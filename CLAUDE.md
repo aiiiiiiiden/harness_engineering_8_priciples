@@ -33,8 +33,9 @@ python3 scripts/verify.py     # 원고 규약·사실·링크 검증
 toc.json (구조)
    └─ scaffold.py ─▶ manuscript/*.md 골격(skeleton)
         └─ /write-chapter ─▶ 본문 작성 + context7 사실확인 + (필요시) /make-diagram ─▶ status: draft
-             └─ 3중 검증 게이트 ─▶ status: reviewed
-             │     1) verify.py (기계적)   2) md-doc-reviewer (Claude)   3) crosscheck.py (codex·독립 모델)
+             └─ 4중 검증 게이트 ─▶ status: reviewed
+             │     1) verify.py (기계적)   2) md-doc-reviewer (Claude)
+             │     3) crosscheck.py (codex·독립 모델)   4) /humanize (문체·AI 티 제거)
              └─ /publish-chapter ─▶ wikidocs MCP push(본문+이미지) ─▶ status: published
 ```
 
@@ -62,8 +63,9 @@ python3 scripts/render_images.py        # assets/diagrams/**/*.svg → screensho
 
 1. **사실 일치**: factor 번호·이름·정의·순서, 출처·명칭은 `docs/verified-facts.md`와 반드시 일치. 어기면 `verify.py`가 FAIL.
 2. **구조 단일 원천**: 장 추가/이동/삭제는 `docs/toc.json`을 먼저 고치고 `python3 scripts/scaffold.py` 실행. 원고 파일을 임의로 만들지 않는다.
-3. **push 전 3중 검증 (강제)**: `verify.py` PASS + `md-doc-reviewer` + `crosscheck.py`(codex) PASS, 그리고 `status: reviewed` 가 아니면 위키독스에 올리지 않는다.
-   - codex 교차검증은 **강제 게이트**다. `crosscheck.py`가 통과 시 front-matter `crosscheck: pass`를 도장 찍고, `verify.py`는 reviewed/published인데 `crosscheck != pass`면 FAIL시킨다.
+3. **push 전 4중 검증 (강제)**: `verify.py` PASS + `md-doc-reviewer` + `crosscheck.py`(codex) + `/humanize`(문체) PASS, 그리고 `status: reviewed` 가 아니면 위키독스에 올리지 않는다.
+   - codex 교차검증과 humanize는 **강제 게이트**다. `crosscheck.py`는 `crosscheck: pass`를, `/humanize`는 `humanized: pass`를 front-matter에 도장 찍고, `verify.py`는 reviewed/published인데 둘 중 하나라도 `!= pass`면 FAIL시킨다.
+   - humanize는 **문체만** 손대고 내용·사실은 불변(content-fidelity-auditor가 검증). 윤문 후 verify.py를 다시 돌려 사실 불변을 확인한다.
    - 사실 레지스트리 자체 점검: `python3 scripts/crosscheck.py --facts`.
 4. **이미지는 코드로**: 개념 다이어그램은 AI 래스터 생성 금지. SVG(`assets/diagrams/<slug>/`)로 작성→`render_images.py`로 렌더→**PNG를 Read로 눈 검수**. 스크린샷만 `/browse`·`/qa` 캡처.
 5. **page_id 기록**: 위키독스에 올린 뒤 page_id를 front-matter에 적는다. 같은 장 재발행은 `update_page`(중복 생성 금지).

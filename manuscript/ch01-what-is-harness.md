@@ -3,7 +3,7 @@ part: 1
 chapter: 1
 slug: ch01-what-is-harness
 title: "하네스 엔지니어링이란 무엇인가"
-status: reviewed
+status: draft
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
@@ -13,6 +13,8 @@ official_links:
 last_verified: 2026-06-02
 crosscheck: "pass"
 crosscheck_date: "2026-06-02"
+humanized: null
+humanized_date: null
 ---
 
 ## 이 장에서 배우는 것

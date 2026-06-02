@@ -27,6 +27,8 @@ official_links:
 last_verified: null
 crosscheck: null
 crosscheck_date: null
+humanized: null
+humanized_date: null
 ---
 
 ## 이 장에서 배우는 것

@@ -55,19 +55,24 @@ official_links:               # toc.json과 일치해야 함
 last_verified: null           # 사실 검증 완료일 (YYYY-MM-DD)
 crosscheck: null              # null | pass | fail  ← crosscheck.py가 자동 기록
 crosscheck_date: null         # codex 교차검증 실행일 (YYYY-MM-DD)
+humanized: null               # null | pass        ← /humanize 윤문 통과 후 도장
+humanized_date: null          # 문체 윤문 완료일 (YYYY-MM-DD)
 ---
 ```
 
-> `crosscheck`/`crosscheck_date`는 **손으로 적지 않는다**. `python3 scripts/crosscheck.py <slug>`가 결과를 자동으로 도장 찍는다. `verify.py`는 `status: reviewed|published`인데 `crosscheck != pass`이면 FAIL시켜 발행을 막는다.
+> `crosscheck`/`crosscheck_date`는 **손으로 적지 않는다**. `python3 scripts/crosscheck.py <slug>`가 결과를 자동으로 도장 찍는다. `humanized`/`humanized_date`는 `/humanize` 파이프라인이 문체 윤문을 끝내고 naturalness-reviewer가 통과시킨 뒤 `pass`로 적는다. `verify.py`는 `status: reviewed|published`인데 `crosscheck != pass` **또는** `humanized != pass`이면 FAIL시켜 발행을 막는다.
 
 ### status 생애주기
 
-`skeleton` → `draft`(본문 작성) → `reviewed`(아래 **3중 검증** 통과) → `published`(wikidocs push 완료, page_id 기록).
+`skeleton` → `draft`(본문 작성) → `reviewed`(아래 **4중 검증** 통과) → `published`(wikidocs push 완료, page_id 기록).
 
-**reviewed로 올리는 3중 검증 게이트** (방어선 셋, 서로 독립):
-1. `python3 scripts/verify.py` — 기계적(front-matter·템플릿·링크·denylist). 결정론적.
+**reviewed로 올리는 4중 검증 게이트** (방어선 넷, 서로 독립 — 앞 셋은 사실·기술, 넷째는 문체):
+1. `python3 scripts/verify.py` — 기계적(front-matter·템플릿·링크·denylist·게이트 강제). 결정론적.
 2. `md-doc-reviewer` 스킬 — 같은 모델(Claude)의 심층 검수(설명 오류·코드 오류·오타).
 3. `python3 scripts/crosscheck.py <slug>` — **독립 모델(codex)** 의 기술 사실 검증. factor 번호·이름·정의, API·명칭·출처 오류를 모델 다양성으로 잡는다. **통과 시 front-matter `crosscheck: pass`가 자동 기록되고, 이게 없으면 verify.py가 reviewed/published를 막는다(강제 게이트).**
+4. `/humanize` (humanize-korean 파이프라인) — **문체** 검수. 번역투·기계적 병렬·불릿/이모지 과다 등 AI 티를 제거한다. **내용·사실은 한 글자도 바꾸지 않는다**(content-fidelity-auditor가 불변을 검증). 통과 시 `humanized: pass`를 도장 찍고, 이게 없으면 verify.py가 reviewed/published를 막는다(강제 게이트). 윤문 후 **사실 불변 확인을 위해 verify.py를 다시 돌린다**.
+
+> 게이트 1~3은 "맞는 내용인가"(사실·기술), 게이트 4는 "사람이 쓴 글처럼 읽히는가"(문체)를 본다. 한글 기술서의 신뢰도는 둘 다 필요하다.
 
 > 사실 레지스트리 자체도 주기적으로 검증한다: `python3 scripts/crosscheck.py --facts` → `docs/verified-facts.md`를 codex가 공식 출처에 비추어 점검.
 

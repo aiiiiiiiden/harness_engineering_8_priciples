@@ -27,7 +27,7 @@ from _harness import (chapter_path, iter_manuscript_files, iter_toc_chapters,
 
 REQUIRED_KEYS = ["part", "chapter", "slug", "title", "status",
                  "wikidocs_page_id", "parent_page_id", "official_links", "last_verified",
-                 "crosscheck", "crosscheck_date"]
+                 "crosscheck", "crosscheck_date", "humanized", "humanized_date"]
 VALID_STATUS = {"skeleton", "draft", "reviewed", "published"}
 GATED_STATUS = {"reviewed", "published"}  # codex 교차검증 통과를 강제하는 상태
 REQUIRED_SECTIONS = [
@@ -97,6 +97,11 @@ def main():
         if status in GATED_STATUS and fm.get("crosscheck") != "pass":
             errors.append(f"{rel}: status '{status}'인데 crosscheck != pass "
                           f"(현재: {fm.get('crosscheck')}). `python3 scripts/crosscheck.py {fname_slug}` 통과 필요")
+
+        # humanize 문체 검수 강제: reviewed/published는 humanized=pass 필수
+        if status in GATED_STATUS and fm.get("humanized") != "pass":
+            errors.append(f"{rel}: status '{status}'인데 humanized != pass "
+                          f"(현재: {fm.get('humanized')}). `/humanize`로 AI 티 윤문 후 humanized: pass 도장 필요")
 
         # 템플릿 섹션 (draft 이상)
         if status in {"draft", "reviewed", "published"}:
