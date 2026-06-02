@@ -3,7 +3,7 @@ part: 1
 chapter: 1
 slug: ch01-what-is-harness
 title: "하네스 엔지니어링이란 무엇인가"
-status: draft
+status: reviewed
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
@@ -11,8 +11,8 @@ official_links:
   - https://github.com/humanlayer/12-factor-agents
   - https://12factor.net
 last_verified: 2026-06-02
-crosscheck: null
-crosscheck_date: null
+crosscheck: "pass"
+crosscheck_date: "2026-06-02"
 ---
 
 ## 이 장에서 배우는 것
@@ -25,11 +25,11 @@ crosscheck_date: null
 
 `harness`는 원래 말에게 씌우는 **마구(馬具)** 입니다. 말의 힘 자체를 만들어내지는 않지만, 그 힘이 엉뚱한 데로 새지 않고 수레를 끄는 방향으로 향하게 잡아줍니다. LLM이 말이라면, 하네스는 그 힘을 제품이 원하는 방향으로 채널링하는 마구입니다. 소프트웨어 테스트의 "test harness"(테스트 대상을 실행·관찰 가능하게 감싸는 장치)와도 같은 결입니다.
 
-12-Factor Agents의 저자 HumanLayer(Dexter Horthy 주도)가 던지는 핵심 관찰은 이렇습니다:
+12-Factor Agents의 저자 HumanLayer(Dexter Horthy 주도)가 던지는 핵심 관찰을, 원문의 요지를 옮기면 이렇습니다:
 
-> "우리가 본 'production-grade 에이전트' 대부분은 사실 그렇게 에이전트답지 않았다. 대부분은 잘 짜인 **결정론적 코드**였고, LLM은 그 사이사이 **전략적인 지점에만** 끼워져 있었다."
+> 스스로 "AI 에이전트"를 표방하는 제품 상당수는 사실 그리 에이전트답지 않다. 대부분은 잘 짜인 **결정론적 코드**이고, LLM은 경험을 마법처럼 만드는 **바로 그 지점에만** 끼워져 있다.
 
-즉 좋은 에이전트일수록 "LLM에게 다 맡긴 마법"이 아니라, **하네스가 80%, LLM이 20%** 에 가깝습니다. 이 책이 다루는 12가지 원칙(12-Factor Agents)은 바로 그 80%, 하네스를 어떻게 설계해야 신뢰할 수 있는가에 대한 답입니다.
+즉 좋은 에이전트일수록 "LLM에게 다 맡긴 마법"이 아니라, 비유하자면 **하네스가 8할, LLM이 2할** 에 가깝습니다(엄밀한 수치가 아니라 무게중심을 가리키는 표현입니다). 이 책이 다루는 12가지 원칙(12-Factor Agents)은 바로 그 8할, 하네스를 어떻게 설계해야 신뢰할 수 있는가에 대한 답입니다.
 
 ## 왜 중요한가
 
@@ -44,14 +44,14 @@ LLM 데모는 거의 항상 됩니다. 프롬프트 하나에 도구 몇 개를 
 
 이건 모델이 약해서가 아닙니다. **하네스가 없어서** 입니다. 데모와 프로덕션을 가르는 것은 모델의 지능이 아니라, 그 지능을 둘러싼 결정론적 구조물의 견고함입니다. "프레임워크가 알아서 해주겠지" 하고 제어 흐름·컨텍스트·상태·검증을 남에게 위임한 만큼, 정확히 그만큼 프로덕션에서 무너집니다.
 
-12-Factor Agents가 [Heroku의 12-Factor App](https://12factor.net) — Adam Wiggins, 2011 — 에서 이름을 빌려온 이유가 여기 있습니다. 12-Factor App이 "클라우드에서 죽지 않는 웹앱"의 조건을 정리했듯, 12-Factor Agents는 "프로덕션에서 죽지 않는 에이전트"의 조건을 정리합니다. (둘은 **이름만 닮은 다른 문서**입니다 — App은 배포 가능한 웹 서비스, Agents는 LLM 에이전트를 다룹니다.)
+12-Factor Agents가 [Heroku의 12-Factor App](https://12factor.net) — Adam Wiggins, 2011 — 에서 **영감을 받은** 이유가 여기 있습니다. 12-Factor App이 "클라우드에서 죽지 않는 웹앱"의 조건을 정리했듯, 12-Factor Agents는 "프로덕션에서 죽지 않는 에이전트"의 조건을 정리합니다. (다만 둘은 **이름과 형식을 공유할 뿐 서로 다른 대상을 다루는 문서**입니다 — App은 배포 가능한 웹 서비스를, Agents는 LLM 에이전트를 다룹니다.)
 
 ## 하네스에 적용하기
 
 가장 단순한 에이전트 루프를 의사코드로 보면, 하네스가 어디에 있는지 한눈에 보입니다.
 
 ```python
-# LLM이 책임지는 부분은 단 한 줄(next_step). 나머지가 전부 하네스다.
+# LLM이 책임지는 부분은 단 한 줄(llm.decide). 나머지가 전부 하네스다.
 def run_agent(goal):
     context = build_context(goal)          # 하네스: 컨텍스트 구성   (Factor 3)
     while True:
@@ -86,7 +86,7 @@ def run_agent(goal):
 - [ ] 데모→프로덕션 격차는 모델 지능이 아니라 **하네스의 견고함**이 만든다.
 - [ ] 좋은 에이전트는 "하네스 多 + LLM 少". 12가지 원칙은 그 하네스의 설계 지침이다.
 - [ ] 모든 설계 결정 앞에서 물어라: *"이건 LLM이 책임질 일인가, 하네스가 책임질 일인가?"*
-- [ ] 12-Factor Agents는 HumanLayer가 정리했고, 12-Factor App(Heroku)에서 **이름만** 빌렸다.
+- [ ] 12-Factor Agents는 HumanLayer가 정리했고, 12-Factor App(Heroku)에서 **영감을 받았다**(이름·형식은 차용하되 다루는 대상은 다름).
 
 ## 공식 출처
 
