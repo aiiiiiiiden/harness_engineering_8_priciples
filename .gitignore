@@ -14,6 +14,9 @@ __pycache__/
 .harness-cache/
 manuscript/MANIFEST.generated.md
 
+# humanize 파이프라인 작업공간 (윤문 중간 산출물)
+_workspace/
+
 # codex 브리지가 CLAUDE.md / .claude 에서 자동 생성하는 파생물 (단일 SoT 유지, codex 실행 시 재생성)
 AGENTS.md
 .codex/
