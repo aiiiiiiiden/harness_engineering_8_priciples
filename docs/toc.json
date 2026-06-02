@@ -10,7 +10,7 @@
       "part": 1,
       "title": "하네스 엔지니어링 입문",
       "chapters": [
-        {"chapter": 1, "slug": "ch01-what-is-harness", "title": "하네스 엔지니어링이란 무엇인가", "official_links": ["https://www.humanlayer.dev/12-factor-agents", "https://github.com/humanlayer/12-factor-agents"]},
+        {"chapter": 1, "slug": "ch01-what-is-harness", "title": "하네스 엔지니어링이란 무엇인가", "official_links": ["https://www.humanlayer.dev/12-factor-agents", "https://github.com/humanlayer/12-factor-agents", "https://12factor.net"]},
         {"chapter": 2, "slug": "ch02-why-12-factor", "title": "왜 12-Factor인가 — App에서 Agent로", "official_links": ["https://12factor.net", "https://github.com/humanlayer/12-factor-agents"]},
         {"chapter": 3, "slug": "ch03-anatomy-of-a-harness", "title": "하네스의 해부학 — 이 책의 실습 환경 미리보기", "official_links": ["https://code.claude.com/docs"]}
       ]
