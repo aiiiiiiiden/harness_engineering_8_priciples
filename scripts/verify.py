@@ -36,15 +36,18 @@ REQUIRED_SECTIONS = [
 ]
 # docs/verified-facts.md 의 denylist 와 동기화할 것
 DENYLIST = [
-    (r"12\s*계명", "비표준 명칭 — '12가지 원칙' 또는 '12 Factor'로"),
-    (r"12\s*법칙", "비표준 명칭 — '12가지 원칙' 또는 '12 Factor'로"),
-    (r"OpenAI가\s*(만든|발표한)", "출처 오류 — 12-Factor Agents는 HumanLayer(Dexter Horthy)가 정리"),
-    (r"Anthropic이?\s*만든\s*12-?\s*Factor", "출처 오류 — HumanLayer가 정리"),
+    (r"OpenAI(이|가)?\s*(만든|발표한|정의한|공식)?\s*(5|8|12)\s*원칙",
+     "출처 오류 — 정본은 원칙을 번호로 명시하지 않음. '정본에서 도출한 8원칙'으로"),
+    (r"12[\s-]*Factor\s*Agents?", "폐기된 구 주제 — '하네스 엔지니어링(Harness Engineering)'으로"),
+    (r"HumanLayer", "폐기된 구 출처 — OpenAI / Ryan Lopopolo로"),
+    (r"Dexter\s*Horthy", "폐기된 구 출처 — OpenAI / Ryan Lopopolo로"),
+    (r"12\s*계명", "비표준 명칭 (해당 없음 — 8원칙)"),
+    (r"12\s*법칙", "비표준 명칭 (해당 없음 — 8원칙)"),
     (r"docs\.claude\.com/docs", "구 도메인 — 'code.claude.com/docs'로"),
 ]
 OFFICIAL_DOMAINS = re.compile(
-    r"https?://(?:github\.com/humanlayer|www\.humanlayer\.dev|humanlayer\.dev|"
-    r"code\.claude\.com|docs\.claude\.com|12factor\.net|modelcontextprotocol\.io|"
+    r"https?://(?:openai\.com|"
+    r"code\.claude\.com|docs\.claude\.com|modelcontextprotocol\.io|"
     r"deepwiki\.com|www\.anthropic\.com)\S*")
 
 

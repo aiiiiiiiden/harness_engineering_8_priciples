@@ -1,13 +1,13 @@
 ---
-part: 2
-chapter: 11
-slug: ch11-factor08-own-control-flow
-title: "Factor 8 — 제어 흐름을 직접 소유하라"
+part: 4
+chapter: 16
+slug: ch16-harness-case-study
+title: "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md
+- https://openai.com/index/harness-engineering/

@@ -1,13 +1,13 @@
 ---
 part: 2
-chapter: 8
-slug: ch08-factor05-unify-state
-title: "Factor 5 — 실행 상태와 비즈니스 상태를 통합하라"
+chapter: 9
+slug: ch09-principle6-throughput-merge-philosophy
+title: "원칙 6 — 처리량에 맞춰 병합 철학을 바꿔라"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md
+- https://openai.com/index/harness-engineering/

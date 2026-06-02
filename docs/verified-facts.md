@@ -1,6 +1,6 @@
 # 검증된 핵심 사실 레지스트리 (Single Source of Truth)
 
-> 이 책 전체에서 반복 등장하는 **출처·명칭·factor 정의**의 단일 원천.
+> 이 책 전체에서 반복 등장하는 **출처·명칭·원칙 정의**의 단일 원천.
 > 모든 장은 이 표와 일치해야 한다. 불일치는 버그다 → `scripts/verify.py`가 자동 검출.
 > 사실이 바뀌면 **여기를 먼저 고치고**, 그 다음 본문을 고친다.
 > 마지막 검증일: 2026-06-02
@@ -11,33 +11,38 @@
 
 | key | 값 | 근거 / 비고 |
 |---|---|---|
-| `twelve_factor_name` | **12-Factor Agents** (한국어: 12가지 원칙) | "12계명"·"12법칙" 등 비표준 명칭 금지 |
-| `twelve_factor_author` | **HumanLayer** (Dexter Horthy 주도) | Anthropic/OpenAI가 만든 것이 아님 |
-| `twelve_factor_repo` | `github.com/humanlayer/12-factor-agents` | 정본(canonical) 출처 |
-| `twelve_factor_count` | **12개** (정본) | 일부 블로그가 13번째(pre-fetch context)를 덧붙이나 정본은 12개. 추가 factor는 "비정본"으로 명시 |
-| `twelve_factor_origin` | Heroku의 **12-Factor App**(Adam Wiggins, 2011)에서 영감 | App과 Agents는 **다른 문서** — 혼동 금지 |
-| `claude_code_docs_domain` | `code.claude.com/docs` | `docs.claude.com` 에서 변경됨. 구 도메인 표기 금지 |
-| `mcp_spec_site` | `modelcontextprotocol.io` | MCP 공식 명세 |
-| `agent_sdk_name` | **Claude Agent SDK** | 과거 명칭 "Claude Code SDK"에서 변경 |
+| `harness_eng_name` | **Harness Engineering** (한국어: 하네스 엔지니어링) | 정본 제목 "Harness engineering: leveraging Codex in an agent-first world" |
+| `harness_eng_author` | **OpenAI** (Ryan Lopopolo, Member of Technical Staff) | 개인이 아니라 OpenAI 팀의 사내 실험 보고. 저자 표기는 Ryan Lopopolo |
+| `harness_eng_source` | `openai.com/index/harness-engineering/` | 정본(canonical) 출처. 발행일 2026-02-11 |
+| `harness_eng_philosophy` | **"사람이 조종하고, 에이전트가 실행한다"** (Humans steer, agents execute) | 정본의 핵심 한 줄. 모든 원칙의 뿌리 |
+| `harness_eng_experiment` | 빈 git 리포(2025-08 말 첫 커밋)에서 5개월간 **약 100만 줄**을 **Codex 에이전트만으로**(사람 손코딩 0줄) 구축. 수동 대비 **약 1/10 시간**으로 추정 | 엔지니어 3→7명, 약 1,500 PR, 내부 베타 출시·실사용. "약 1/10 시간"은 정본 추정치 |
+| `principle_count` | **8개** (이 책이 정본에서 도출) | ⚠️ 정본은 원칙을 번호로 명시하지 않는다. 8개 구분은 **이 책의 편집적 도출**이며 각 원칙은 정본의 특정 절·인용에 1:1 접지한다 |
+| `codex_name` | **OpenAI Codex** | 정본 실험의 코딩 에이전트. 사람은 거의 전적으로 프롬프트로만 상호작용 |
+| `ralph_wiggum_loop` | 에이전트 검토자가 모두 만족할 때까지 반복하는 피드백 루프 | 정본이 자기 PR 완성 과정을 "사실상 Ralph Wiggum Loop"라 부름 |
+| `claude_code_docs_domain` | `code.claude.com/docs` | `docs.claude.com` 에서 변경됨. 구 도메인 표기 금지. (실습 도구 문서) |
+| `mcp_spec_site` | `modelcontextprotocol.io` | MCP 공식 명세 (실습 도구) |
+| `agent_sdk_name` | **Claude Agent SDK** | 과거 명칭 "Claude Code SDK"에서 변경 (실습 도구) |
 
-## 2. 12 Factor 정본 명칭 (한국어 표준 번역 — 전 장 통일)
+## 2. 하네스 엔지니어링 8원칙 (이 책이 정본에서 도출 — 전 장 통일)
 
-| # | 영문 (정본) | 한국어 표준어 |
-|---|---|---|
-| 1 | Natural Language to Tool Calls | 자연어를 도구 호출로 |
-| 2 | Own your prompts | 프롬프트를 직접 소유하라 |
-| 3 | Own your context window | 컨텍스트 윈도를 직접 소유하라 |
-| 4 | Tools are structured outputs | 도구는 구조화된 출력일 뿐 |
-| 5 | Unify execution state and business state | 실행 상태와 비즈니스 상태를 통합하라 |
-| 6 | Launch / Pause / Resume with simple APIs | 간단한 API로 시작·중단·재개 |
-| 7 | Contact humans with tool calls | 사람과의 소통도 도구 호출로 |
-| 8 | Own your control flow | 제어 흐름을 직접 소유하라 |
-| 9 | Compact errors into context window | 에러를 컨텍스트에 압축해 넣어라 |
-| 10 | Small, focused agents | 작고 집중된 에이전트 |
-| 11 | Trigger from anywhere | 어디서든 트리거하라 |
-| 12 | Make your agent a stateless reducer | 에이전트를 무상태 리듀서로 |
+> ⚠️ **비정본 카운트 주의.** OpenAI 정본은 서술형 글이며 원칙을 번호로 열거하지 않는다. 아래 8개는 정본의 **목차 절(section)** 을 한 절당 한 원칙으로 도출한 **이 책의 커리큘럼**이다. 각 원칙은 정본의 해당 절에 직접 접지하며, 본문은 이를 "정본이 명시한 8원칙"으로 단정하지 않고 "정본에서 도출한 8원칙"으로 제시한다.
 
-> factor 번호·이름·순서는 위 표가 마스터다. 본문에서 다른 순서/이름을 쓰면 `crosscheck.py`(codex)가 잡는다.
+| # | 영문 (도출 명칭) | 한국어 표준어 | 정본 절(근거) |
+|---|---|---|---|
+| 1 | Humans steer, agents execute | 사람이 조종하고, 에이전트가 실행한다 | 엔지니어의 역할 재정의하기 |
+| 2 | Make the application legible to agents | 애플리케이션을 에이전트가 읽게 하라 | 애플리케이션의 가독성 향상 |
+| 3 | Repository knowledge as a system of record | 리포지터리 지식을 기록 시스템으로 | 리포지터리 지식을 기록 시스템으로 만듦 |
+| 4 | Optimize for agent legibility | 에이전트 가독성에 최적화하라 | 에이전트의 가독성이 목표 |
+| 5 | Enforce architecture and taste mechanically | 아키텍처와 취향을 기계적으로 강제하라 | 아키텍처 및 취향 강제 적용 |
+| 6 | Let throughput reshape merge philosophy | 처리량에 맞춰 병합 철학을 바꿔라 | 병합 철학을 변화시키는 처리량 |
+| 7 | Encode the autonomy loop | 자율 루프를 시스템에 인코딩하라 | 자율성 수준의 증가 |
+| 8 | Garbage-collect entropy | 엔트로피를 가비지 컬렉션하라 | 엔트로피 및 가비지 컬렉션 |
+
+> 원칙 번호·이름·순서(정본 절 순서)는 위 표가 마스터다. 본문에서 다른 순서/이름을 쓰면 `crosscheck.py`(codex)가 잡는다. 순서는 정본 서술 순서를 따른다.
+
+### 핵심 아티팩트 (정본이 명명 — 본문에서 사례로 인용 가능)
+
+`AGENTS.md`(약 100줄, 맵 역할) · `ARCHITECTURE.md` · 구조화된 `docs/`(design-docs·exec-plans(active/completed)·tech-debt-tracker.md·product-specs·references) · 맞춤형 린터 + 구조적 테스트 · doc-gardening 에이전트 · ExecPlan(실행 계획) · 계층 모델(Types → Config → Repo → Service → Runtime → UI, 교차관심사는 Providers 인터페이스) · Chrome DevTools Protocol 연동 · LogQL/PromQL 관측성 · "황금 원칙(Golden Principles)" · 수용 기준(acceptance criteria) · 품질 등급(QUALITY_SCORE).
 
 ---
 
@@ -47,9 +52,10 @@
 
 | 금지 패턴 | 이유 | 올바른 표현 |
 |---|---|---|
-| `12계명`, `12 법칙` | 비표준 명칭 | 12가지 원칙 / 12 Factor |
-| `OpenAI가 만든`, `OpenAI가 발표한` (12-Factor 맥락) | 출처 오류 | HumanLayer(Dexter Horthy)가 정리 |
-| `Anthropic이 만든 12-Factor` | 출처 오류 | HumanLayer가 정리 |
+| `OpenAI의 8원칙`, `OpenAI가 정의한 8원칙`, `정본의 8원칙`(공식 카운트 단정) | 출처 오류 — 정본은 원칙을 번호로 명시하지 않음 | "정본에서 도출한 8원칙" / "이 책의 8원칙" |
+| `12-Factor Agents`, `12 Factor Agents` | 폐기된 구 주제 (피벗으로 제거) | 하네스 엔지니어링(Harness Engineering) |
+| `HumanLayer`, `Dexter Horthy` | 폐기된 구 출처 | OpenAI / Ryan Lopopolo |
+| `12계명`, `12법칙` | 비표준 명칭 | (해당 없음 — 8원칙) |
 | `docs.claude.com/docs` | 구 도메인 | code.claude.com/docs |
 
 > 새 오류 패턴을 발견하면 이 표에 추가하고 `scripts/verify.py`의 `DENYLIST`에도 반영한다.
@@ -62,11 +68,11 @@
 
 **본문에 등장 가능 (주제 그 자체)**
 
-- Claude Code (CLI/SDK), Claude Agent SDK
+- OpenAI Codex, Claude Code (CLI/SDK), Claude Agent SDK
 - MCP (Model Context Protocol)
 - 구조화 출력(structured outputs)·JSON Schema
 - codex 같은 독립 모델 CLI (교차검증 예시)
-- 일반적인 에이전트 패턴(서브에이전트, 컨텍스트 관리 등)
+- 일반적인 에이전트 패턴(서브에이전트, 컨텍스트 관리, 관측성, 린터/CI 등)
 
 **본문 비노출 (저자 전용)**
 

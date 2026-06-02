@@ -1,13 +1,13 @@
 ---
 part: 3
-chapter: 19
-slug: ch19-multi-agent-orchestration
-title: "멀티 에이전트 오케스트레이션"
+chapter: 12
+slug: ch12-single-source-of-truth
+title: "진실의 원천(SoT) 설계하기"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://code.claude.com/docs/en/sub-agents
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://code.claude.com/docs/en/sub-agents
+- https://openai.com/index/harness-engineering/

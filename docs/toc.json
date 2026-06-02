@@ -1,7 +1,7 @@
 {
   "book": {
-    "subject": "12-Factor Agents로 배우는 하네스 엔지니어링",
-    "summary": "신뢰할 수 있는 LLM 에이전트를 만드는 12가지 원칙(12-Factor Agents)을 한 장씩 풀고, 그 원칙으로 실제 '하네스'를 설계·검증하는 법을 배운다. 마지막엔 이 책을 집필한 하네스 자체를 해부한다.",
+    "subject": "하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기",
+    "summary": "OpenAI의 Harness Engineering 정본에서 도출한 8원칙을 한 장씩 풀고, 빈 레포에서 시작한 샘플 프로젝트를 원칙마다 키워 에이전트가 안정적으로 일하는 하네스로 만든다. 마지막엔 이 책을 집필한 하네스 자체를 8원칙으로 해부·채점한다. (정본은 원칙을 번호로 명시하지 않으며, 8개 구분은 이 책이 정본 절에서 도출한 커리큘럼이다.)",
     "open_yn": "N",
     "wikidocs_book_id": null
   },
@@ -10,45 +10,41 @@
       "part": 1,
       "title": "하네스 엔지니어링 입문",
       "chapters": [
-        {"chapter": 1, "slug": "ch01-what-is-harness", "title": "하네스 엔지니어링이란 무엇인가", "official_links": ["https://www.humanlayer.dev/12-factor-agents", "https://github.com/humanlayer/12-factor-agents", "https://12factor.net"]},
-        {"chapter": 2, "slug": "ch02-why-12-factor", "title": "왜 12-Factor인가 — App에서 Agent로", "official_links": ["https://12factor.net", "https://github.com/humanlayer/12-factor-agents"]},
-        {"chapter": 3, "slug": "ch03-anatomy-of-a-harness", "title": "하네스의 해부학 — 이 책의 실습 환경 미리보기", "official_links": ["https://code.claude.com/docs", "https://modelcontextprotocol.io", "https://github.com/humanlayer/12-factor-agents"]}
+        {"chapter": 1, "slug": "ch01-what-is-harness", "title": "하네스 엔지니어링이란 무엇인가", "official_links": ["https://openai.com/index/harness-engineering/", "https://code.claude.com/docs", "https://modelcontextprotocol.io"]},
+        {"chapter": 2, "slug": "ch02-why-harness-engineering", "title": "왜 하네스 엔지니어링인가 — 사람이 조종, 에이전트가 실행", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 3, "slug": "ch03-anatomy-of-a-harness", "title": "하네스의 해부학 — 샘플 프로젝트와 실습 환경 미리보기", "official_links": ["https://openai.com/index/harness-engineering/", "https://code.claude.com/docs", "https://modelcontextprotocol.io"]}
       ]
     },
     {
       "part": 2,
-      "title": "12 Factors — 한 장에 하나씩",
+      "title": "하네스 엔지니어링 8원칙 — 한 장에 하나씩",
       "chapters": [
-        {"chapter": 4, "slug": "ch04-factor01-natural-language-to-tools", "title": "Factor 1 — 자연어를 도구 호출로", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-01-natural-language-to-tool-calls.md"]},
-        {"chapter": 5, "slug": "ch05-factor02-own-your-prompts", "title": "Factor 2 — 프롬프트를 직접 소유하라", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md"]},
-        {"chapter": 6, "slug": "ch06-factor03-own-your-context", "title": "Factor 3 — 컨텍스트 윈도를 직접 소유하라", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md"]},
-        {"chapter": 7, "slug": "ch07-factor04-tools-as-structured-output", "title": "Factor 4 — 도구는 구조화된 출력일 뿐", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-04-tools-are-structured-outputs.md"]},
-        {"chapter": 8, "slug": "ch08-factor05-unify-state", "title": "Factor 5 — 실행 상태와 비즈니스 상태를 통합하라", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md"]},
-        {"chapter": 9, "slug": "ch09-factor06-launch-pause-resume", "title": "Factor 6 — 간단한 API로 시작·중단·재개", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-06-launch-pause-resume.md"]},
-        {"chapter": 10, "slug": "ch10-factor07-contact-humans", "title": "Factor 7 — 사람과의 소통도 도구 호출로", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-07-contact-humans-with-tools.md"]},
-        {"chapter": 11, "slug": "ch11-factor08-own-control-flow", "title": "Factor 8 — 제어 흐름을 직접 소유하라", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md"]},
-        {"chapter": 12, "slug": "ch12-factor09-compact-errors", "title": "Factor 9 — 에러를 컨텍스트에 압축해 넣어라", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md"]},
-        {"chapter": 13, "slug": "ch13-factor10-small-focused-agents", "title": "Factor 10 — 작고 집중된 에이전트", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md"]},
-        {"chapter": 14, "slug": "ch14-factor11-trigger-from-anywhere", "title": "Factor 11 — 어디서든 트리거하라", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-11-trigger-from-anywhere.md"]},
-        {"chapter": 15, "slug": "ch15-factor12-stateless-reducer", "title": "Factor 12 — 에이전트를 무상태 리듀서로", "official_links": ["https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-12-stateless-reducer.md"]}
+        {"chapter": 4, "slug": "ch04-principle1-humans-steer-agents-execute", "title": "원칙 1 — 사람이 조종하고, 에이전트가 실행한다", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 5, "slug": "ch05-principle2-make-app-legible", "title": "원칙 2 — 애플리케이션을 에이전트가 읽게 하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 6, "slug": "ch06-principle3-repo-as-system-of-record", "title": "원칙 3 — 리포지터리 지식을 기록 시스템으로", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 7, "slug": "ch07-principle4-optimize-agent-legibility", "title": "원칙 4 — 에이전트 가독성에 최적화하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 8, "slug": "ch08-principle5-enforce-architecture-and-taste", "title": "원칙 5 — 아키텍처와 취향을 기계적으로 강제하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 9, "slug": "ch09-principle6-throughput-merge-philosophy", "title": "원칙 6 — 처리량에 맞춰 병합 철학을 바꿔라", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 10, "slug": "ch10-principle7-encode-autonomy-loop", "title": "원칙 7 — 자율 루프를 시스템에 인코딩하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 11, "slug": "ch11-principle8-garbage-collect-entropy", "title": "원칙 8 — 엔트로피를 가비지 컬렉션하라", "official_links": ["https://openai.com/index/harness-engineering/"]}
       ]
     },
     {
       "part": 3,
-      "title": "하네스 패턴 — Factor를 합치다",
+      "title": "하네스 패턴 — 원칙을 합치다",
       "chapters": [
-        {"chapter": 16, "slug": "ch16-single-source-of-truth", "title": "진실의 원천(SoT) 설계하기", "official_links": []},
-        {"chapter": 17, "slug": "ch17-trust-and-model-diversity", "title": "검증 게이트와 모델 다양성으로 신뢰성 확보", "official_links": []},
-        {"chapter": 18, "slug": "ch18-deterministic-artifacts", "title": "결정론적 산출물 — 코드가 진실의 원천", "official_links": []},
-        {"chapter": 19, "slug": "ch19-multi-agent-orchestration", "title": "멀티 에이전트 오케스트레이션", "official_links": ["https://code.claude.com/docs/en/sub-agents"]}
+        {"chapter": 12, "slug": "ch12-single-source-of-truth", "title": "진실의 원천(SoT) 설계하기", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 13, "slug": "ch13-trust-and-model-diversity", "title": "검증 게이트와 모델 다양성으로 신뢰성 확보", "official_links": []},
+        {"chapter": 14, "slug": "ch14-deterministic-artifacts", "title": "결정론적 산출물 — 코드가 진실의 원천", "official_links": []},
+        {"chapter": 15, "slug": "ch15-multi-agent-orchestration", "title": "멀티 에이전트 오케스트레이션", "official_links": ["https://code.claude.com/docs/en/sub-agents"]}
       ]
     },
     {
       "part": 4,
       "title": "케이스 스터디 — 이 책을 만든 하네스",
       "chapters": [
-        {"chapter": 20, "slug": "ch20-harness-case-study", "title": "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)", "official_links": []},
-        {"chapter": 21, "slug": "ch21-self-assessment-scorecard", "title": "12 Factors로 내 하네스 평가하기 (스코어카드)", "official_links": ["https://github.com/humanlayer/12-factor-agents"]}
+        {"chapter": 16, "slug": "ch16-harness-case-study", "title": "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": 17, "slug": "ch17-self-assessment-scorecard", "title": "8원칙으로 내 하네스 평가하기 (스코어카드 L1→L5)", "official_links": ["https://openai.com/index/harness-engineering/"]}
       ]
     },
     {
@@ -56,9 +52,9 @@
       "title": "부록",
       "is_appendix": true,
       "chapters": [
-        {"chapter": "A", "slug": "appendix-a-cheatsheet", "title": "12 Factors 치트시트 (한 장 요약)", "official_links": ["https://github.com/humanlayer/12-factor-agents"]},
-        {"chapter": "B", "slug": "appendix-b-glossary", "title": "용어 사전 (하네스·에이전트·컨텍스트 등)", "official_links": []},
-        {"chapter": "C", "slug": "appendix-c-resources", "title": "참고 자료 / 원문 링크 모음", "official_links": ["https://github.com/humanlayer/12-factor-agents", "https://www.humanlayer.dev/12-factor-agents", "https://12factor.net"]}
+        {"chapter": "A", "slug": "appendix-a-cheatsheet", "title": "8원칙 치트시트 (한 장 요약)", "official_links": ["https://openai.com/index/harness-engineering/"]},
+        {"chapter": "B", "slug": "appendix-b-glossary", "title": "용어 사전 (하네스·에이전트·기록 시스템·불변식 등)", "official_links": []},
+        {"chapter": "C", "slug": "appendix-c-resources", "title": "참고 자료 / 원문 링크 모음", "official_links": ["https://openai.com/index/harness-engineering/"]}
       ]
     }
   ]

@@ -1,13 +1,13 @@
 ---
 part: 2
-chapter: 5
-slug: ch05-factor02-own-your-prompts
-title: "Factor 2 — 프롬프트를 직접 소유하라"
+chapter: 6
+slug: ch06-principle3-repo-as-system-of-record
+title: "원칙 3 — 리포지터리 지식을 기록 시스템으로"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md
+- https://openai.com/index/harness-engineering/

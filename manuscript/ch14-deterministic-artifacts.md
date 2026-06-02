@@ -1,13 +1,13 @@
 ---
-part: 2
-chapter: 15
-slug: ch15-factor12-stateless-reducer
-title: "Factor 12 — 에이전트를 무상태 리듀서로"
+part: 3
+chapter: 14
+slug: ch14-deterministic-artifacts
+title: "결정론적 산출물 — 코드가 진실의 원천"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-12-stateless-reducer.md
+  []
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-12-stateless-reducer.md
+<!-- toc.json의 official_links만 사용 -->

@@ -1,13 +1,13 @@
 ---
 part: 2
-chapter: 13
-slug: ch13-factor10-small-focused-agents
-title: "Factor 10 — 작고 집중된 에이전트"
+chapter: 11
+slug: ch11-principle8-garbage-collect-entropy
+title: "원칙 8 — 엔트로피를 가비지 컬렉션하라"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-10-small-focused-agents.md
+- https://openai.com/index/harness-engineering/

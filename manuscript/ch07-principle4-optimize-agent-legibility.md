@@ -1,13 +1,13 @@
 ---
 part: 2
 chapter: 7
-slug: ch07-factor04-tools-as-structured-output
-title: "Factor 4 — 도구는 구조화된 출력일 뿐"
+slug: ch07-principle4-optimize-agent-legibility
+title: "원칙 4 — 에이전트 가독성에 최적화하라"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-04-tools-are-structured-outputs.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-04-tools-are-structured-outputs.md
+- https://openai.com/index/harness-engineering/

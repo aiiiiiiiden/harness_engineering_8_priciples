@@ -1,13 +1,13 @@
 ---
-part: 2
-chapter: 9
-slug: ch09-factor06-launch-pause-resume
-title: "Factor 6 — 간단한 API로 시작·중단·재개"
+part: 3
+chapter: 15
+slug: ch15-multi-agent-orchestration
+title: "멀티 에이전트 오케스트레이션"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-06-launch-pause-resume.md
+  - https://code.claude.com/docs/en/sub-agents
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-06-launch-pause-resume.md
+- https://code.claude.com/docs/en/sub-agents

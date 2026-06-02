@@ -1,13 +1,13 @@
 ---
-part: 3
-chapter: 17
-slug: ch17-trust-and-model-diversity
-title: "검증 게이트와 모델 다양성으로 신뢰성 확보"
+part: 2
+chapter: 4
+slug: ch04-principle1-humans-steer-agents-execute
+title: "원칙 1 — 사람이 조종하고, 에이전트가 실행한다"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  []
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-<!-- toc.json의 official_links만 사용 -->
+- https://openai.com/index/harness-engineering/

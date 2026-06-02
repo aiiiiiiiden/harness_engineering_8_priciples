@@ -1,13 +1,13 @@
 ---
 part: 2
-chapter: 12
-slug: ch12-factor09-compact-errors
-title: "Factor 9 — 에러를 컨텍스트에 압축해 넣어라"
+chapter: 10
+slug: ch10-principle7-encode-autonomy-loop
+title: "원칙 7 — 자율 루프를 시스템에 인코딩하라"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md
+- https://openai.com/index/harness-engineering/

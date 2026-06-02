@@ -1,13 +1,13 @@
 ---
-part: 2
-chapter: 6
-slug: ch06-factor03-own-your-context
-title: "Factor 3 — 컨텍스트 윈도를 직접 소유하라"
+part: 4
+chapter: 17
+slug: ch17-self-assessment-scorecard
+title: "8원칙으로 내 하네스 평가하기 (스코어카드 L1→L5)"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md
+- https://openai.com/index/harness-engineering/

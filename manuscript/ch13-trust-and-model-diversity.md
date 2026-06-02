@@ -1,8 +1,8 @@
 ---
-part: 4
-chapter: 20
-slug: ch20-harness-case-study
-title: "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)"
+part: 3
+chapter: 13
+slug: ch13-trust-and-model-diversity
+title: "검증 게이트와 모델 다양성으로 신뢰성 확보"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null

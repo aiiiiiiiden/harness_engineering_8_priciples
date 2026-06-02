@@ -1,13 +1,13 @@
 ---
-part: 3
-chapter: 16
-slug: ch16-single-source-of-truth
-title: "진실의 원천(SoT) 설계하기"
+part: 2
+chapter: 5
+slug: ch05-principle2-make-app-legible
+title: "원칙 2 — 애플리케이션을 에이전트가 읽게 하라"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  []
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-<!-- toc.json의 official_links만 사용 -->
+- https://openai.com/index/harness-engineering/
