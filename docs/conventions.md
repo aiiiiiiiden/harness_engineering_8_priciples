@@ -6,10 +6,10 @@
 
 ## 1. 대상 독자와 톤
 
-- **독자**: LLM 에이전트·AI 앱을 만드는 **개발자**(주니어~미드 레벨). 파이썬/JS를 읽을 수 있고, LLM API를 한 번쯤 호출해 봤다.
-- **약속**: "데모는 되는데 프로덕션에서 무너지는 에이전트"를, **12가지 원칙으로 신뢰할 수 있는 하네스**로 바꾼다.
+- **독자**: 에이전트가 일하는 코드베이스를 만드는 **개발자**(주니어~미드 레벨). 파이썬/JS를 읽을 수 있고, 코딩 에이전트(Codex·Claude Code 등)를 한 번쯤 써 봤다.
+- **약속**: "에이전트한테 시켰더니 엉망이 되는 코드베이스"를, **하네스 엔지니어링 8원칙으로 에이전트가 안정적으로 일하는 환경**으로 바꾼다.
 - **톤**: 명확한 존댓말. 개념은 **한 줄 정의 + 구체 예시(코드/의사코드)** 로. 추상적 훈계 금지.
-- **금지**: 출처 없는 단정, "그냥 이렇게 하면 됩니다"식 생략, 검증 안 된 주장. 모든 factor 설명은 정본(`docs/verified-facts.md`)과 일치.
+- **금지**: 출처 없는 단정, "그냥 이렇게 하면 됩니다"식 생략, 검증 안 된 주장. 모든 원칙 설명은 정본(`docs/verified-facts.md`)과 일치.
 - **자기참조 활용**: 이 레포 자체가 하나의 하네스다. 가능하면 추상 개념을 **이 레포의 실제 파일**(`toc.json`, `verify.py`, `crosscheck.py` 등)로 예시한다. 단 이는 4부에서 본격적으로, 본문 전반에서는 보조적으로만.
 
 ## 2. 파일·디렉토리 규약
@@ -45,13 +45,13 @@
 ---
 part: 2                       # 정수 또는 "부록"
 chapter: 5                    # 정수 또는 "A"~"C"
-slug: ch05-factor02-own-your-prompts
-title: "Factor 2 — 프롬프트를 직접 소유하라"
+slug: ch05-principle2-make-app-legible
+title: "원칙 2 — 애플리케이션을 에이전트가 읽게 하라"
 status: skeleton              # skeleton | draft | reviewed | published
 wikidocs_page_id: null        # push 후 채움
 parent_page_id: null          # 소속 '부' 페이지 id
 official_links:               # toc.json과 일치해야 함
-  - https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-02-own-your-prompts.md
+  - https://openai.com/index/harness-engineering/
 last_verified: null           # 사실 검증 완료일 (YYYY-MM-DD)
 crosscheck: null              # null | pass | fail  ← crosscheck.py가 자동 기록
 crosscheck_date: null         # codex 교차검증 실행일 (YYYY-MM-DD)
@@ -83,20 +83,21 @@ humanized_date: null          # 문체 윤문 완료일 (YYYY-MM-DD)
 | 표준어 | 쓰지 말 것 |
 |---|---|
 | 하네스(harness) | 래퍼, 프레임워크(맥락상 구분), 껍데기 |
+| 코딩 에이전트 | AI, 봇(맥락상 구분) |
 | 컨텍스트 윈도 | 컨텍스트 창, 윈도우 |
-| 도구 호출(tool call) | 함수 호출(LLM 맥락에선 혼란), 툴콜 |
-| 구조화 출력 | 정형 출력, structured output(본문 한글 우선) |
-| 12가지 원칙 / 12 Factor | 12계명, 12법칙 |
-| 무상태(stateless) | 스테이트리스(본문 한글 우선) |
+| 가독성(legibility) | 판독성, 읽힘성(혼용 금지) |
+| 기계적 강제(mechanical enforcement) | 자동 검사(좁음), 강제화 |
+| 기록 시스템(system of record) | 기록 체계, SoR(본문 한글 우선) |
+| 불변식(invariant) | 불변 조건(혼용 가능하나 '불변식' 우선) |
 | 진실의 원천(SoT) | 단일 진실 공급원(장황) |
 
-> factor의 한국어 표준 번역은 `docs/verified-facts.md` §2가 마스터. 용어 사전은 부록 B(`appendix-b-glossary`)가 마스터.
+> 8원칙의 한국어 표준 번역은 `docs/verified-facts.md` §2가 마스터. 용어 사전은 부록 B(`appendix-b-glossary`)가 마스터.
 
 ## 6. 사실·출처 규약
 
-- factor 번호·이름·정의·순서, 출처·명칭은 **반드시** `docs/verified-facts.md`와 일치.
-- 코드 예시(에이전트 루프·도구 스키마 등)의 API 정확성은 **context7 MCP**로 교차 확인 후 `last_verified` 갱신.
-- 정본에 없는 주장(예: "13번째 factor")은 **비정본임을 명시**한다.
+- 원칙 번호·이름·정의·순서, 출처·명칭은 **반드시** `docs/verified-facts.md`와 일치.
+- 코드 예시(린터·구조적 테스트·관측성·도구 스키마 등)의 API 정확성은 **context7 MCP**로 교차 확인 후 `last_verified` 갱신.
+- **8원칙은 이 책이 정본에서 도출한 커리큘럼**이다. 정본(OpenAI)은 원칙을 번호로 명시하지 않으므로, 본문은 "정본이 정한 8원칙"이 아니라 **"정본에서 도출한 8원칙"** 으로 제시하고 각 원칙을 정본 절에 접지한다.
 
 ## 7. 도구 노출 규약
 

@@ -53,13 +53,13 @@ SCHEMA = {
     },
 }
 
-PROMPT_TMPL = """너는 한국어 기술서 **"12-Factor Agents로 배우는 하네스 엔지니어링"**(개발자 대상)의 **독립 기술 검수자**다.
+PROMPT_TMPL = """너는 한국어 기술서 **"하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기"**(개발자 대상)의 **독립 기술 검수자**다.
 아래 원고의 **기술적 사실만** 검증하라. 문체·톤·맞춤법은 절대 언급하지 마라.
 
 검증 대상:
-- 12-Factor Agents의 **factor 번호·이름·정의·순서** (정본: github.com/humanlayer/12-factor-agents, HumanLayer/Dexter Horthy).
-- 출처·명칭 (누가 만들었는가, 12-Factor App과의 관계 등).
-- 코드/의사코드의 정확성(에이전트 루프·도구 스키마·구조화 출력 등), API·CLI·도메인 표기.
+- 하네스 엔지니어링 **원칙의 번호·이름·정의·순서** (정본: OpenAI "Harness Engineering", openai.com/index/harness-engineering, Ryan Lopopolo, 2026-02-11).
+- 출처·명칭·실험 사실 (빈 레포→100만 줄, Codex, "사람이 조종·에이전트가 실행" 등). ⚠️ 정본은 원칙을 번호로 명시하지 않으므로, 원고가 "정본이 정한 N원칙"으로 단정하면 incorrect, "정본에서 도출한 8원칙"으로 표기하면 correct로 본다.
+- 코드/의사코드의 정확성(린터·구조적 테스트·관측성·도구 스키마 등), API·CLI·도메인 표기.
 
 기준이 되는 '검증된 사실 레지스트리'(이것과 어긋나면 incorrect):
 <verified_facts>
@@ -89,10 +89,11 @@ def run_codex(prompt: str, schema_path: str, out_path: str, model: str | None) -
     return proc.returncode, proc.stderr
 
 
-FACTS_PROMPT = """너는 한국어 기술서 "12-Factor Agents로 배우는 하네스 엔지니어링"의 **독립 기술 검수자**다.
+FACTS_PROMPT = """너는 한국어 기술서 "하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기"의 **독립 기술 검수자**다.
 아래는 이 책 전체가 사실의 기준으로 삼는 '검증된 사실 레지스트리'다.
-각 사실을 **공식 출처**(github.com/humanlayer/12-factor-agents, humanlayer.dev, 12factor.net, code.claude.com 등)에 비추어 검증하라.
-특히 factor의 번호·이름·정의·순서, 출처·저자, 12-Factor App과의 관계가 정확한지 본다.
+각 사실을 **공식 출처**(openai.com/index/harness-engineering, code.claude.com, modelcontextprotocol.io 등)에 비추어 검증하라.
+특히 하네스 엔지니어링 정본(OpenAI, Ryan Lopopolo, 2026-02-11)의 출처·저자·실험 사실, 그리고 8원칙의 이름·순서가 정본 절과 일치하는지 본다.
+⚠️ 정본은 원칙을 번호로 명시하지 않는다. 레지스트리가 8개를 "정본이 정한 것"으로 단정하면 incorrect, "이 책이 정본 절에서 도출한 것"으로 명시하면 correct로 본다.
 값이 틀렸거나, 옛 정보이거나, 출처상 확인되지 않으면 incorrect/uncertain으로 표시하고 evidence에 근거 URL을, fix에 올바른 값을 적어라.
 맞으면 correct. 추측으로 correct 처리하지 마라. claim에는 검증한 항목(key 또는 한 줄 요약)을 넣어라.
 

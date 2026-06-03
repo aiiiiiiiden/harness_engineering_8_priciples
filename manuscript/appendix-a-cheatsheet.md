@@ -2,12 +2,12 @@
 part: 부록
 chapter: A
 slug: appendix-a-cheatsheet
-title: "12 Factors 치트시트 (한 장 요약)"
+title: "8원칙 치트시트 (한 장 요약)"
 status: skeleton
 wikidocs_page_id: null
 parent_page_id: null
 official_links:
-  - https://github.com/humanlayer/12-factor-agents
+  - https://openai.com/index/harness-engineering/
 last_verified: null
 crosscheck: null
 crosscheck_date: null
@@ -41,4 +41,4 @@ humanized_date: null
 
 ## 공식 출처
 
-- https://github.com/humanlayer/12-factor-agents
+- https://openai.com/index/harness-engineering/

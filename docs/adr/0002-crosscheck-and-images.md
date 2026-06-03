@@ -5,18 +5,18 @@
 
 ## 맥락
 
-이 책의 신뢰도는 (1) **factor 정의·출처·코드의 사실 정확성**과 (2) 개념을 풀어주는 **이미지**가 좌우한다. 집필을 Claude 한 모델이 하면 그 모델의 사각지대(예: factor 번호·순서 혼동, 출처 오귀속)가 그대로 책에 남고, 이미지를 AI 래스터로 생성하면 재현·수정·일관성이 깨진다.
+이 책의 신뢰도는 (1) **8원칙 정의·출처·코드의 사실 정확성**과 (2) 개념을 풀어주는 **이미지**가 좌우한다. 집필을 Claude 한 모델이 하면 그 모델의 사각지대(예: 원칙 순서 혼동, 출처 오귀속, 정본이 명시 안 한 카운트를 단정)가 그대로 책에 남고, 이미지를 AI 래스터로 생성하면 재현·수정·일관성이 깨진다.
 
-> 메타: 교차검증은 곧 **Factor 4(구조화 출력)·7(사람/외부와 도구로 소통)**, 이미지 파이프라인은 **Factor 8(제어 흐름 소유)·결정론**의 예제다.
+> 메타: 교차검증은 곧 **원칙 5(기계적 강제)·7(자율 루프의 피드백)**, 이미지 파이프라인은 **원칙 4(에이전트 가독성)·결정론**의 예제다.
 
 ## 결정
 
 ### 1. 교차 검증 = 독립 모델(codex)
-- 집필(Claude) 외에 **codex CLI**(`codex exec`)로 기술 사실을 독립 검증한다 → 모델 다양성으로 사각지대를 줄인다. 특히 **factor 번호·이름·정의·순서**와 출처·명칭을 점검.
+- 집필(Claude) 외에 **codex CLI**(`codex exec`)로 기술 사실을 독립 검증한다 → 모델 다양성으로 사각지대를 줄인다. 특히 **원칙 번호·이름·정의·순서**와 출처·명칭, 그리고 "정본에서 도출한 8원칙"이라는 비정본 카운트 표기를 점검.
 - 신뢰성 장치: `--output-schema`(JSON Schema 강제) + `-o`(최종 메시지 파일) + `sandbox_mode=read-only`(원고 수정 불가) + stdin DEVNULL(멈춤 방지).
 - `scripts/crosscheck.py`가 원고 본문 + `verified-facts.md`를 codex에 넘겨 `{verdict, severity, evidence, fix}` 배열을 받는다. 결과는 `.harness-cache/crosscheck/<slug>.json`.
-- **reviewed 게이트 = 3중**: `verify.py`(기계) + `md-doc-reviewer`(Claude) + `crosscheck.py`(codex). 셋이 합의해야 reviewed. 통과 시 front-matter `crosscheck: pass`를 자동 도장 → 없으면 `verify.py`가 발행을 막는다.
-- 두 모델이 엇갈리면 정본(github.com/humanlayer/12-factor-agents)을 근거로 사람이 결정한다.
+- **reviewed 게이트 = 4중**: `verify.py`(기계) + `md-doc-reviewer`(Claude) + `crosscheck.py`(codex) + `/humanize`(문체). 넷이 합의해야 reviewed. 통과 시 front-matter `crosscheck: pass`·`humanized: pass`를 자동 도장 → 없으면 `verify.py`가 발행을 막는다.
+- 두 모델이 엇갈리면 정본(openai.com/index/harness-engineering)을 근거로 사람이 결정한다.
 
 ### 2. 이미지 = 코드(SVG) → 결정론적 렌더
 - 개념 다이어그램(에이전트 루프·상태 통합·reducer 등)은 **AI 래스터 생성 금지**. `assets/diagrams/<slug>/*.svg`를 코드로 작성(진실의 원천).
@@ -37,5 +37,5 @@
 
 ## 영향
 
-- 집필 비용에 codex 1회 호출(수십 초~수 분)이 추가되나, factor를 틀리게 가르치는 비용보다 싸다.
+- 집필 비용에 codex 1회 호출(수십 초~수 분)이 추가되나, 원칙을 틀리게 가르치는 비용보다 싸다.
 - `.harness-cache/`는 gitignore(검증 산출물). 다이어그램 SVG와 렌더 PNG는 커밋(리뷰 가시성).

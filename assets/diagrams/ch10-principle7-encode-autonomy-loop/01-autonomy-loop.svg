@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Apple SD Gothic Neo, sans-serif">
+  <defs>
+    <marker id="ok" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.5,3 L0,6 Z" fill="#36B37E"/>
+    </marker>
+    <marker id="loop" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.5,3 L0,6 Z" fill="#2D6CDF"/>
+    </marker>
+    <marker id="esc" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.5,3 L0,6 Z" fill="#5B6B7A"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="640" fill="#F7F9FC"/>
+
+  <text x="600" y="48" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">원칙 7 — 한 프롬프트가 닫힌 자율 루프를 돈다</text>
+  <text x="600" y="80" text-anchor="middle" font-size="16" fill="#5B6B7A">검증·복구가 인코딩돼 있어야 루프가 끊기지 않는다 · 사람은 판단에만</text>
+
+  <!-- 사람 에스컬레이션 박스 -->
+  <rect x="845" y="112" width="300" height="62" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3" stroke-dasharray="8 6"/>
+  <text x="995" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">사람 — 판단 필요할 때만</text>
+  <text x="995" y="160" text-anchor="middle" font-size="13" fill="#5B6B7A">에스컬레이션 (원칙 1)</text>
+
+  <!-- 프롬프트 입력 -->
+  <text x="48" y="234" font-size="14" font-weight="700" fill="#2D6CDF">프롬프트</text>
+  <line x1="48" y1="244" x2="48" y2="270" stroke="#2D6CDF" stroke-width="5" marker-end="url(#loop)"/>
+
+  <!-- 단계 박스 5개 -->
+  <rect x="40" y="278" width="190" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <text x="135" y="314" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">상태 검증 · 계획</text>
+  <text x="135" y="338" text-anchor="middle" font-size="12.5" fill="#5B6B7A">(원칙 1 · 4)</text>
+
+  <rect x="270" y="278" width="170" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <text x="355" y="326" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">구현</text>
+
+  <rect x="480" y="278" width="200" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <text x="580" y="314" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">검증 — 앱 실행·테스트</text>
+  <text x="580" y="338" text-anchor="middle" font-size="12.5" fill="#5B6B7A">(원칙 2)</text>
+
+  <rect x="720" y="278" width="180" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <text x="810" y="314" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">강제 — 린터·테스트</text>
+  <text x="810" y="338" text-anchor="middle" font-size="12.5" fill="#5B6B7A">(원칙 5)</text>
+
+  <rect x="940" y="278" width="210" height="86" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
+  <text x="1045" y="314" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">PR → ✓ 병합</text>
+  <text x="1045" y="338" text-anchor="middle" font-size="12.5" fill="#5B6B7A">(원칙 6)</text>
+
+  <!-- 전진 화살표 (초록) -->
+  <line x1="230" y1="321" x2="266" y2="321" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="440" y1="321" x2="476" y2="321" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="680" y1="321" x2="716" y2="321" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="900" y1="321" x2="936" y2="321" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+
+  <!-- 에스컬레이션 화살표 (PR 박스에서 위로) -->
+  <line x1="1045" y1="278" x2="1045" y2="178" stroke="#5B6B7A" stroke-width="5" stroke-dasharray="7 6" marker-end="url(#esc)"/>
+
+  <!-- 복구 루프 (PR 영역 → 검증으로 되돌아감, 파랑) -->
+  <path d="M 1045 364 C 1045 470, 580 470, 580 368" fill="none" stroke="#2D6CDF" stroke-width="5" stroke-dasharray="2 0" marker-end="url(#loop)"/>
+  <text x="812" y="500" text-anchor="middle" font-size="15" font-weight="700" fill="#2D6CDF">복구: 빌드 실패 감지 → 자가 수정 → 다시 검증</text>
+
+  <!-- 하단 핵심 -->
+  <text x="600" y="588" text-anchor="middle" font-size="16" fill="#1B2733">자율은 <tspan font-weight="700" fill="#E5484D">모델 신뢰</tspan>가 아니라 <tspan font-weight="700" fill="#2D6CDF">인코딩된 검증·복구 루프</tspan>의 결과 — 한 단계라도 끊기면 거기서 사람을 기다린다</text>
+</svg>
