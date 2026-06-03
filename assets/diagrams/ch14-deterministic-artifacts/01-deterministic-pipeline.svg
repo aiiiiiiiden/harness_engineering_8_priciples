@@ -1,74 +1,91 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" font-family="Apple SD Gothic Neo, sans-serif">
   <defs>
-    <marker id="ok" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#36B37E"/>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#2D6CDF"/>
     </marker>
-    <marker id="loop" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#2D6CDF"/>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#36B37E"/>
     </marker>
-    <marker id="esc" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#5B6B7A"/>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#5B6B7A"/>
     </marker>
-    <marker id="block" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#E5484D"/>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#E5484D"/>
     </marker>
   </defs>
 
   <rect x="0" y="0" width="1200" height="660" fill="#F7F9FC"/>
 
+  <g fill="#2D6CDF" opacity="0.16">
+    <circle cx="72" cy="96" r="2"/>
+    <circle cx="98" cy="138" r="1.8"/>
+    <circle cx="1088" cy="98" r="2"/>
+    <circle cx="1124" cy="146" r="1.8"/>
+    <circle cx="92" cy="560" r="2"/>
+    <circle cx="1110" cy="552" r="2"/>
+    <circle cx="1142" cy="590" r="1.7"/>
+  </g>
+
   <text x="600" y="48" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">결정론적 산출물 — 소스에서 재현 가능한 파생으로</text>
   <text x="600" y="80" text-anchor="middle" font-size="16" fill="#5B6B7A">같은 소스면 같은 산출물. 코드가 진실의 원천, PNG·타입·SDK는 파생</text>
 
-  <rect x="120" y="108" width="960" height="74" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3" stroke-dasharray="8 6"/>
-  <text x="254" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#2D6CDF">소스(코드, SoT)</text>
-  <rect x="462" y="121" width="176" height="40" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="550" y="146" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">생성기(결정론적)</text>
-  <text x="887" y="139" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">산출물(파생, 재생성 가능)</text>
-  <line x1="338" y1="141" x2="456" y2="141" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="644" y1="141" x2="772" y2="141" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <rect x="120" y="110" width="960" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2" stroke-dasharray="6 7"/>
+  <text x="150" y="130" font-size="10" font-weight="700" letter-spacing="1.6" fill="#5B6B7A">SOURCE ┄ GENERATOR ┄ ARTIFACT</text>
+  <text x="254" y="145" text-anchor="middle" font-size="15" font-weight="700" fill="#2D6CDF">소스(코드, SoT)</text>
+  <rect x="462" y="123" width="176" height="40" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="550" y="148" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">생성기(결정론적)</text>
+  <text x="887" y="145" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">산출물(파생, 재생성 가능)</text>
+  <line x1="338" y1="143" x2="456" y2="143" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="644" y1="143" x2="772" y2="143" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
 
-  <rect x="94" y="220" width="250" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <g>
+    <text x="94" y="209" font-size="10" font-weight="700" letter-spacing="1.5" fill="#5B6B7A">FROM SOURCE</text>
+    <text x="455" y="209" font-size="10" font-weight="700" letter-spacing="1.5" fill="#5B6B7A">THROUGH</text>
+    <text x="742" y="209" font-size="10" font-weight="700" letter-spacing="1.5" fill="#5B6B7A">TO ARTIFACT</text>
+  </g>
+
+  <rect x="94" y="220" width="250" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="219" y="261" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2733">diagram.svg</text>
-  <rect x="455" y="226" width="170" height="60" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <rect x="455" y="226" width="170" height="60" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="540" y="261" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">렌더</text>
-  <rect x="742" y="220" width="320" height="72" rx="16" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="3"/>
+  <rect x="742" y="220" width="320" height="72" rx="16" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="2"/>
   <text x="902" y="261" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2733">diagram.png</text>
-  <line x1="344" y1="256" x2="449" y2="256" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="625" y1="256" x2="736" y2="256" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="344" y1="256" x2="449" y2="256" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="625" y1="256" x2="736" y2="256" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
 
-  <rect x="94" y="320" width="250" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <rect x="94" y="320" width="250" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="219" y="361" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2733">schema.sql</text>
-  <rect x="455" y="326" width="170" height="60" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <rect x="455" y="326" width="170" height="60" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="540" y="361" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">codegen</text>
-  <rect x="742" y="320" width="320" height="72" rx="16" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="3"/>
+  <rect x="742" y="320" width="320" height="72" rx="16" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="2"/>
   <text x="902" y="361" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2733">types.ts / 문서</text>
-  <line x1="344" y1="356" x2="449" y2="356" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="625" y1="356" x2="736" y2="356" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="344" y1="356" x2="449" y2="356" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="625" y1="356" x2="736" y2="356" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
 
-  <rect x="94" y="420" width="250" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <rect x="94" y="420" width="250" height="72" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="219" y="461" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2733">openapi.yaml</text>
-  <rect x="455" y="426" width="170" height="60" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
+  <rect x="455" y="426" width="170" height="60" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="540" y="461" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">gen</text>
-  <rect x="742" y="420" width="320" height="72" rx="16" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="3"/>
+  <rect x="742" y="420" width="320" height="72" rx="16" fill="#FFFFFF" stroke="#5B6B7A" stroke-width="2"/>
   <text x="902" y="452" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">클라이언트 SDK</text>
   <text x="902" y="474" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">/ API 문서</text>
-  <line x1="344" y1="456" x2="449" y2="456" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="625" y1="456" x2="736" y2="456" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="344" y1="456" x2="449" y2="456" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <line x1="625" y1="456" x2="736" y2="456" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
 
-  <path d="M 902 492 C 902 520, 600 512, 600 535" fill="none" stroke="#5B6B7A" stroke-width="5" stroke-dasharray="7 6" marker-end="url(#esc)"/>
+  <path d="M 902 492 C 902 520, 600 512, 600 535" fill="none" stroke="#5B6B7A" stroke-width="2.5" stroke-dasharray="6 7" marker-end="url(#arrowGray)"/>
   <text x="786" y="521" text-anchor="middle" font-size="13" font-weight="700" fill="#5B6B7A">CI에서 다시 생성 후 diff</text>
 
-  <rect x="384" y="535" width="432" height="76" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3" stroke-dasharray="8 6"/>
+  <rect x="384" y="535" width="432" height="76" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2" stroke-dasharray="6 7"/>
   <text x="600" y="565" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">재생성한 산출물 == 커밋된 산출물?</text>
   <text x="600" y="590" text-anchor="middle" font-size="13.5" fill="#5B6B7A">점검 루프(게이트) · 원칙 5</text>
 
-  <rect x="870" y="540" width="130" height="50" rx="14" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
+  <rect x="870" y="540" width="130" height="50" rx="14" fill="#FFFFFF" stroke="#36B37E" stroke-width="2"/>
   <text x="935" y="571" text-anchor="middle" font-size="16" font-weight="700" fill="#36B37E">일치: 통과</text>
-  <line x1="816" y1="573" x2="864" y2="573" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <line x1="816" y1="573" x2="864" y2="573" stroke="#36B37E" stroke-width="3" marker-end="url(#arrowGreen)"/>
 
-  <rect x="200" y="540" width="130" height="50" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="3"/>
+  <rect x="200" y="540" width="130" height="50" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
   <text x="265" y="571" text-anchor="middle" font-size="16" font-weight="700" fill="#E5484D">불일치: 차단</text>
-  <line x1="384" y1="573" x2="336" y2="573" stroke="#E5484D" stroke-width="6" marker-end="url(#block)"/>
+  <line x1="384" y1="573" x2="336" y2="573" stroke="#E5484D" stroke-width="3" marker-end="url(#arrowRed)"/>
 
   <text x="600" y="638" text-anchor="middle" font-size="16" fill="#1B2733">산출물을 손으로 고치지 말고 <tspan font-weight="700" fill="#2D6CDF">소스에서 결정론적으로 생성</tspan> — CI가 <tspan font-weight="700" fill="#36B37E">재생성 후 diff</tspan>로 <tspan font-weight="700" fill="#E5484D">드리프트를 차단</tspan>한다</text>
 </svg>

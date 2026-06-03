@@ -1,90 +1,127 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" font-family="Apple SD Gothic Neo, sans-serif">
   <defs>
-    <marker id="ok" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#36B37E"/>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#2D6CDF"/>
     </marker>
-    <marker id="loop" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#2D6CDF"/>
+    <marker id="arrow-ink" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#1B2733"/>
     </marker>
-    <marker id="esc" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#5B6B7A"/>
+    <marker id="arrow-ok" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#36B37E"/>
     </marker>
-    <marker id="block" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#E5484D"/>
+    <marker id="arrow-block" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#E5484D"/>
     </marker>
+    <style>
+      .title{font-size:27px;font-weight:700;fill:#1B2733}
+      .subtitle{font-size:16px;fill:#5B6B7A}
+      .box{fill:#FFFFFF;stroke:#2D6CDF;stroke-width:2}
+      .box-ink{fill:#FFFFFF;stroke:#1B2733;stroke-width:2}
+      .box-ok{fill:#FFFFFF;stroke:#36B37E;stroke-width:2.5}
+      .box-block{fill:#FFFFFF;stroke:#E5484D;stroke-width:2;stroke-dasharray:7 7}
+      .label{font-size:15.5px;font-weight:700;fill:#1B2733}
+      .small{font-size:12.5px;fill:#5B6B7A}
+      .micro{font-size:10.5px;font-weight:700;letter-spacing:.08em;fill:#5B6B7A}
+      .flow{fill:none;stroke:#2D6CDF;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+      .ok-flow{fill:none;stroke:#36B37E;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .block-flow{fill:none;stroke:#E5484D;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:6 7}
+      .dot{fill:#2D6CDF;opacity:.17}
+    </style>
   </defs>
 
   <rect x="0" y="0" width="1200" height="680" fill="#F7F9FC"/>
 
-  <text x="600" y="48" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">골든 워크플로우 — 구조에서 발행까지</text>
-  <text x="600" y="80" text-anchor="middle" font-size="16" fill="#5B6B7A">구조(SoT)에서 시작해 결정론 생성 + 4중 게이트를 통과해야 발행된다</text>
+  <g>
+    <circle class="dot" cx="58" cy="94" r="2"/>
+    <circle class="dot" cx="83" cy="124" r="1.7"/>
+    <circle class="dot" cx="112" cy="86" r="1.5"/>
+    <circle class="dot" cx="156" cy="118" r="2"/>
+    <circle class="dot" cx="1075" cy="92" r="1.8"/>
+    <circle class="dot" cx="1110" cy="127" r="2"/>
+    <circle class="dot" cx="1142" cy="88" r="1.5"/>
+    <circle class="dot" cx="1167" cy="132" r="1.7"/>
+  </g>
 
-  <rect x="34" y="276" width="166" height="92" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="117" y="315" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">docs/toc.json</text>
-  <text x="117" y="340" text-anchor="middle" font-size="13" fill="#5B6B7A">구조 SoT</text>
-  <text x="117" y="386" text-anchor="middle" font-size="12.5" fill="#5B6B7A">원칙 3 — 구조 단일 원천</text>
+  <text x="600" y="49" text-anchor="middle" class="title">골든 워크플로우 — 구조에서 발행까지</text>
+  <text x="600" y="80" text-anchor="middle" class="subtitle">구조(SoT)에서 시작해 결정론 생성 + 4중 게이트를 통과해야 발행된다</text>
 
-  <rect x="284" y="276" width="176" height="92" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="372" y="315" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">manuscript/*.md</text>
-  <text x="372" y="340" text-anchor="middle" font-size="13" fill="#5B6B7A">골격</text>
+  <rect x="42" y="274" width="164" height="98" rx="16" class="box"/>
+  <text x="124" y="314" text-anchor="middle" class="label">docs/toc.json</text>
+  <text x="124" y="338" text-anchor="middle" class="small">구조 SoT</text>
+  <text x="124" y="392" text-anchor="middle" class="small">원칙 3 — 구조 단일 원천</text>
 
-  <rect x="544" y="276" width="140" height="92" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="614" y="315" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">status:</text>
-  <text x="614" y="342" text-anchor="middle" font-size="18" font-weight="700" fill="#36B37E">draft</text>
+  <rect x="292" y="274" width="176" height="98" rx="16" class="box"/>
+  <text x="380" y="315" text-anchor="middle" class="label">manuscript/*.md</text>
+  <text x="380" y="340" text-anchor="middle" class="small">골격</text>
 
-  <line x1="200" y1="322" x2="280" y2="322" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <text x="240" y="296" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1B2733">scaffold.py</text>
-  <text x="240" y="385" text-anchor="middle" font-size="12.5" fill="#5B6B7A">결정론 생성 · 14장</text>
+  <rect x="548" y="274" width="142" height="98" rx="16" class="box-ink"/>
+  <text x="619" y="315" text-anchor="middle" class="label">status:</text>
+  <text x="619" y="342" text-anchor="middle" font-size="18" font-weight="700" fill="#1B2733">draft</text>
 
-  <line x1="460" y1="322" x2="540" y2="322" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <text x="500" y="296" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1B2733">집필</text>
+  <path d="M206 323 H288" class="flow" marker-end="url(#arrow-blue)"/>
+  <text x="247" y="296" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1B2733">scaffold.py</text>
+  <text x="247" y="392" text-anchor="middle" class="small">결정론 생성 · 14장</text>
 
-  <rect x="720" y="124" width="270" height="410" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3" stroke-dasharray="8 6"/>
-  <text x="855" y="154" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">4중 검증 게이트</text>
-  <text x="855" y="177" text-anchor="middle" font-size="13" fill="#5B6B7A">직렬이 아니라 모두 통과해야 합류</text>
+  <path d="M468 323 H544" class="flow" marker-end="url(#arrow-blue)"/>
+  <text x="506" y="296" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1B2733">집필</text>
 
-  <rect x="745" y="204" width="220" height="58" rx="14" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="855" y="229" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">1) verify.py</text>
-  <text x="855" y="249" text-anchor="middle" font-size="12.5" fill="#5B6B7A">기계·결정론 · 원칙 5</text>
+  <rect x="724" y="122" width="270" height="414" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2" stroke-dasharray="7 8"/>
+  <text x="859" y="154" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">4중 검증 게이트</text>
+  <text x="859" y="178" text-anchor="middle" font-size="13" fill="#5B6B7A">직렬이 아니라 모두 통과해야 합류</text>
 
-  <rect x="745" y="282" width="220" height="58" rx="14" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="855" y="306" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">2) md-doc-reviewer</text>
-  <text x="855" y="326" text-anchor="middle" font-size="12.5" fill="#5B6B7A">같은 모델 심층 검수</text>
+  <rect x="748" y="204" width="222" height="58" rx="14" class="box"/>
+  <text x="859" y="229" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">1) verify.py</text>
+  <text x="859" y="249" text-anchor="middle" class="small">기계·결정론 · 원칙 5</text>
 
-  <rect x="745" y="360" width="220" height="68" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="855" y="386" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">3) crosscheck.py</text>
-  <text x="855" y="407" text-anchor="middle" font-size="12.5" fill="#2D6CDF">codex = 독립 모델 교차검증</text>
-  <text x="855" y="423" text-anchor="middle" font-size="11.5" fill="#5B6B7A">원칙 1 · 13장 — 모델 다양성</text>
+  <rect x="748" y="282" width="222" height="58" rx="14" class="box"/>
+  <text x="859" y="306" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">2) md-doc-reviewer</text>
+  <text x="859" y="326" text-anchor="middle" class="small">같은 모델 심층 검수</text>
 
-  <rect x="745" y="448" width="220" height="58" rx="14" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="855" y="472" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">4) humanize</text>
-  <text x="855" y="492" text-anchor="middle" font-size="12.5" fill="#5B6B7A">문체 윤문</text>
+  <rect x="748" y="360" width="222" height="68" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2.5"/>
+  <text x="859" y="386" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">3) crosscheck.py</text>
+  <text x="859" y="407" text-anchor="middle" font-size="12.5" font-weight="700" fill="#2D6CDF">codex = 독립 모델 교차검증</text>
+  <text x="859" y="423" text-anchor="middle" font-size="11.5" fill="#5B6B7A">원칙 1 · 13장 — 모델 다양성</text>
 
-  <path d="M 684 322 C 704 322, 704 233, 741 233" fill="none" stroke="#36B37E" stroke-width="5" marker-end="url(#ok)"/>
-  <path d="M 684 322 C 704 322, 704 311, 741 311" fill="none" stroke="#36B37E" stroke-width="5" marker-end="url(#ok)"/>
-  <path d="M 684 322 C 704 322, 704 394, 741 394" fill="none" stroke="#36B37E" stroke-width="5" marker-end="url(#ok)"/>
-  <path d="M 684 322 C 704 322, 704 477, 741 477" fill="none" stroke="#36B37E" stroke-width="5" marker-end="url(#ok)"/>
+  <rect x="748" y="448" width="222" height="58" rx="14" class="box"/>
+  <text x="859" y="472" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">4) humanize</text>
+  <text x="859" y="492" text-anchor="middle" class="small">문체 윤문</text>
 
-  <path d="M 965 233 C 995 233, 1000 322, 1020 322" fill="none" stroke="#36B37E" stroke-width="5"/>
-  <path d="M 965 311 C 995 311, 1000 322, 1020 322" fill="none" stroke="#36B37E" stroke-width="5"/>
-  <path d="M 965 394 C 995 394, 1000 322, 1020 322" fill="none" stroke="#36B37E" stroke-width="5"/>
-  <path d="M 965 477 C 995 477, 1000 322, 1020 322" fill="none" stroke="#36B37E" stroke-width="5"/>
-  <line x1="1020" y1="322" x2="1032" y2="322" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
+  <path d="M690 323 C711 323 710 233 744 233" class="flow" marker-end="url(#arrow-blue)"/>
+  <path d="M690 323 C711 323 710 311 744 311" class="flow" marker-end="url(#arrow-blue)"/>
+  <path d="M690 323 C711 323 710 394 744 394" class="flow" marker-end="url(#arrow-blue)"/>
+  <path d="M690 323 C711 323 710 477 744 477" class="flow" marker-end="url(#arrow-blue)"/>
 
-  <rect x="1036" y="276" width="132" height="92" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="1102" y="315" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">status:</text>
-  <text x="1102" y="342" text-anchor="middle" font-size="18" font-weight="700" fill="#36B37E">reviewed</text>
+  <path d="M970 233 C1000 233 1002 323 1025 323" class="ok-flow"/>
+  <path d="M970 311 C1000 311 1002 323 1025 323" class="ok-flow"/>
+  <path d="M970 394 C1000 394 1002 323 1025 323" class="ok-flow"/>
+  <path d="M970 477 C1000 477 1002 323 1025 323" class="ok-flow"/>
+  <path d="M1025 323 H1038" class="ok-flow" marker-end="url(#arrow-ok)"/>
+  <text x="1018" y="304" text-anchor="middle" font-size="12.5" font-weight="700" fill="#36B37E">모두 통과 합류</text>
 
-  <rect x="1036" y="454" width="132" height="82" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="1102" y="488" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">발행</text>
-  <text x="1102" y="513" text-anchor="middle" font-size="13" fill="#5B6B7A">wikidocs</text>
+  <rect x="1042" y="274" width="132" height="98" rx="16" class="box-ok"/>
+  <text x="1108" y="315" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">status:</text>
+  <text x="1108" y="342" text-anchor="middle" font-size="18" font-weight="700" fill="#36B37E">reviewed</text>
 
-  <line x1="1102" y1="368" x2="1102" y2="450" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <text x="1136" y="416" text-anchor="middle" font-size="12.5" fill="#36B37E">통과</text>
+  <rect x="1042" y="456" width="132" height="82" rx="16" class="box-ok"/>
+  <text x="1108" y="490" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">발행</text>
+  <text x="1108" y="515" text-anchor="middle" font-size="13" fill="#5B6B7A">wikidocs</text>
 
-  <rect x="722" y="558" width="268" height="48" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="3" stroke-dasharray="8 6"/>
-  <text x="856" y="588" text-anchor="middle" font-size="15" font-weight="700" fill="#E5484D">하나라도 실패하면 차단</text>
-  <line x1="855" y1="534" x2="855" y2="554" stroke="#E5484D" stroke-width="5" stroke-dasharray="7 6" marker-end="url(#block)"/>
+  <path d="M1108 372 V452" class="ok-flow" marker-end="url(#arrow-ok)"/>
+  <text x="1138" y="419" text-anchor="middle" font-size="12.5" font-weight="700" fill="#36B37E">통과</text>
 
-  <text x="600" y="645" text-anchor="middle" font-size="16" fill="#1B2733">구조가 <tspan font-weight="700" fill="#2D6CDF">진실의 원천</tspan> — <tspan font-weight="700" fill="#36B37E">결정론 생성</tspan>과 <tspan font-weight="700" fill="#2D6CDF">4중 게이트(기계·Claude·codex·문체)</tspan>를 통과한 것만 발행된다</text>
+  <rect x="724" y="560" width="270" height="48" rx="14" class="box-block"/>
+  <text x="859" y="589" text-anchor="middle" font-size="15" font-weight="700" fill="#E5484D">하나라도 실패하면 차단</text>
+  <path d="M859 536 V556" class="block-flow" marker-end="url(#arrow-block)"/>
+
+  <g>
+    <text x="86" y="622" class="micro">STRUCTURE(SOT)</text>
+    <path d="M190 618 C330 618 428 618 548 618" fill="none" stroke="#5B6B7A" stroke-width="1.4" stroke-dasharray="2 8" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+    <text x="568" y="622" class="micro">GATES</text>
+    <path d="M615 618 C755 618 880 618 1050 618" fill="none" stroke="#5B6B7A" stroke-width="1.4" stroke-dasharray="2 8" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+    <text x="1072" y="622" class="micro">PUBLISHED</text>
+  </g>
+
+  <text x="600" y="653" text-anchor="middle" font-size="15.5" fill="#1B2733">
+    구조가 <tspan font-weight="700" fill="#2D6CDF">진실의 원천</tspan> — <tspan font-weight="700" fill="#1B2733">결정론 생성</tspan>과 <tspan font-weight="700" fill="#2D6CDF">4중 게이트(기계·Claude·codex·문체)</tspan>를 <tspan font-weight="700" fill="#36B37E">통과한 것만 발행</tspan>된다
+  </text>
 </svg>

@@ -1,64 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="Apple SD Gothic Neo, sans-serif">
   <defs>
-    <marker id="ok" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#36B37E"/>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#2D6CDF"/>
     </marker>
-    <marker id="bad" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#E5484D"/>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#36B37E"/>
     </marker>
-    <marker id="prov" markerWidth="9" markerHeight="9" refX="6.5" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L6.5,3 L0,6 Z" fill="#2D6CDF"/>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6.4" refY="3.2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.4,3.2 L0,6.4 Z" fill="#E5484D"/>
     </marker>
   </defs>
 
   <rect x="0" y="0" width="1200" height="640" fill="#F7F9FC"/>
 
+  <g fill="#2D6CDF" opacity="0.18">
+    <circle cx="86" cy="106" r="2"/>
+    <circle cx="126" cy="118" r="2"/>
+    <circle cx="166" cy="98" r="2"/>
+    <circle cx="1012" cy="104" r="2"/>
+    <circle cx="1052" cy="118" r="2"/>
+    <circle cx="1092" cy="96" r="2"/>
+    <circle cx="948" cy="520" r="2"/>
+    <circle cx="988" cy="538" r="2"/>
+    <circle cx="1028" cy="516" r="2"/>
+  </g>
+
   <text x="600" y="50" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">원칙 5 — 한 방향 계층 + 단일 Providers, 나머지는 빌드가 막는다</text>
   <text x="600" y="82" text-anchor="middle" font-size="16" fill="#5B6B7A">허용된 에지만 통과 · 어긴 에지는 맞춤 린터·구조적 테스트가 차단</text>
 
-  <!-- 금지 에지: UI -> Repo (위로 휘는 빨간 점선) -->
-  <path d="M 1065 200 C 1065 110, 495 110, 495 200" fill="none" stroke="#E5484D" stroke-width="4" stroke-dasharray="9 7" marker-end="url(#bad)"/>
-  <text x="780" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#E5484D">✗ 금지 — UI가 Repo를 직접 호출 (린터가 빌드 실패)</text>
+  <path d="M1065 200 C1065 116, 495 116, 495 200" fill="none" stroke="#E5484D" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 8" marker-end="url(#arrow-red)"/>
+  <text x="780" y="132" text-anchor="middle" font-size="14.5" font-weight="700" fill="#E5484D">금지 — UI가 Repo를 직접 호출 (린터가 빌드 실패)</text>
 
-  <!-- 계층 박스 6개 (한 방향) -->
-  <!-- Types -->
-  <rect x="40" y="200" width="150" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="115" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">Types</text>
-  <!-- Config -->
-  <rect x="230" y="200" width="150" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="305" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">Config</text>
-  <!-- Repo -->
-  <rect x="420" y="200" width="150" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="495" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">Repo</text>
-  <!-- Service -->
-  <rect x="610" y="200" width="150" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="685" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">Service</text>
-  <!-- Runtime -->
-  <rect x="800" y="200" width="150" height="86" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="3"/>
-  <text x="875" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">Runtime</text>
-  <!-- UI -->
-  <rect x="990" y="200" width="150" height="86" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="3"/>
-  <text x="1065" y="250" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">UI</text>
+  <g font-size="11" font-weight="700" letter-spacing="1.4" fill="#5B6B7A" opacity="0.8">
+    <text x="115" y="186" text-anchor="middle">BASE</text>
+    <text x="495" y="186" text-anchor="middle">DATA</text>
+    <text x="875" y="186" text-anchor="middle">RUNTIME</text>
+    <text x="1065" y="186" text-anchor="middle">SURFACE</text>
+  </g>
 
-  <!-- 허용 화살표 (한 방향, 초록) -->
-  <line x1="190" y1="243" x2="226" y2="243" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="380" y1="243" x2="416" y2="243" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="570" y1="243" x2="606" y2="243" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="760" y1="243" x2="796" y2="243" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <line x1="950" y1="243" x2="986" y2="243" stroke="#36B37E" stroke-width="6" marker-end="url(#ok)"/>
-  <text x="115" y="330" text-anchor="middle" font-size="13.5" fill="#36B37E" font-weight="700">허용: 한 방향만</text>
+  <g fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2">
+    <rect x="40" y="200" width="150" height="86" rx="15"/>
+    <rect x="230" y="200" width="150" height="86" rx="15"/>
+    <rect x="420" y="200" width="150" height="86" rx="15"/>
+    <rect x="610" y="200" width="150" height="86" rx="15"/>
+    <rect x="800" y="200" width="150" height="86" rx="15"/>
+    <rect x="990" y="200" width="150" height="86" rx="15"/>
+  </g>
 
-  <!-- Providers (교차관심사 단일 인터페이스) -->
-  <rect x="330" y="430" width="540" height="120" rx="18" fill="#E8F0FD" stroke="#2D6CDF" stroke-width="3"/>
+  <g text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">
+    <text x="115" y="250">Types</text>
+    <text x="305" y="250">Config</text>
+    <text x="495" y="250">Repo</text>
+    <text x="685" y="250">Service</text>
+    <text x="875" y="250">Runtime</text>
+    <text x="1065" y="250">UI</text>
+  </g>
+
+  <g stroke="#36B37E" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-green)">
+    <line x1="191" y1="243" x2="225" y2="243"/>
+    <line x1="381" y1="243" x2="415" y2="243"/>
+    <line x1="571" y1="243" x2="605" y2="243"/>
+    <line x1="761" y1="243" x2="795" y2="243"/>
+    <line x1="951" y1="243" x2="985" y2="243"/>
+  </g>
+
+  <text x="115" y="326" text-anchor="middle" font-size="13.5" fill="#36B37E" font-weight="700">허용: 한 방향만</text>
+  <path d="M168 322 H254" fill="none" stroke="#36B37E" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.75"/>
+
+  <rect x="330" y="430" width="540" height="120" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
   <text x="600" y="466" text-anchor="middle" font-size="17" font-weight="700" fill="#1B2733">Providers — 교차관심사 단일 인터페이스</text>
   <text x="600" y="494" text-anchor="middle" font-size="14" font-family="ui-monospace, Menlo, monospace" fill="#5B6B7A">인증 · 텔레메트리 · 커넥터 · 기능 플래그</text>
   <text x="600" y="524" text-anchor="middle" font-size="13.5" fill="#2D6CDF">이 하나의 인터페이스로만 유입 — 직접 배선 금지</text>
 
-  <!-- Providers → 계층들 (교차, 파랑) -->
-  <line x1="500" y1="430" x2="495" y2="290" stroke="#2D6CDF" stroke-width="5" marker-end="url(#prov)"/>
-  <line x1="660" y1="430" x2="685" y2="290" stroke="#2D6CDF" stroke-width="5" marker-end="url(#prov)"/>
-  <line x1="740" y1="430" x2="875" y2="290" stroke="#2D6CDF" stroke-width="5" marker-end="url(#prov)"/>
+  <g stroke="#2D6CDF" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)">
+    <line x1="500" y1="430" x2="495" y2="291"/>
+    <line x1="660" y1="430" x2="685" y2="291"/>
+    <line x1="740" y1="430" x2="875" y2="291"/>
+  </g>
 
-  <!-- 하단 핵심 -->
-  <text x="600" y="600" text-anchor="middle" font-size="16" fill="#1B2733"><tspan font-weight="700">무엇을</tspan> 지킬지(계층·에지)는 고정, <tspan font-weight="700">어떻게</tspan>는 자율 — 위반은 문서가 아니라 <tspan font-weight="700" fill="#E5484D">빌드가</tspan> 막는다</text>
+  <g font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#5B6B7A">
+    <text x="362" y="411">FROM PROVIDERS</text>
+    <path d="M474 408 H520" fill="none" stroke="#5B6B7A" stroke-width="1.3" stroke-dasharray="3 5"/>
+    <text x="768" y="411">TO LAYERS</text>
+  </g>
+
+  <text x="600" y="600" text-anchor="middle" font-size="16" fill="#1B2733">
+    <tspan font-weight="700">무엇을</tspan><tspan> 지킬지(계층·에지)는 고정, </tspan><tspan font-weight="700">어떻게</tspan><tspan>는 자율 — 위반은 문서가 아니라 </tspan><tspan font-weight="700" fill="#E5484D">빌드가</tspan><tspan> 막는다</tspan>
+  </text>
 </svg>
