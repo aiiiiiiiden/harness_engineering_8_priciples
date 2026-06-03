@@ -16,6 +16,7 @@
 | `harness_eng_source` | `openai.com/index/harness-engineering/` | 정본(canonical) 출처. 발행일 2026-02-11 |
 | `harness_eng_philosophy` | **"사람이 조종하고, 에이전트가 실행한다"** (Humans steer, agents execute) | 정본의 핵심 한 줄. 모든 원칙의 뿌리 |
 | `harness_eng_experiment` | 빈 git 리포(2025-08 말 첫 커밋)에서 5개월간 **약 100만 줄**을 **Codex 에이전트만으로**(사람 손코딩 0줄) 구축. 수동 대비 **약 1/10 시간**으로 추정 | 엔지니어 3→7명, 약 1,500 PR, 내부 베타 출시·실사용. "약 1/10 시간"은 정본 추정치 |
+| `entropy_friday_cleanup` | 엔트로피 대응 초기엔 **매주 금요일(엔지니어링 시간의 약 20%)** 을 "AI 슬로프" 수동 정리에 썼으나 생성 속도를 못 따라가, **"황금 원칙" + 반복 Codex 정리 태스크**(doc-gardening)로 전환 | 정본 "Entropy and garbage collection" 절. 원칙 8(ch11)·부록 A 근거 |
 | `principle_count` | **8개** (이 책이 정본에서 도출) | ⚠️ 정본은 원칙을 번호로 명시하지 않는다. 8개 구분은 **이 책의 편집적 도출**이며 각 원칙은 정본의 특정 절·인용에 1:1 접지한다 |
 | `codex_name` | **OpenAI Codex** | 정본 실험의 코딩 에이전트. 사람은 거의 전적으로 프롬프트로만 상호작용 |
 | `ralph_wiggum_loop` | 에이전트 검토자가 모두 만족할 때까지 반복하는 피드백 루프 | 정본이 자기 PR 완성 과정을 "사실상 Ralph Wiggum Loop"라 부름 |
