@@ -32,6 +32,8 @@ docs/toc.json ─ scaffold.py ─▶ manuscript/*.md(골격) ─ 집필 ─▶ d
                                           status: reviewed ─▶ 발행(wikidocs)
 ```
 
+![골든 워크플로우 다이어그램: 구조의 진실의 원천인 toc.json에서 scaffold.py가 원고 골격을 결정론적으로 생성하고, 집필된 draft는 4중 검증 게이트(verify.py 기계검증·md-doc-reviewer·crosscheck.py codex 독립 모델·humanize 문체)를 모두 통과해야 reviewed가 되어 위키독스로 발행된다. 하나라도 실패하면 차단된다.](../assets/screenshots/ch16-harness-case-study/01-golden-workflow.png)
+
 각 부품은 앞 장의 원칙·패턴과 1:1로 대응합니다. `toc.json`은 구조의 진실의 원천(원칙 3, ch12)이고, `scaffold.py`는 거기서 골격을 *생성*하는 결정론적 산출물(ch14)이며, `verify.py`는 규약을 기계로 강제하고(원칙 5), `crosscheck.py`는 다른 모델로 사실을 교차검증합니다(원칙 1·ch13의 모델 다양성). 이 장은 그 부품들을 하나씩 뜯어봅니다.
 
 비유하면 **자기 설계도대로 지어진 집**입니다. 이 책은 8원칙을 설명하는데, 그 책을 만든 작업장 자체가 8원칙으로 지어졌습니다. 그래서 작업장을 구경하는 것이 곧 원칙의 실물을 보는 일입니다.
