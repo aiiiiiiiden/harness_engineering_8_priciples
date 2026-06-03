@@ -10,9 +10,9 @@ official_links:
   - https://code.claude.com/docs/en/sub-agents
 last_verified: 2026-06-02
 crosscheck: "pass"
-crosscheck_date: "2026-06-02"
+crosscheck_date: "2026-06-03"
 humanized: "pass"
-humanized_date: "2026-06-02"
+humanized_date: "2026-06-03"
 ---
 
 ## 이 장에서 배우는 것
@@ -57,7 +57,7 @@ humanized_date: "2026-06-02"
                  각 단계는 서브에이전트, 출력 요약만 다음으로 전달
 ```
 
-![멀티 에이전트 토폴로지 다이어그램: 오케스트레이터가 작업을 분해해 격리된 컨텍스트·제한 도구를 가진 서브에이전트 A·B·C로 병렬 팬아웃한 뒤 합류·중재로 결과를 모은다. 직렬 파이프라인은 탐지→변환→검증→게이트 통과? 순으로 흐르고, 통과 못하면 루프(원칙 7)로 되돌아간다. 각 단계는 서브에이전트이며 출력 요약만 다음으로 전달한다.](../assets/screenshots/ch15-multi-agent-orchestration/01-orchestration-topology.png)
+![오케스트레이터가 작업을 분해해 격리된 컨텍스트·제한 도구를 가진 서브에이전트 A·B·C로 병렬 팬아웃한 뒤 합류·중재로 결과를 모으는 토폴로지 그림. 직렬 파이프라인은 탐지→변환→검증→게이트 통과? 순으로 흐르고, 통과 못하면 루프(원칙 7)로 되돌아간다. 각 단계는 서브에이전트이며 출력 요약만 다음으로 전달한다.](../assets/screenshots/ch15-multi-agent-orchestration/01-orchestration-topology.png)
 
 핵심 규칙 셋입니다. (1) 역할마다 서브에이전트를 두고 커스텀 시스템 프롬프트와 제한된 도구를 준다 — 검증자에게 쓰기 권한을 주지 않는 식으로. (2) 서브에이전트는 요약만 메인에 반환해 컨텍스트를 격리한다. (3) 의존 단계는 파이프라인으로, 독립 단계는 병렬로 배치하고, 오케스트레이터가 결과를 합류·중재한다. 단순히 던지기만 하고 합치지 않으면 오케스트레이션이 아닙니다.
 

@@ -10,9 +10,9 @@ official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02
 crosscheck: "pass"
-crosscheck_date: "2026-06-02"
+crosscheck_date: "2026-06-03"
 humanized: "pass"
-humanized_date: "2026-06-02"
+humanized_date: "2026-06-03"
 ---
 
 ## 이 장에서 배우는 것
