@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" font-family="Apple SD Gothic Neo, sans-serif">
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#2D6CDF"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#36B37E"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#E5484D"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#5B6B7A"/>
+    </marker>
+    <pattern id="dot-field" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.2" fill="#2D6CDF" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="660" fill="#F7F9FC"/>
+  <rect x="44" y="112" width="1108" height="462" fill="url(#dot-field)" opacity="0.68"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">프롬프트로 때우기 vs 환경에 인코딩하기</text>
+  <text x="600" y="82" text-anchor="middle" font-size="16" fill="#5B6B7A">한 번의 호출을 달래는가, 모든 실행에 적용되는 역량을 인코딩하는가</text>
+
+  <rect x="244" y="116" width="712" height="58" rx="15" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="600" y="140" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.3" fill="#2D6CDF">SYMPTOM</text>
+  <text x="600" y="160" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">에이전트가 매번 인증 로직을 제멋대로 다시 구현한다</text>
+
+  <text x="86" y="220" font-size="11" font-weight="700" letter-spacing="1.4" fill="#E5484D">PATCH THE PROMPT</text>
+  <line x1="86" y1="230" x2="398" y2="230" stroke="#E5484D" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#arrow-red)"/>
+  <text x="300" y="255" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2733">프롬프트로 때우기</text>
+  <text x="300" y="278" text-anchor="middle" font-size="13.5" fill="#E5484D">안티패턴: 호출 하나를 달랜다</text>
+
+  <rect x="78" y="305" width="210" height="90" rx="16" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
+  <text x="183" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">프롬프트에</text>
+  <text x="183" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">“직접 만들지 마” 추가</text>
+  <text x="183" y="381" text-anchor="middle" font-size="12.5" fill="#5B6B7A">문장 하나를 덧붙임</text>
+
+  <rect x="78" y="430" width="210" height="90" rx="16" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
+  <text x="183" y="464" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">이번 호출만</text>
+  <text x="183" y="488" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">반짝 통과</text>
+  <text x="183" y="507" text-anchor="middle" font-size="12.5" fill="#5B6B7A">기억은 실행 밖에 남음</text>
+
+  <rect x="342" y="430" width="230" height="90" rx="16" fill="#FFFFFF" stroke="#E5484D" stroke-width="2.5"/>
+  <text x="457" y="464" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">다음 세션</text>
+  <text x="457" y="488" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">같은 실수 재발</text>
+  <text x="457" y="507" text-anchor="middle" font-size="12.5" fill="#E5484D">FAIL AGAIN</text>
+
+  <line x1="183" y1="395" x2="183" y2="424" stroke="#E5484D" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <line x1="288" y1="475" x2="336" y2="475" stroke="#E5484D" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <path d="M 457 430 C 457 385, 330 378, 292 353" fill="none" stroke="#E5484D" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow-red)"/>
+  <text x="352" y="408" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1.2" fill="#E5484D">SESSION RESET</text>
+
+  <line x1="600" y1="204" x2="600" y2="548" stroke="#D8E2F0" stroke-width="1.4"/>
+
+  <text x="690" y="220" font-size="11" font-weight="700" letter-spacing="1.4" fill="#2D6CDF">FIX THE ENVIRONMENT</text>
+  <line x1="690" y1="230" x2="1018" y2="230" stroke="#2D6CDF" stroke-width="2" stroke-dasharray="5 6" marker-end="url(#arrow-blue)"/>
+  <text x="900" y="255" text-anchor="middle" font-size="20" font-weight="700" fill="#1B2733">환경을 고치기 — 하네스</text>
+  <text x="900" y="278" text-anchor="middle" font-size="13.5" fill="#36B37E">좋은쪽: 실행 환경에 역량을 심는다</text>
+
+  <rect x="668" y="305" width="242" height="96" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="789" y="334" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">docs/design-docs/auth.md</text>
+  <text x="789" y="357" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">결정 기록</text>
+  <text x="789" y="380" text-anchor="middle" font-size="12.5" fill="#5B6B7A">원칙 3</text>
+
+  <rect x="946" y="305" width="242" height="96" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="1067" y="338" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">직접구현 막는</text>
+  <text x="1067" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">구조적 테스트</text>
+  <text x="1067" y="385" text-anchor="middle" font-size="12.5" fill="#5B6B7A">원칙 5</text>
+
+  <rect x="668" y="438" width="242" height="90" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="789" y="472" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">모든 미래 실행에</text>
+  <text x="789" y="496" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">영구 적용</text>
+  <text x="789" y="515" text-anchor="middle" font-size="12.5" fill="#36B37E">PERSISTENT CAPABILITY</text>
+
+  <rect x="946" y="438" width="242" height="90" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="1067" y="472" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">빌드가 위반</text>
+  <text x="1067" y="496" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">자동 차단</text>
+  <text x="1067" y="515" text-anchor="middle" font-size="12.5" fill="#36B37E">AUTO BLOCK</text>
+
+  <line x1="910" y1="353" x2="940" y2="353" stroke="#2D6CDF" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <path d="M 789 401 C 789 421, 789 421, 789 432" fill="none" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <path d="M 1067 401 C 1067 421, 1067 421, 1067 432" fill="none" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <line x1="910" y1="483" x2="940" y2="483" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+  <text x="926" y="337" font-size="9.5" font-weight="700" letter-spacing="1.1" fill="#2D6CDF">ENCODE</text>
+  <text x="922" y="467" font-size="9.5" font-weight="700" letter-spacing="1.1" fill="#36B37E">ENFORCE</text>
+  <path d="M 1067 528 C 1067 565, 789 565, 789 533" fill="none" stroke="#36B37E" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow-green)"/>
+  <text x="928" y="585" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1.2" fill="#5B6B7A">FROM BUILD RESULT ┄▶ TO FUTURE RUNS</text>
+
+  <line x1="112" y1="602" x2="1088" y2="602" stroke="#D8E2F0" stroke-width="1"/>
+  <text x="600" y="632" text-anchor="middle" font-size="16" fill="#1B2733">왼쪽은 <tspan font-weight="700" fill="#E5484D">한 번 달래고 끝</tspan>, 오른쪽은 <tspan font-weight="700" fill="#2D6CDF">한 번 인코딩하면</tspan> <tspan font-weight="700" fill="#36B37E">어디에나 적용</tspan>된다</text>
+</svg>

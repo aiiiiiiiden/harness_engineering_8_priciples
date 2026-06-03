@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" font-family="Apple SD Gothic Neo, sans-serif">
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#2D6CDF"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#36B37E"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#5B6B7A"/>
+    </marker>
+    <pattern id="dot-field" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.2" fill="#2D6CDF" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="680" fill="#F7F9FC"/>
+  <rect x="42" y="108" width="1116" height="440" fill="url(#dot-field)" opacity="0.7"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">하네스의 다섯 부품</text>
+  <text x="600" y="82" text-anchor="middle" font-size="16" fill="#5B6B7A">8원칙이 각각 어느 부품에 사는가 · 빈 레포(L1)에서 자율(L5)로</text>
+
+  <text x="68" y="132" font-size="11" font-weight="700" letter-spacing="1.4" fill="#2D6CDF">ANATOMY</text>
+  <text x="68" y="153" font-size="14" font-weight="700" fill="#1B2733">분해해서 본 하네스</text>
+  <line x1="68" y1="164" x2="142" y2="164" stroke="#2D6CDF" stroke-width="2.8" stroke-dasharray="5 5" marker-end="url(#arrow-blue)"/>
+
+  <rect x="80" y="190" width="205" height="122" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="182.5" y="222" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">진입점·맵</text>
+  <text x="182.5" y="249" text-anchor="middle" font-size="13.5" fill="#5B6B7A">어디서 시작</text>
+  <text x="182.5" y="268" text-anchor="middle" font-size="13.5" fill="#5B6B7A">무엇이 어디</text>
+  <rect x="135" y="285" width="95" height="24" rx="12" fill="#EDF4FF" stroke="#2D6CDF" stroke-width="1.5"/>
+  <text x="182.5" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#2D6CDF">원칙 3</text>
+
+  <rect x="326" y="190" width="220" height="122" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="436" y="222" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">기록 시스템</text>
+  <text x="436" y="249" text-anchor="middle" font-size="13.5" fill="#5B6B7A">결정·계획·스키마</text>
+  <text x="436" y="268" text-anchor="middle" font-size="13.5" fill="#5B6B7A">버전 관리</text>
+  <rect x="383" y="285" width="106" height="24" rx="12" fill="#EDF4FF" stroke="#2D6CDF" stroke-width="1.5"/>
+  <text x="436" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#2D6CDF">원칙 3·4</text>
+
+  <rect x="586" y="190" width="225" height="122" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="698.5" y="222" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">기계적 강제</text>
+  <text x="698.5" y="249" text-anchor="middle" font-size="13.5" fill="#5B6B7A">어겨선 안 될 규칙을</text>
+  <text x="698.5" y="268" text-anchor="middle" font-size="13.5" fill="#5B6B7A">빌드가 막음</text>
+  <rect x="651" y="285" width="95" height="24" rx="12" fill="#EDF4FF" stroke="#2D6CDF" stroke-width="1.5"/>
+  <text x="698.5" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#2D6CDF">원칙 5</text>
+
+  <rect x="850" y="190" width="205" height="122" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="952.5" y="222" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">관측성(눈)</text>
+  <text x="952.5" y="249" text-anchor="middle" font-size="13.5" fill="#5B6B7A">자기 작업</text>
+  <text x="952.5" y="268" text-anchor="middle" font-size="13.5" fill="#5B6B7A">직접 검증</text>
+  <rect x="905" y="285" width="95" height="24" rx="12" fill="#EDF4FF" stroke="#2D6CDF" stroke-width="1.5"/>
+  <text x="952.5" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#2D6CDF">원칙 2</text>
+
+  <line x1="285" y1="251" x2="320" y2="251" stroke="#2D6CDF" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <line x1="546" y1="251" x2="580" y2="251" stroke="#2D6CDF" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <line x1="811" y1="251" x2="844" y2="251" stroke="#2D6CDF" stroke-width="3" marker-end="url(#arrow-blue)"/>
+
+  <rect x="216" y="365" width="278" height="126" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="355" y="398" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">피드백 루프</text>
+  <text x="355" y="425" text-anchor="middle" font-size="13.5" fill="#5B6B7A">실패를 스스로 재현</text>
+  <text x="355" y="444" text-anchor="middle" font-size="13.5" fill="#5B6B7A">수정·정리</text>
+  <rect x="292" y="462" width="126" height="24" rx="12" fill="#EAF8F2" stroke="#36B37E" stroke-width="1.5"/>
+  <text x="355" y="479" text-anchor="middle" font-size="12" font-weight="700" fill="#36B37E">원칙 1·7·8</text>
+
+  <path d="M 952 312 C 952 352, 510 352, 510 428 C 510 468, 494 468, 498 468" fill="none" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <path d="M 355 365 C 355 332, 698 337, 698 318" fill="none" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <text x="630" y="352" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1.2" fill="#36B37E">VERIFY ┄▶ REPRODUCE ┄▶ FIX</text>
+
+  <rect x="606" y="384" width="320" height="72" rx="15" fill="#FFFFFF" stroke="#36B37E" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="766" y="413" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">원칙 6 — 운영 정책</text>
+  <text x="766" y="436" text-anchor="middle" font-size="13" fill="#5B6B7A">부품을 가로지르는 병합 기준</text>
+  <line x1="606" y1="420" x2="164" y2="420" stroke="#5B6B7A" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow-gray)"/>
+  <line x1="926" y1="420" x2="1046" y2="420" stroke="#5B6B7A" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow-gray)"/>
+
+  <text x="92" y="534" font-size="10" font-weight="700" letter-spacing="1.4" fill="#5B6B7A">L1 ┄▶ L5</text>
+  <line x1="120" y1="566" x2="1080" y2="566" stroke="#D8E2F0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="120" y1="566" x2="575" y2="566" stroke="#2D6CDF" stroke-width="8" stroke-linecap="round"/>
+  <line x1="575" y1="566" x2="1080" y2="566" stroke="#36B37E" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="120" cy="566" r="11" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2.5"/>
+  <circle cx="575" cy="566" r="11" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2.5"/>
+  <circle cx="1080" cy="566" r="11" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="120" y="594" text-anchor="middle" font-size="13" font-weight="700" fill="#1B2733">L1</text>
+  <text x="120" y="615" text-anchor="middle" font-size="12.5" fill="#5B6B7A">빈 레포</text>
+  <text x="575" y="594" text-anchor="middle" font-size="13" font-weight="700" fill="#1B2733">L3</text>
+  <text x="575" y="615" text-anchor="middle" font-size="12.5" fill="#5B6B7A">부분</text>
+  <text x="1080" y="594" text-anchor="middle" font-size="13" font-weight="700" fill="#1B2733">L5</text>
+  <text x="1080" y="615" text-anchor="middle" font-size="12.5" fill="#5B6B7A">다섯 부품 맞물림</text>
+
+  <line x1="112" y1="638" x2="1088" y2="638" stroke="#D8E2F0" stroke-width="1"/>
+  <text x="600" y="660" text-anchor="middle" font-size="16" fill="#1B2733"><tspan font-weight="700" fill="#E5484D">'에이전트가 망쳤다'</tspan>가 아니라 <tspan font-weight="700" fill="#2D6CDF">'어느 부품이 비었나'</tspan>로 디버깅한다</text>
+</svg>

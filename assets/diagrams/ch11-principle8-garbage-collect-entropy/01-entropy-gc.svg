@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" font-family="Apple SD Gothic Neo, sans-serif">
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#2D6CDF"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#36B37E"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#E5484D"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="6.2" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6.2,3 L0,6 Z" fill="#5B6B7A"/>
+    </marker>
+    <pattern id="dot-field" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.2" fill="#2D6CDF" opacity="0.12"/>
+    </pattern>
+    <pattern id="red-dot-field" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.15" fill="#E5484D" opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="680" fill="#F7F9FC"/>
+  <rect x="42" y="104" width="1116" height="466" fill="url(#dot-field)" opacity="0.7"/>
+
+  <text x="600" y="50" text-anchor="middle" font-size="27" font-weight="700" fill="#1B2733">엔트로피 GC — 매일 조금씩 걷어낸다</text>
+  <text x="600" y="82" text-anchor="middle" font-size="16" fill="#5B6B7A">에이전트는 패턴을 복제한다 → 드리프트는 필연 · 비싼 건 청소가 아니라 미룬 청소</text>
+
+  <text x="62" y="132" font-size="11" font-weight="700" letter-spacing="1.5" fill="#E5484D">ENTROPY</text>
+  <rect x="62" y="146" width="1076" height="126" rx="16" fill="#FFFFFF" stroke="#E5484D" stroke-width="2" stroke-dasharray="7 6"/>
+  <rect x="78" y="160" width="1044" height="96" fill="url(#red-dot-field)" opacity="0.55"/>
+
+  <rect x="105" y="178" width="190" height="58" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
+  <text x="200" y="202" text-anchor="middle" font-size="15" font-weight="700" fill="#1B2733">패턴 복제</text>
+  <text x="200" y="222" text-anchor="middle" font-size="12.5" fill="#5B6B7A">작은 편차가 기준이 됨</text>
+
+  <rect x="368" y="172" width="165" height="70" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
+  <text x="450.5" y="198" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">명명 표류</text>
+  <text x="450.5" y="220" text-anchor="middle" font-size="12.3" fill="#5B6B7A">같은 뜻, 다른 이름</text>
+
+  <rect x="597" y="172" width="165" height="70" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
+  <text x="679.5" y="198" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">죽은 코드</text>
+  <text x="679.5" y="220" text-anchor="middle" font-size="12.3" fill="#5B6B7A">남아 복제되는 흔적</text>
+
+  <rect x="826" y="172" width="185" height="70" rx="14" fill="#FFFFFF" stroke="#E5484D" stroke-width="2"/>
+  <text x="918.5" y="198" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">문서 불일치</text>
+  <text x="918.5" y="220" text-anchor="middle" font-size="12.3" fill="#5B6B7A">원고와 실제의 간극</text>
+
+  <line x1="295" y1="207" x2="360" y2="207" stroke="#E5484D" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <line x1="533" y1="207" x2="589" y2="207" stroke="#E5484D" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <line x1="762" y1="207" x2="818" y2="207" stroke="#E5484D" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <path d="M 1012 207 C 1062 207, 1068 160, 1098 158" fill="none" stroke="#E5484D" stroke-width="2.6" stroke-dasharray="5 6" marker-end="url(#arrow-red)"/>
+  <text x="1047" y="145" font-size="10" font-weight="700" letter-spacing="1.2" fill="#E5484D">SPREADS</text>
+
+  <text x="72" y="316" font-size="11" font-weight="700" letter-spacing="1.4" fill="#2D6CDF">GARBAGE COLLECT</text>
+
+  <rect x="62" y="334" width="330" height="126" rx="16" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="227" y="362" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">황금 원칙</text>
+  <text x="227" y="384" text-anchor="middle" font-size="12.5" font-weight="700" letter-spacing="0.8" fill="#2D6CDF">GOLDEN_PRINCIPLES.md</text>
+  <text x="227" y="408" text-anchor="middle" font-size="13.5" fill="#5B6B7A">리포에 인코딩</text>
+  <text x="92" y="434" font-size="13.5" fill="#1B2733">• 공유 유틸 선호</text>
+  <text x="235" y="434" font-size="13.5" fill="#1B2733">• 경계에서 데이터 검증</text>
+
+  <line x1="392" y1="397" x2="444" y2="397" stroke="#2D6CDF" stroke-width="3" stroke-dasharray="6 6" marker-end="url(#arrow-blue)"/>
+  <text x="409" y="381" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#2D6CDF">RULES</text>
+
+  <rect x="454" y="318" width="686" height="172" rx="16" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="797" y="348" text-anchor="middle" font-size="16" font-weight="700" fill="#1B2733">백그라운드 GC 작업 — 상시 루프</text>
+  <text x="797" y="369" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="1.3" fill="#5B6B7A">FROM ENTROPY ┄▶ TO CLEAN REPOSITORY</text>
+
+  <rect x="486" y="393" width="132" height="58" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="552" y="417" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">① 편차 스캔</text>
+  <text x="552" y="437" text-anchor="middle" font-size="12" fill="#5B6B7A">이름·코드·문서</text>
+
+  <rect x="656" y="393" width="160" height="58" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="736" y="416" text-anchor="middle" font-size="14.2" font-weight="700" fill="#1B2733">② 품질 등급 갱신</text>
+  <text x="736" y="437" text-anchor="middle" font-size="11.5" font-weight="700" fill="#2D6CDF">QUALITY_SCORE</text>
+
+  <rect x="854" y="393" width="132" height="58" rx="14" fill="#FFFFFF" stroke="#2D6CDF" stroke-width="2"/>
+  <text x="920" y="417" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1B2733">③ 리팩터 PR</text>
+  <text x="920" y="437" text-anchor="middle" font-size="12" fill="#5B6B7A">작게 쪼갬</text>
+
+  <rect x="1024" y="393" width="92" height="58" rx="14" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="1070" y="416" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1B2733">④ 자동</text>
+  <text x="1070" y="436" text-anchor="middle" font-size="13.5" font-weight="700" fill="#36B37E">병합</text>
+
+  <line x1="618" y1="422" x2="650" y2="422" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <line x1="816" y1="422" x2="848" y2="422" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <line x1="986" y1="422" x2="1018" y2="422" stroke="#36B37E" stroke-width="3" marker-end="url(#arrow-green)"/>
+  <path d="M 1070 451 C 1070 478, 552 478, 552 456" fill="none" stroke="#36B37E" stroke-width="2.8" marker-end="url(#arrow-green)"/>
+  <text x="812" y="478" text-anchor="middle" font-size="12.5" font-weight="700" fill="#36B37E">대부분 1분 내 병합 → 다시 스캔</text>
+
+  <rect x="126" y="526" width="396" height="62" rx="15" fill="#FFFFFF" stroke="#E5484D" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="324" y="552" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">금요일 수동 청소</text>
+  <text x="324" y="574" text-anchor="middle" font-size="13" fill="#E5484D">한 주의 20% · 확장 안 됨</text>
+
+  <rect x="678" y="526" width="396" height="62" rx="15" fill="#FFFFFF" stroke="#36B37E" stroke-width="2.5"/>
+  <text x="876" y="552" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1B2733">상시 자동 GC</text>
+  <text x="876" y="574" text-anchor="middle" font-size="13" fill="#36B37E">매일 조금씩 · 루프가 규모를 흡수</text>
+
+  <line x1="522" y1="557" x2="672" y2="557" stroke="#5B6B7A" stroke-width="2.4" stroke-dasharray="5 7" marker-end="url(#arrow-gray)"/>
+  <text x="560" y="540" font-size="10" font-weight="700" letter-spacing="1.2" fill="#5B6B7A">ANTI ┄▶ AUTO</text>
+
+  <line x1="112" y1="618" x2="1088" y2="618" stroke="#D8E2F0" stroke-width="1"/>
+  <text x="600" y="651" text-anchor="middle" font-size="15.5" fill="#1B2733">원칙5가 <tspan font-weight="700" fill="#2D6CDF">경계</tspan>(어기면 빌드 실패)라면, 원칙8은 <tspan font-weight="700" fill="#36B37E">경계 안의 때를 매일 닦는 일</tspan> — 둘은 짝</text>
+</svg>
