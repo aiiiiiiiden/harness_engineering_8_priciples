@@ -37,15 +37,16 @@ REQUIRED_SECTIONS = [
 # docs/verified-facts.md 의 denylist 와 동기화할 것
 DENYLIST = [
     (r"OpenAI(이|가)?\s*(만든|발표한|정의한|공식)?\s*(5|8|12)\s*원칙",
-     "출처 오류 — 정본은 원칙을 번호로 명시하지 않음. '정본에서 도출한 8원칙'으로"),
+     "출처 오류 — 원문은 원칙을 번호로 명시하지 않음. '원문에서 도출한 8원칙'으로"),
     (r"한\s*절당\s*한\s*원칙으로\s*도출",
-     "출처 오류 — 정본 11개 절 중 8개만 원칙으로 도출(1:1 전수 매핑 아님). '8개 절을 한 원칙씩 선별·도출'로"),
+     "출처 오류 — 원문 11개 절 중 8개만 원칙으로 도출(1:1 전수 매핑 아님). '8개 절을 한 원칙씩 선별·도출'로"),
     (r"12[\s-]*Factor\s*Agents?", "폐기된 구 주제 — '하네스 엔지니어링(Harness Engineering)'으로"),
     (r"HumanLayer", "폐기된 구 출처 — OpenAI / Ryan Lopopolo로"),
     (r"Dexter\s*Horthy", "폐기된 구 출처 — OpenAI / Ryan Lopopolo로"),
     (r"12\s*계명", "비표준 명칭 (해당 없음 — 8원칙)"),
     (r"12\s*법칙", "비표준 명칭 (해당 없음 — 8원칙)"),
     (r"docs\.claude\.com/docs", "구 도메인 — 'code.claude.com/docs'로"),
+    (r"정본", "용어 통일(2026-06-04 저자 결정) — 본문은 '원문'으로"),
 ]
 OFFICIAL_DOMAINS = re.compile(
     r"https?://(?:openai\.com|"

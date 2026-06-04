@@ -72,7 +72,7 @@ for part, ch in iter_toc_chapters(toc):
 
 **`scripts/status.py` — 관측성 (원칙 4).** 별도 상태 파일을 읽는 게 아니라, 모든 원고의 front-matter를 `toc.json` 순서대로 *스캔해* 진척표를 만든다. 상태의 SoT가 front-matter이므로, status는 그걸 비추는 파생 뷰일 뿐이다(ch14).
 
-**`scripts/verify.py` — 기계적 강제 (원칙 5).** 불변식을 코드로 박은 핵심 게이트다. 검사 항목: 필수 front-matter 키, 파일명과 `slug` 일치, `official_links`가 `toc.json`과 일치, denylist(폐기된 구 주제명·구 출처명, 정본이 원칙을 번호로 못박았다는 식의 단정), 그리고 *게이트 강제* — `reviewed`/`published`인데 교차검증·윤문 도장이 안 찍혔으면 실패시킨다.
+**`scripts/verify.py` — 기계적 강제 (원칙 5).** 불변식을 코드로 박은 핵심 게이트다. 검사 항목: 필수 front-matter 키, 파일명과 `slug` 일치, `official_links`가 `toc.json`과 일치, denylist(폐기된 구 주제명·구 출처명, 원문이 원칙을 번호로 못박았다는 식의 단정), 그리고 *게이트 강제* — `reviewed`/`published`인데 교차검증·윤문 도장이 안 찍혔으면 실패시킨다.
 
 ```python
 # verify.py — reviewed/published는 두 게이트 도장을 강제
