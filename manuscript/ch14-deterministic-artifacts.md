@@ -58,7 +58,7 @@ openapi.yaml    ── gen ──▶           클라이언트 SDK / API 문서
 점검: 재생성한 산출물 == 커밋된 산출물?   (CI에서 다시 생성 후 diff)   ← 원칙 5
 ```
 
-![결정론적 산출물 파이프라인 다이어그램: 소스(코드, SoT)에서 결정론적 생성기를 거쳐 산출물(파생, 재생성 가능)이 나온다. diagram.svg→렌더→png, schema.sql→codegen→types.ts, openapi.yaml→gen→SDK처럼. CI가 재생성한 산출물과 커밋된 산출물이 같은지 diff로 점검해(원칙 5) 일치하면 통과, 불일치하면 차단한다.](../assets/screenshots/ch14-deterministic-artifacts/01-deterministic-pipeline.png)
+![결정론적 산출물 파이프라인 다이어그램: 소스(코드, SoT)에서 결정론적 생성기를 거쳐 산출물(파생, 재생성 가능)이 나온다. diagram.svg→렌더→png, schema.sql→codegen→types.ts, openapi.yaml→gen→SDK처럼. CI가 재생성한 산출물과 커밋된 산출물이 같은지 diff로 점검해(원칙 5) 일치하면 통과, 불일치하면 차단한다.](../assets/diagrams/chatgpt-renders/ch14-deterministic-artifacts.ko.png)
 
 핵심 규칙 셋입니다. (1) 소스를 커밋하고, 산출물은 소스에서 생성한다. (2) 산출물을 손으로 고치지 않는다. 소스를 고치고 재생성한다. (3) CI가 "재생성 후 diff"로 산출물이 소스와 일치함을 강제한다. 특히 (3)이 이 패턴을 살아있게 합니다. 강제가 없으면 누군가 산출물을 손으로 고치고, 소스와의 연결이 끊깁니다.
 

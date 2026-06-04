@@ -35,7 +35,7 @@ humanized_date: "2026-06-02"
 - **계층 아키텍처.** 각 비즈니스 도메인을 고정된 계층으로 나누고, 종속성 방향과 허용된 에지만 통과시킵니다. 정본의 모델은 `Types → Config → Repo → Service → Runtime → UI` 한 방향이고, 교차관심사(인증·텔레메트리·기능 플래그 등)는 `Providers`라는 하나의 명시적 인터페이스로만 들어옵니다. 그 외는 전부 금지, 기계가 막습니다.
 - **취향 불변식.** 소수의 "취향" 규칙을 코드로 박습니다. 구조화된 로깅, 스키마·타입 명명 규칙, 파일 크기 제한 등이 그것입니다. 린트가 맞춤형이라, 위반 시 오류 메시지에 수정 지침을 담아 에이전트 컨텍스트에 주입합니다. 막기만 하는 게 아니라 고치는 법까지 알려줍니다.
 
-![각 비즈니스 도메인은 한 방향 계층(Types→Config→Repo→Service→Runtime→UI)으로만 호출이 흐르고, 교차관심사(인증·텔레메트리·기능 플래그)는 Providers라는 단일 인터페이스로만 유입된다. 허용되지 않은 에지(예: UI가 Repo를 직접 호출)는 맞춤 린터·구조적 테스트가 빌드에서 차단한다.](../assets/screenshots/ch08-principle5-enforce-architecture-and-taste/01-layered-enforcement.png)
+![각 비즈니스 도메인은 한 방향 계층(Types→Config→Repo→Service→Runtime→UI)으로만 호출이 흐르고, 교차관심사(인증·텔레메트리·기능 플래그)는 Providers라는 단일 인터페이스로만 유입된다. 허용되지 않은 에지(예: UI가 Repo를 직접 호출)는 맞춤 린터·구조적 테스트가 빌드에서 차단한다.](../assets/diagrams/chatgpt-renders/ch08-principle5-enforce-architecture-and-taste.ko.png)
 
 ## 왜 중요한가
 

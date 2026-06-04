@@ -42,7 +42,7 @@ humanized_date: "2026-06-02"
 - **계획을 일급 아티팩트로.** 복잡한 작업은 진행 상황·의사결정 로그와 함께 실행 계획(execution plans, active/completed로 구분)에 담겨 리포지터리에 버전 관리됩니다. 에이전트가 외부 상황 없이도 작업할 수 있게.
 - **점진적 공개(progressive disclosure).** 에이전트는 작고 안정적인 진입점에서 시작해, 맵을 따라 필요한 깊이로 들어갑니다. 처음부터 모든 걸 떠안지 않습니다.
 
-![왼쪽은 거대한 단일 AGENTS.md(매뉴얼) — 낡은 규칙이 뒤섞여 컨텍스트를 밀어내고 드리프트한다. 오른쪽은 짧은 맵(약 100줄 AGENTS.md)이 구조화된 docs/ 기록 시스템(design-docs·exec-plans·references)을 가리키고, 에이전트가 필요한 깊이로만 점진적으로 들어간다.](../assets/screenshots/ch06-principle3-repo-as-system-of-record/01-map-not-manual.png)
+![왼쪽은 거대한 단일 AGENTS.md(매뉴얼) — 낡은 규칙이 뒤섞여 컨텍스트를 밀어내고 드리프트한다. 오른쪽은 짧은 맵(약 100줄 AGENTS.md)이 구조화된 docs/ 기록 시스템(design-docs·exec-plans·references)을 가리키고, 에이전트가 필요한 깊이로만 점진적으로 들어간다.](../assets/diagrams/chatgpt-renders/ch06-principle3-repo-as-system-of-record.ko.png)
 
 ## 왜 중요한가
 

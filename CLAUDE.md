@@ -40,7 +40,7 @@ toc.json (구조)
              └─ /publish-chapter ─▶ wikidocs MCP push(본문+이미지) ─▶ status: published
 ```
 
-**신뢰성의 핵심 = 모델 다양성.** 집필은 Claude, 사실 검증은 **codex(다른 모델)** 가 독립적으로 한 번 더. 두 모델 + 기계 검증이 합의해야 reviewed. 이미지는 **AI 생성이 아니라 SVG 코드 → 결정론적 렌더**라 재현 가능. (이 책이 가르치는 원칙을 이 하네스가 그대로 실천한다.)
+**신뢰성의 핵심 = 모델 다양성.** 집필은 Claude, 사실 검증은 **codex(다른 모델)** 가 독립적으로 한 번 더. 두 모델 + 기계 검증이 합의해야 reviewed. 다이어그램 *콘텐츠*의 소스는 여전히 **SVG 코드**(버전관리·diff 가능)지만, **발행 본문에 싣는 이미지는 한국어 타이포그래피 품질을 위해 ChatGPT로 생성한 한국어 래스터**(`chatgpt-renders/<slug>.ko.png`)를 채택한다 — 결정론 원칙(원칙·ch14)의 **의도적·문서화된 예외**다(ADR 0004). 이 절충은 4부 자기채점에 감점으로 정직하게 반영한다.
 
 ## 프로젝트 커맨드
 
@@ -68,7 +68,7 @@ python3 scripts/render_images.py        # assets/diagrams/**/*.svg → screensho
    - codex 교차검증과 humanize는 **강제 게이트**다. `crosscheck.py`는 `crosscheck: pass`를, `/humanize`는 `humanized: pass`를 front-matter에 도장 찍고, `verify.py`는 reviewed/published인데 둘 중 하나라도 `!= pass`면 FAIL시킨다.
    - humanize는 **문체만** 손대고 내용·사실은 불변(content-fidelity-auditor가 검증). 윤문 후 verify.py를 다시 돌려 사실 불변을 확인한다.
    - 사실 레지스트리 자체 점검: `python3 scripts/crosscheck.py --facts`.
-4. **이미지는 코드로**: 개념 다이어그램은 AI 래스터 생성 금지. SVG(`assets/diagrams/<slug>/`)로 작성→`render_images.py`로 렌더→**PNG를 Read로 눈 검수**. 스크린샷만 `/browse`·`/qa` 캡처.
+4. **다이어그램: SVG가 콘텐츠 소스, 발행본은 ChatGPT 한국어 래스터**(ADR 0004). 개념 다이어그램의 *내용*은 SVG(`assets/diagrams/<slug>/`)로 작성·버전관리하고 `render_images.py`로 렌더해 **눈 검수**한다. 단 **본문에 싣는 발행 이미지**는 한국어 가독성을 위해 ChatGPT로 생성한 `assets/diagrams/chatgpt-renders/<slug>.ko.png`를 쓴다(본문 `![]()`는 이 경로를 가리킴). 생성 래스터는 결정론으로 재현되지 않으므로 **저자가 직접 눈 검수**(글리프·오타·용어가 `verified-facts.md`와 일치하는지). SVG 소스는 대안·이력으로 보존(삭제 금지). 스크린샷만 `/browse`·`/qa` 캡처.
 5. **page_id 기록**: 위키독스에 올린 뒤 page_id를 front-matter에 적는다. 같은 장 재발행은 `update_page`(중복 생성 금지).
 6. **도구 노출 경계**: 이 책은 기술서라 Claude Code·MCP·Agent SDK·codex 등 하네스 도구를 본문에서 다룬다. 단 **gstack·개인 스킬**, 이 레포의 사적 스크립트/커맨드는 본문 비노출 — **예외: 4부 케이스 스터디**는 의도적으로 해부.
 7. **코드·API 정확성**: 코드 예시는 **context7 MCP**로 교차 확인 후 front-matter `last_verified` 갱신.
@@ -93,7 +93,7 @@ docs/
   conventions.md     ← 집필 규약
   verified-facts.md  ← 사실 SoT(8원칙 정의) + denylist
   publishing-runbook.md
-  adr/               ← 결정 기록 (0001 하네스·SoT, 0002 교차검증·이미지, 0003 하네스 엔지니어링 피벗)
+  adr/               ← 결정 기록 (0001 하네스·SoT, 0002 교차검증·이미지, 0003 하네스 엔지니어링 피벗, 0004 본문 다이어그램=ChatGPT 한국어 래스터)
 manuscript/<slug>.md ← 원고 (front-matter + 본문)
 scripts/             ← scaffold/status/verify/crosscheck/render_images (저자 전용)
 assets/diagrams/<slug>/*.svg     ← 다이어그램 소스(SoT)

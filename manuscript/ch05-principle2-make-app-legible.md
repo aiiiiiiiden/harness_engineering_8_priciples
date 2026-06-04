@@ -32,7 +32,7 @@ humanized_date: "2026-06-03"
 
 핵심 통찰 하나. *검증할 수 없으면 고친 게 아닙니다.* 에이전트가 "고쳤다"고 말해도, 직접 띄워서 확인하지 못하면 그건 추측입니다. 눈이 있어야 "추측"이 "검증"이 됩니다.
 
-![에이전트가 앱을 직접 부팅(boot.sh)하고 통합 테스트로 수용 기준을 때려본 뒤, 로그(LogQL)·메트릭(PromQL)·스크린샷(CDP)을 읽어 통과를 판정하는 자가 검증 루프. 실패하면 로그를 읽고 고쳐 다시 돈다. 앱 내부가 에이전트에게 노출돼야 '추측'이 '검증'이 된다.](../assets/screenshots/ch05-principle2-make-app-legible/01-agent-eyes.png)
+![에이전트가 앱을 직접 부팅(boot.sh)하고 통합 테스트로 수용 기준을 때려본 뒤, 로그(LogQL)·메트릭(PromQL)·스크린샷(CDP)을 읽어 통과를 판정하는 자가 검증 루프. 실패하면 로그를 읽고 고쳐 다시 돈다. 앱 내부가 에이전트에게 노출돼야 '추측'이 '검증'이 된다.](../assets/diagrams/chatgpt-renders/ch05-principle2-make-app-legible.ko.png)
 
 ## 왜 중요한가
 

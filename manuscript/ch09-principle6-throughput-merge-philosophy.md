@@ -37,7 +37,7 @@ humanized_date: "2026-06-03"
 
 단, 정본은 분명히 단서를 답니다. *이건 처리량이 적은 환경에는 맞지 않습니다.* 거기서는 종종 반대쪽 절충이 옳습니다.
 
-![사람 속도 기본값은 모든 PR을 사람이 승인하고 단발 플래키도 무기한 차단해 PR이 게이트 앞에 줄 서는 병목을 만든다. 처리량 정책(원칙 6)은 짧은 PR·빠른 병합·필요할 때만 사람 승인·어겨선 안 될 불변식만 차단하는 최소 게이트로 흐름을 연다.](../assets/screenshots/ch09-principle6-throughput-merge-philosophy/01-merge-philosophy.png)
+![사람 속도 기본값은 모든 PR을 사람이 승인하고 단발 플래키도 무기한 차단해 PR이 게이트 앞에 줄 서는 병목을 만든다. 처리량 정책(원칙 6)은 짧은 PR·빠른 병합·필요할 때만 사람 승인·어겨선 안 될 불변식만 차단하는 최소 게이트로 흐름을 연다.](../assets/diagrams/chatgpt-renders/ch09-principle6-throughput-merge-philosophy.ko.png)
 
 ## 왜 중요한가
 
