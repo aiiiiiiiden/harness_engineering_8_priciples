@@ -23,7 +23,7 @@ mcp__wikidocs__create_book(subject, summary, open_yn="N")  →  book_id
 ```
 
 - `subject`/`summary`/`open_yn` 값은 `docs/toc.json`의 `book` 블록 사용
-  (subject = "하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기").
+  (subject = "8원칙으로 살펴보는 하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기").
 - 받은 `book_id`를 `docs/toc.json`의 `wikidocs_book_id`에 기록 + 커밋.
 - **초안은 비공개(`open_yn="N"`)**. 완성 후 마지막에 공개 전환.
 

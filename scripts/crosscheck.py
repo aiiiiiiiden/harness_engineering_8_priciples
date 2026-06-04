@@ -53,7 +53,7 @@ SCHEMA = {
     },
 }
 
-PROMPT_TMPL = """너는 한국어 기술서 **"하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기"**(개발자 대상)의 **독립 기술 검수자**다.
+PROMPT_TMPL = """너는 한국어 기술서 **"8원칙으로 살펴보는 하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기"**(개발자 대상)의 **독립 기술 검수자**다.
 아래 원고의 **기술적 사실만** 검증하라. 문체·톤·맞춤법은 절대 언급하지 마라.
 
 검증 대상:
@@ -89,7 +89,7 @@ def run_codex(prompt: str, schema_path: str, out_path: str, model: str | None) -
     return proc.returncode, proc.stderr
 
 
-FACTS_PROMPT = """너는 한국어 기술서 "하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기"의 **독립 기술 검수자**다.
+FACTS_PROMPT = """너는 한국어 기술서 "8원칙으로 살펴보는 하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기"의 **독립 기술 검수자**다.
 아래는 이 책 전체가 사실의 기준으로 삼는 '검증된 사실 레지스트리'다.
 각 사실을 **공식 출처**(openai.com/index/harness-engineering, code.claude.com, modelcontextprotocol.io 등)에 비추어 검증하라.
 특히 하네스 엔지니어링 정본(OpenAI, Ryan Lopopolo, 2026-02-11)의 출처·저자·실험 사실, 그리고 8원칙의 이름·순서가 정본 절과 일치하는지 본다.

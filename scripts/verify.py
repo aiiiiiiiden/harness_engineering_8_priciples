@@ -50,7 +50,7 @@ DENYLIST = [
 OFFICIAL_DOMAINS = re.compile(
     r"https?://(?:openai\.com|"
     r"code\.claude\.com|docs\.claude\.com|modelcontextprotocol\.io|"
-    r"deepwiki\.com|www\.anthropic\.com)\S*")
+    r"deepwiki\.com|www\.anthropic\.com)[^\s)]*")
 
 
 def main():
