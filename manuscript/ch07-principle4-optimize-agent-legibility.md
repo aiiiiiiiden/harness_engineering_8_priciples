@@ -13,6 +13,7 @@ crosscheck: "pass"
 crosscheck_date: "2026-06-03"
 humanized: "pass"
 humanized_date: "2026-06-03"
+wikidocs_image: "applied"
 ---
 
 ## 이 장에서 배우는 것
