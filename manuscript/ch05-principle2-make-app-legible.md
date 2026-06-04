@@ -3,9 +3,9 @@ part: 2
 chapter: 5
 slug: ch05-principle2-make-app-legible
 title: "원칙 2 — 애플리케이션을 에이전트가 읽게 하라"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363223
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

@@ -3,9 +3,9 @@ part: 4
 chapter: 16
 slug: ch16-harness-case-study
 title: "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363235
+parent_page_id: 363216
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

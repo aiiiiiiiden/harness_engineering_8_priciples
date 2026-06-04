@@ -3,9 +3,9 @@ part: 3
 chapter: 12
 slug: ch12-single-source-of-truth
 title: "진실의 원천(SoT) 설계하기"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363231
+parent_page_id: 363215
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

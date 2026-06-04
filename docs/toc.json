@@ -3,59 +3,204 @@
     "subject": "하네스 엔지니어링 — 에이전트가 일하는 코드베이스 만들기",
     "summary": "OpenAI의 Harness Engineering 정본에서 도출한 8원칙을 한 장씩 풀고, 빈 레포에서 시작한 샘플 프로젝트를 원칙마다 키워 에이전트가 안정적으로 일하는 하네스로 만든다. 마지막엔 이 책을 집필한 하네스 자체를 8원칙으로 해부·채점한다. (정본은 원칙을 번호로 명시하지 않으며, 8개 구분은 이 책이 정본 절에서 도출한 커리큘럼이다.)",
     "open_yn": "N",
-    "wikidocs_book_id": null
+    "wikidocs_book_id": 20064
   },
   "parts": [
     {
       "part": 1,
       "title": "하네스 엔지니어링 입문",
       "chapters": [
-        {"chapter": 1, "slug": "ch01-what-is-harness", "title": "하네스 엔지니어링이란 무엇인가", "official_links": ["https://openai.com/index/harness-engineering/", "https://code.claude.com/docs", "https://modelcontextprotocol.io"]},
-        {"chapter": 2, "slug": "ch02-why-harness-engineering", "title": "왜 하네스 엔지니어링인가 — 사람이 조종, 에이전트가 실행", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 3, "slug": "ch03-anatomy-of-a-harness", "title": "하네스의 해부학 — 샘플 프로젝트와 실습 환경 미리보기", "official_links": ["https://openai.com/index/harness-engineering/", "https://code.claude.com/docs", "https://modelcontextprotocol.io"]}
-      ]
+        {
+          "chapter": 1,
+          "slug": "ch01-what-is-harness",
+          "title": "하네스 엔지니어링이란 무엇인가",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/",
+            "https://code.claude.com/docs",
+            "https://modelcontextprotocol.io"
+          ]
+        },
+        {
+          "chapter": 2,
+          "slug": "ch02-why-harness-engineering",
+          "title": "왜 하네스 엔지니어링인가 — 사람이 조종, 에이전트가 실행",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 3,
+          "slug": "ch03-anatomy-of-a-harness",
+          "title": "하네스의 해부학 — 샘플 프로젝트와 실습 환경 미리보기",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/",
+            "https://code.claude.com/docs",
+            "https://modelcontextprotocol.io"
+          ]
+        }
+      ],
+      "wikidocs_page_id": 363213
     },
     {
       "part": 2,
       "title": "하네스 엔지니어링 8원칙 — 한 장에 하나씩",
       "chapters": [
-        {"chapter": 4, "slug": "ch04-principle1-humans-steer-agents-execute", "title": "원칙 1 — 사람이 조종하고, 에이전트가 실행한다", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 5, "slug": "ch05-principle2-make-app-legible", "title": "원칙 2 — 애플리케이션을 에이전트가 읽게 하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 6, "slug": "ch06-principle3-repo-as-system-of-record", "title": "원칙 3 — 리포지터리 지식을 기록 시스템으로", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 7, "slug": "ch07-principle4-optimize-agent-legibility", "title": "원칙 4 — 에이전트 가독성에 최적화하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 8, "slug": "ch08-principle5-enforce-architecture-and-taste", "title": "원칙 5 — 아키텍처와 취향을 기계적으로 강제하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 9, "slug": "ch09-principle6-throughput-merge-philosophy", "title": "원칙 6 — 처리량에 맞춰 병합 철학을 바꿔라", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 10, "slug": "ch10-principle7-encode-autonomy-loop", "title": "원칙 7 — 자율 루프를 시스템에 인코딩하라", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 11, "slug": "ch11-principle8-garbage-collect-entropy", "title": "원칙 8 — 엔트로피를 가비지 컬렉션하라", "official_links": ["https://openai.com/index/harness-engineering/"]}
-      ]
+        {
+          "chapter": 4,
+          "slug": "ch04-principle1-humans-steer-agents-execute",
+          "title": "원칙 1 — 사람이 조종하고, 에이전트가 실행한다",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 5,
+          "slug": "ch05-principle2-make-app-legible",
+          "title": "원칙 2 — 애플리케이션을 에이전트가 읽게 하라",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 6,
+          "slug": "ch06-principle3-repo-as-system-of-record",
+          "title": "원칙 3 — 리포지터리 지식을 기록 시스템으로",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 7,
+          "slug": "ch07-principle4-optimize-agent-legibility",
+          "title": "원칙 4 — 에이전트 가독성에 최적화하라",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 8,
+          "slug": "ch08-principle5-enforce-architecture-and-taste",
+          "title": "원칙 5 — 아키텍처와 취향을 기계적으로 강제하라",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 9,
+          "slug": "ch09-principle6-throughput-merge-philosophy",
+          "title": "원칙 6 — 처리량에 맞춰 병합 철학을 바꿔라",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 10,
+          "slug": "ch10-principle7-encode-autonomy-loop",
+          "title": "원칙 7 — 자율 루프를 시스템에 인코딩하라",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 11,
+          "slug": "ch11-principle8-garbage-collect-entropy",
+          "title": "원칙 8 — 엔트로피를 가비지 컬렉션하라",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        }
+      ],
+      "wikidocs_page_id": 363214
     },
     {
       "part": 3,
       "title": "하네스 패턴 — 원칙을 합치다",
       "chapters": [
-        {"chapter": 12, "slug": "ch12-single-source-of-truth", "title": "진실의 원천(SoT) 설계하기", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 13, "slug": "ch13-trust-and-model-diversity", "title": "검증 게이트와 모델 다양성으로 신뢰성 확보", "official_links": []},
-        {"chapter": 14, "slug": "ch14-deterministic-artifacts", "title": "결정론적 산출물 — 코드가 진실의 원천", "official_links": []},
-        {"chapter": 15, "slug": "ch15-multi-agent-orchestration", "title": "멀티 에이전트 오케스트레이션", "official_links": ["https://code.claude.com/docs/en/sub-agents"]}
-      ]
+        {
+          "chapter": 12,
+          "slug": "ch12-single-source-of-truth",
+          "title": "진실의 원천(SoT) 설계하기",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 13,
+          "slug": "ch13-trust-and-model-diversity",
+          "title": "검증 게이트와 모델 다양성으로 신뢰성 확보",
+          "official_links": []
+        },
+        {
+          "chapter": 14,
+          "slug": "ch14-deterministic-artifacts",
+          "title": "결정론적 산출물 — 코드가 진실의 원천",
+          "official_links": []
+        },
+        {
+          "chapter": 15,
+          "slug": "ch15-multi-agent-orchestration",
+          "title": "멀티 에이전트 오케스트레이션",
+          "official_links": [
+            "https://code.claude.com/docs/en/sub-agents"
+          ]
+        }
+      ],
+      "wikidocs_page_id": 363215
     },
     {
       "part": 4,
       "title": "케이스 스터디 — 이 책을 만든 하네스",
       "chapters": [
-        {"chapter": 16, "slug": "ch16-harness-case-study", "title": "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": 17, "slug": "ch17-self-assessment-scorecard", "title": "8원칙으로 내 하네스 평가하기 (스코어카드 L1→L5)", "official_links": ["https://openai.com/index/harness-engineering/"]}
-      ]
+        {
+          "chapter": 16,
+          "slug": "ch16-harness-case-study",
+          "title": "책 집필 하네스 해부 (toc·scaffold·verify·crosscheck)",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": 17,
+          "slug": "ch17-self-assessment-scorecard",
+          "title": "8원칙으로 내 하네스 평가하기 (스코어카드 L1→L5)",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        }
+      ],
+      "wikidocs_page_id": 363216
     },
     {
       "part": 5,
       "title": "부록",
       "is_appendix": true,
       "chapters": [
-        {"chapter": "A", "slug": "appendix-a-cheatsheet", "title": "8원칙 치트시트 (한 장 요약)", "official_links": ["https://openai.com/index/harness-engineering/"]},
-        {"chapter": "B", "slug": "appendix-b-glossary", "title": "용어 사전 (하네스·에이전트·기록 시스템·불변식 등)", "official_links": []},
-        {"chapter": "C", "slug": "appendix-c-resources", "title": "참고 자료 / 원문 링크 모음", "official_links": ["https://openai.com/index/harness-engineering/", "https://code.claude.com/docs", "https://modelcontextprotocol.io"]}
-      ]
+        {
+          "chapter": "A",
+          "slug": "appendix-a-cheatsheet",
+          "title": "8원칙 치트시트 (한 장 요약)",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/"
+          ]
+        },
+        {
+          "chapter": "B",
+          "slug": "appendix-b-glossary",
+          "title": "용어 사전 (하네스·에이전트·기록 시스템·불변식 등)",
+          "official_links": []
+        },
+        {
+          "chapter": "C",
+          "slug": "appendix-c-resources",
+          "title": "참고 자료 / 원문 링크 모음",
+          "official_links": [
+            "https://openai.com/index/harness-engineering/",
+            "https://code.claude.com/docs",
+            "https://modelcontextprotocol.io"
+          ]
+        }
+      ],
+      "wikidocs_page_id": 363217
     }
   ]
 }

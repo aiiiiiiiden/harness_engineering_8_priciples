@@ -3,9 +3,9 @@ part: 3
 chapter: 15
 slug: ch15-multi-agent-orchestration
 title: "멀티 에이전트 오케스트레이션"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363234
+parent_page_id: 363215
 official_links:
   - https://code.claude.com/docs/en/sub-agents
 last_verified: 2026-06-02

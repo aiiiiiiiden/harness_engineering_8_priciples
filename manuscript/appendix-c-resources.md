@@ -3,9 +3,9 @@ part: 부록
 chapter: C
 slug: appendix-c-resources
 title: "참고 자료 / 원문 링크 모음"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363239
+parent_page_id: 363217
 official_links:
   - https://openai.com/index/harness-engineering/
   - https://code.claude.com/docs

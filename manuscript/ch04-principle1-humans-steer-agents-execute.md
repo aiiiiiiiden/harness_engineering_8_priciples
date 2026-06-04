@@ -3,9 +3,9 @@ part: 2
 chapter: 4
 slug: ch04-principle1-humans-steer-agents-execute
 title: "원칙 1 — 사람이 조종하고, 에이전트가 실행한다"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363222
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

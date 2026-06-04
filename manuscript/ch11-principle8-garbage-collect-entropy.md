@@ -3,9 +3,9 @@ part: 2
 chapter: 11
 slug: ch11-principle8-garbage-collect-entropy
 title: "원칙 8 — 엔트로피를 가비지 컬렉션하라"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363230
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

@@ -3,9 +3,9 @@ part: 2
 chapter: 6
 slug: ch06-principle3-repo-as-system-of-record
 title: "원칙 3 — 리포지터리 지식을 기록 시스템으로"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363224
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

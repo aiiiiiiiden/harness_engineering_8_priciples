@@ -3,9 +3,9 @@ part: 2
 chapter: 9
 slug: ch09-principle6-throughput-merge-philosophy
 title: "원칙 6 — 처리량에 맞춰 병합 철학을 바꿔라"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363228
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

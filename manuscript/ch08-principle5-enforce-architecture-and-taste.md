@@ -3,9 +3,9 @@ part: 2
 chapter: 8
 slug: ch08-principle5-enforce-architecture-and-taste
 title: "원칙 5 — 아키텍처와 취향을 기계적으로 강제하라"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363227
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

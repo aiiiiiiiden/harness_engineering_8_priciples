@@ -3,9 +3,9 @@ part: 2
 chapter: 7
 slug: ch07-principle4-optimize-agent-legibility
 title: "원칙 4 — 에이전트 가독성에 최적화하라"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363226
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02

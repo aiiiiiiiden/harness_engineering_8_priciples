@@ -3,9 +3,9 @@ part: 1
 chapter: 1
 slug: ch01-what-is-harness
 title: "하네스 엔지니어링이란 무엇인가"
-status: "reviewed"
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363218
+parent_page_id: 363213
 official_links:
   - https://openai.com/index/harness-engineering/
   - https://code.claude.com/docs

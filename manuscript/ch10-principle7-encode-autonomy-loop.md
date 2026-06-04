@@ -3,9 +3,9 @@ part: 2
 chapter: 10
 slug: ch10-principle7-encode-autonomy-loop
 title: "원칙 7 — 자율 루프를 시스템에 인코딩하라"
-status: reviewed
-wikidocs_page_id: null
-parent_page_id: null
+status: "published"
+wikidocs_page_id: 363229
+parent_page_id: 363214
 official_links:
   - https://openai.com/index/harness-engineering/
 last_verified: 2026-06-02
