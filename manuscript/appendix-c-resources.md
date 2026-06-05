@@ -29,7 +29,7 @@ humanized_date: "2026-06-03"
 
 | 자료 | 무엇 | 링크 |
 |---|---|---|
-| **Harness Engineering** (OpenAI, Ryan Lopopolo, 2026-02-11) | 이 책의 원문. "사람이 조종하고, 에이전트가 실행한다"와 8원칙의 도출 근거. 빈 리포에서 5개월간 약 100만 줄을 Codex만으로 구축한 실험 보고. | https://openai.com/index/harness-engineering/ |
+| **Harness Engineering** (OpenAI, Ryan Lopopolo, 2026-02-11) | 이 책의 원문. "사람이 조종하고, 에이전트가 실행한다"와 8원칙의 도출 근거. 빈 저장소에서 5개월간 약 100만 줄을 Codex만으로 구축한 실험 보고. | https://openai.com/index/harness-engineering/ |
 
 > 이 책의 8원칙은 위 글의 **11개 절 중 원칙을 담은 8개 절에서 도출**한 것입니다(원문은 원칙을 번호로 매기지 않습니다). 절 ↔ 원칙 대응은 아래 (라)를 보세요.
 
@@ -38,21 +38,21 @@ humanized_date: "2026-06-03"
 | 도구 | 무엇 | 링크 |
 |---|---|---|
 | **Claude Code · Claude Agent SDK** | 실습에 쓰는 코딩 에이전트 CLI와, 에이전트를 만드는 SDK(과거 "Claude Code SDK"에서 변경). | https://code.claude.com/docs |
-| **MCP (Model Context Protocol)** | 에이전트와 외부 도구·데이터를 잇는 공개 프로토콜의 명세. | https://modelcontextprotocol.io |
+| **MCP (Model Context Protocol)** | 에이전트와 외부 도구·데이터를 연결하는 공개 프로토콜의 명세. | https://modelcontextprotocol.io |
 | **OpenAI Codex** | 원문 실험의 코딩 에이전트. 원문 글과 같은 출처에서 다룬다. | https://openai.com/index/harness-engineering/ |
 
-> 외부 라이브러리 문서는 원문의 방식대로 **요약본을 리포에 둡니다**. `docs/references/*-llms.txt`에 핵심만 추려 버전 관리하면, 에이전트가 매번 외부를 긁지 않고도 안정적으로 참조합니다(원칙 3, ch06).
+> 외부 라이브러리 문서는 원문의 방식대로 **요약본을 프로젝트 저장소에 둡니다**. `docs/references/*-llms.txt`에 핵심만 추려 버전 관리하면, 에이전트가 매번 외부를 긁지 않고도 안정적으로 참조합니다(원칙 3, ch06).
 
 ### (다) 이 책의 내부 기준 (Source of Truth)
 
-이 책 자체가 하나의 하네스라, 사실과 구조의 기준이 리포 안에 있습니다. 원문 인용을 검증하려면 이 파일들과 대조하세요.
+이 책 자체가 하나의 하네스라, 사실과 구조의 기준이 프로젝트 저장소 안에 있습니다. 원문 인용을 검증하려면 이 파일들과 대조하세요.
 
 | 파일 | 역할 |
 |---|---|
 | `docs/verified-facts.md` | 8원칙 정의·출처·명칭의 진실의 원천. 원문 절 매핑과 denylist 포함. |
 | `docs/conventions.md` | 집필 규약. §5가 용어 표준(부록 B와 한 쌍). |
 | `docs/toc.json` | 책 구조의 단일 원천. 각 장의 `official_links`가 여기서 정해진다. |
-| `docs/adr/` | 핵심 결정 기록(하네스·SoT, 교차검증·이미지, 하네스 엔지니어링 피벗). |
+| `docs/adr/` | 핵심 결정 기록(하네스·SoT, 교차검증·이미지, 하네스 엔지니어링 피벗, 본문 다이어그램=ChatGPT 한국어 래스터). |
 
 ### (라) 장 ↔ 원문 절 대응
 
@@ -84,18 +84,13 @@ humanized_date: "2026-06-03"
 
 ## 하네스에 적용하기
 
-이 책은 참고 링크를 **구조로** 관리합니다. 사람이 기억하는 대신 리포가 강제합니다.
+이 책은 참고 링크를 **구조로** 관리합니다. 사람이 기억하는 대신 프로젝트 저장소가 강제합니다.
 
-```text
-링크 등록 흐름
-  docs/toc.json (각 장 official_links)   ← 링크의 단일 원천
-        │  scaffold.py
-        ▼
-  manuscript/<slug>.md front-matter official_links   ← toc와 일치해야 함
-        │  verify.py
-        ▼
-  본문의 공식 도메인 링크가 official_links에 없으면 → 경고
-```
+| 단계 | 아티팩트 | 역할 |
+|---|---|---|
+| 1. 링크 등록 | `docs/toc.json`의 각 장 `official_links` | 링크의 단일 원천 |
+| 2. `scaffold.py` | `manuscript/<slug>.md` front-matter의 `official_links` | toc.json과 일치해야 함 |
+| 3. `verify.py` | 본문의 공식 도메인 링크 | `official_links`에 없으면 경고 |
 
 `scripts/verify.py`는 두 가지를 봅니다. front-matter의 `official_links`가 `toc.json`과 어긋나면 **에러**로 막고, 본문에 등장한 공식 도메인 링크가 그 목록에 없으면 **경고**합니다. 그래서 새 출처를 인용하려면 `toc.json`에 먼저 등록하는 습관이 강제됩니다. 이 부록을 쓸 때도 `code.claude.com/docs`와 `modelcontextprotocol.io`를 먼저 `toc.json`에 넣고서야 본문에 인용했습니다.
 
@@ -103,7 +98,7 @@ humanized_date: "2026-06-03"
 
 ## 안티패턴과 함정
 
-- **2차 출처로 때우기.** 원문 대신 그것을 요약한 블로그·영상을 인용합니다. 요약은 틀리거나 낡기 쉽습니다. 항상 원문을 먼저 가리키고, 2차 자료는 보조로만 둡니다.
+- **2차 출처로 때우기.** 원문 대신 그것을 요약한 블로그나 영상을 인용하는 것. 요약은 틀리거나 낡기 쉽습니다. 항상 원문을 먼저 가리키고, 2차 자료는 보조로만 둡니다.
 - **죽은 링크 방치.** 링크를 걸고 점검하지 않는 것. URL이 바뀌거나 사라져도 아무도 모릅니다. 링크를 한곳에 모아 기계로 점검합니다.
 - **출처를 본문에만 두기.** 인용 링크를 `toc.json`에 등록하지 않은 채 본문에만 적어두면, 장마다 출처가 흩어져 점검할 수 없습니다. 링크는 구조(`toc.json`)에 먼저 등록합니다.
 - **버전 없는 인용.** "원문에 따르면"으로 끝내고 어느 절인지 안 밝히는 것. 독자가 확인할 수 없습니다. 위 (라)처럼 절 단위로 접지합니다.
@@ -112,7 +107,7 @@ humanized_date: "2026-06-03"
 
 - [ ] 주장은 **1차 출처**(원문·공식 문서)로 추적 가능해야 한다. 2차 요약은 보조.
 - [ ] 8원칙의 근거는 원문 11개 절 중 8개. 절 ↔ 원칙 대응은 위 (라)를 따른다.
-- [ ] 외부 문서는 `docs/references/*-llms.txt`로 **요약해 리포에 둔다**(원칙 3).
+- [ ] 외부 문서는 `docs/references/*-llms.txt`로 **요약해 프로젝트 저장소에 둔다**(원칙 3).
 - [ ] 인용 링크는 `toc.json`에 **먼저 등록**하고 본문에 쓴다(`verify.py`가 점검).
 - [ ] 사실의 기준은 `docs/verified-facts.md`, 용어는 `docs/conventions.md` §5와 부록 B다.
 
