@@ -50,6 +50,21 @@ A minimal, data-visualization-inspired developer tech-book cover, portrait orien
 
 ---
 
+## 변형 3-R — 기존 표지 리메이크: 타이틀 가독성 강화 (스타일 유지)
+
+> 현재 채택본(`cover-empty-to-structured.png`, 변형 3)의 **스타일·모티프·색은 그대로 두고**, 콘텐츠 배치와 레이아웃만 다시 짜서 키커·메인 제목·부제가 또렷하게 읽히도록 만드는 프롬프트.
+> **권장 사용법: 기존 표지 이미지를 첨부하고** 아래 블록을 붙여넣기(스타일 레퍼런스로 쓰게 함). 첨부 없이 단독 생성해도 동작하도록 스타일 서술을 포함해 둠.
+
+```
+Redesign the layout of the attached book cover while strictly preserving its visual style: light background (#F7F9FC), ink (#1B2733) and blue (#2D6CDF) accents, minimal data-visualization aesthetic, the "scattered sparse dots converging into an ordered grid / layered architecture" motif (chaos → order), elegant, restrained, geometric, portrait 10:13 aspect ratio book cover (keep generous top and bottom margins safe for cropping). Do NOT change the art style, color palette, or motif — only restructure the composition for title legibility. New layout: dedicate the TOP ~40% of the cover to a clean, nearly empty band for the title lockup with strong contrast against the background; compress the dots→structure motif into the LOWER ~55%, flowing left-to-right, with its highest visual density kept away from all text. Title lockup, top-aligned and left-aligned, in this order and scale: (1) small kicker "8원칙으로 살펴보는" with a subtle blue accent, (2) the main Korean title "하네스 엔지니어링" set VERY LARGE — at least twice the kicker size, the single most dominant element on the cover, ink #1B2733 at full opacity, (3) subtitle "에이전트가 일하는 코드베이스 만들기" at roughly 40% of the main title size with clear spacing below it. Optional small tagline "사람이 조종하고, 에이전트가 실행한다" near the bottom edge, clear of the motif. Ensure every text block sits on a quiet area — no dots, lines, or grid elements behind or overlapping any letterform. Crisp, perfectly legible Korean typography; generous whitespace; no photographic elements; no busy gradients.
+```
+
+글자 없이 옵션: 제목 문장들을 빼고 `Keep the top ~40% of the cover as a clean empty band for title text to be added later; compress the dots→structure motif into the lower half.`로 교체 → 텍스트는 디자인 툴에서 얹기.
+
+생성 팁: 첨부 이미지 없이 돌리면 모티프가 달라질 수 있음 → 그땐 기존 표지를 함께 첨부하고 "match the attached cover's style exactly"를 프롬프트 맨 앞에 한 줄 추가. 한글 타이포가 깨지면 "글자 없이" 옵션이 1순위.
+
+---
+
 ## 변형 4 — 타이포 중심 미니멀 (Typographic hero)
 
 ```
