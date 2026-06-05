@@ -13,7 +13,7 @@ official_links:
   - https://modelcontextprotocol.io
 last_verified: 2026-06-02
 crosscheck: "pass"
-crosscheck_date: "2026-06-04"
+crosscheck_date: "2026-06-05"
 humanized: "pass"
 humanized_date: "2026-06-04"
 wikidocs_image: "applied"
