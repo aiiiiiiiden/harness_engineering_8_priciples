@@ -59,9 +59,10 @@ def parse_front_matter(text: str):
         if not kv:
             continue
         key, val = kv.group(1), kv.group(2)
-        if val.strip() == "":
+        if val.strip() in ("", "[]"):
+            # 블록 리스트(key: 다음 줄부터 "- 항목")와 인라인 빈 배열(key: []) 모두 지원
             data[key] = []
-            current_list_key = key
+            current_list_key = key if val.strip() == "" else None
         else:
             data[key] = _coerce(val)
             current_list_key = None
