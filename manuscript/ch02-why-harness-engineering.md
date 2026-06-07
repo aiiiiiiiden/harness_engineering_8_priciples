@@ -2,7 +2,7 @@
 part: 1
 chapter: 2
 slug: ch02-why-harness-engineering
-title: "왜 하네스 엔지니어링인가 — 사람이 조종, 에이전트가 실행"
+title: "왜 하네스 엔지니어링이 필요한가"
 status: "published"
 wikidocs_page_id: 363219
 parent_page_id: 363213

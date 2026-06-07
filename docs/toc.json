@@ -13,7 +13,7 @@
         {
           "chapter": 1,
           "slug": "ch01-what-is-harness",
-          "title": "하네스 엔지니어링이란 무엇인가",
+          "title": "하네스 엔지니어링이란?",
           "official_links": [
             "https://openai.com/index/harness-engineering/",
             "https://openai.com/ko-KR/index/harness-engineering/",
@@ -24,7 +24,7 @@
         {
           "chapter": 2,
           "slug": "ch02-why-harness-engineering",
-          "title": "왜 하네스 엔지니어링인가 — 사람이 조종, 에이전트가 실행",
+          "title": "왜 하네스 엔지니어링이 필요한가",
           "official_links": [
             "https://openai.com/index/harness-engineering/"
           ]
@@ -32,7 +32,7 @@
         {
           "chapter": 3,
           "slug": "ch03-anatomy-of-a-harness",
-          "title": "하네스의 해부학 — 샘플 프로젝트와 실습 환경 미리보기",
+          "title": "하네스 엔지니어링 미리보기",
           "official_links": [
             "https://openai.com/index/harness-engineering/",
             "https://code.claude.com/docs",

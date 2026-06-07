@@ -2,7 +2,7 @@
 part: 1
 chapter: 1
 slug: ch01-what-is-harness
-title: "하네스 엔지니어링이란 무엇인가"
+title: "하네스 엔지니어링이란?"
 status: "published"
 wikidocs_page_id: 363218
 parent_page_id: 363213

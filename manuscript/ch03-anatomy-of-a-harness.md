@@ -2,7 +2,7 @@
 part: 1
 chapter: 3
 slug: ch03-anatomy-of-a-harness
-title: "하네스의 해부학 — 샘플 프로젝트와 실습 환경 미리보기"
+title: "하네스 엔지니어링 미리보기"
 status: "published"
 wikidocs_page_id: 363220
 parent_page_id: 363213
