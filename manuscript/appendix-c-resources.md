@@ -2,7 +2,7 @@
 part: 부록
 chapter: C
 slug: appendix-c-resources
-title: "참고 자료 / 원문 링크 모음"
+title: "참고 자료"
 status: "published"
 wikidocs_page_id: 363239
 parent_page_id: 363217

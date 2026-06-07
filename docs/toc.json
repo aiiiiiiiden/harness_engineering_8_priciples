@@ -179,7 +179,7 @@
         {
           "chapter": "A",
           "slug": "appendix-a-cheatsheet",
-          "title": "8원칙 치트시트 (한 장 요약)",
+          "title": "8원칙 치트시트",
           "official_links": [
             "https://openai.com/index/harness-engineering/"
           ]
@@ -187,13 +187,13 @@
         {
           "chapter": "B",
           "slug": "appendix-b-glossary",
-          "title": "용어 사전 (하네스·에이전트·기록 시스템·불변식 등)",
+          "title": "용어 사전",
           "official_links": []
         },
         {
           "chapter": "C",
           "slug": "appendix-c-resources",
-          "title": "참고 자료 / 원문 링크 모음",
+          "title": "참고 자료",
           "official_links": [
             "https://openai.com/index/harness-engineering/",
             "https://code.claude.com/docs",

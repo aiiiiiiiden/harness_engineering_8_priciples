@@ -2,7 +2,7 @@
 part: 부록
 chapter: A
 slug: appendix-a-cheatsheet
-title: "8원칙 치트시트 (한 장 요약)"
+title: "8원칙 치트시트"
 status: "published"
 wikidocs_page_id: 363237
 parent_page_id: 363217

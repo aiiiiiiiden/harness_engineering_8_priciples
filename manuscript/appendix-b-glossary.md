@@ -2,7 +2,7 @@
 part: 부록
 chapter: B
 slug: appendix-b-glossary
-title: "용어 사전 (하네스·에이전트·기록 시스템·불변식 등)"
+title: "용어 사전"
 status: "published"
 wikidocs_page_id: 363238
 parent_page_id: 363217
