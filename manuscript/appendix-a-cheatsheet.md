@@ -36,7 +36,7 @@ humanized_date: "2026-06-03"
 | 4 | **에이전트 가독성에 최적화하라**<br>Optimize for agent legibility | 사람의 멋부린 취향보다 **에이전트가 읽기 쉬운 구조**(작은 진입점·명시적 경계·일관된 패턴)를 우선한다. | Agent legibility is the goal |
 | 5 | **아키텍처와 취향을 기계적으로 강제하라**<br>Enforce architecture and taste mechanically | 규칙을 문서가 아니라 **린터·구조적 테스트·CI**로 강제한다. 강제되지 않은 규칙은 드리프트한다. | Enforcing architecture and taste |
 | 6 | **처리량에 맞춰 병합 철학을 바꿔라**<br>Let throughput reshape merge philosophy | 에이전트 PR이 폭증하면 사람의 리뷰가 병목이 되어 버티지 못한다. **작은 PR·자동 검증·반복 루프**로 병합 정책을 재설계한다. | Throughput changes the merge philosophy |
-| 7 | **자율 루프를 시스템에 인코딩하라**<br>Encode the autonomy loop | 반복 작업을 매번 사람이 트리거하지 말고 **백그라운드 태스크·루프**로 인코딩해 자율 수준을 점증시킨다. | Increasing levels of autonomy |
+| 7 | **자율 루프를 시스템으로 구축하라**<br>Encode the autonomy loop | 반복 작업을 매번 사람이 트리거하지 말고 **백그라운드 태스크·루프**로 구축해 자율 수준을 점증시킨다. | Increasing levels of autonomy |
 | 8 | **엔트로피를 가비지 컬렉션하라**<br>Garbage-collect entropy | AI 생성물의 드리프트(명명 표류·죽은 코드·문서 불일치)를 **"황금 원칙" + 반복 정리 태스크**로 GC한다. | Entropy and garbage collection |
 
 > 원칙 번호·이름·순서의 마스터는 `docs/verified-facts.md` §2입니다. 원문 절 순서를 따르되, 원칙 6→7 사이에는 매핑하지 않은 개념 절("What \"agent-generated\" actually means")이 끼어 있어 **절과 원칙이 1:1로 맞물리지는 않습니다.**

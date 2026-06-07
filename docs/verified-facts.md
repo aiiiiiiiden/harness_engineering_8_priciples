@@ -36,7 +36,7 @@
 | 4 | Optimize for agent legibility | 에이전트 가독성에 최적화하라 | Agent legibility is the goal |
 | 5 | Enforce architecture and taste mechanically | 아키텍처와 취향을 기계적으로 강제하라 | Enforcing architecture and taste |
 | 6 | Let throughput reshape merge philosophy | 처리량에 맞춰 병합 철학을 바꿔라 | Throughput changes the merge philosophy |
-| 7 | Encode the autonomy loop | 자율 루프를 시스템에 인코딩하라 | Increasing levels of autonomy |
+| 7 | Encode the autonomy loop | 자율 루프를 시스템으로 구축하라 | Increasing levels of autonomy |
 | 8 | Garbage-collect entropy | 엔트로피를 가비지 컬렉션하라 | Entropy and garbage collection |
 
 > ⚠️ **원칙 6 → 7 사이 비연속.** 원문에서 "Throughput changes the merge philosophy"(원칙 6) 다음 절은 원칙 7이 아니라 **"What \"agent-generated\" actually means"**(원칙 미승격 개념 절)이고, 그 다음이 "Increasing levels of autonomy"(원칙 7)다. 8원칙은 원문 절 순서를 **따르되 연속 매핑은 아니다**.
