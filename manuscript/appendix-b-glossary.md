@@ -42,7 +42,7 @@ humanized_date: "2026-06-03"
 |---|---|---|---|
 | 1 | **사람이 조종하고, 에이전트가 실행한다** (Humans steer, agents execute) | 사람의 역할을 코드 작성에서 환경 설계로 재정의한다. | ch04 |
 | 2 | **애플리케이션을 에이전트가 읽게 하라** (Make the application legible to agents) | 로그·상태·동작을 에이전트가 관측하도록 앱을 계측한다. | ch05 |
-| 3 | **리포지터리 지식을 기록 시스템으로** (Repository knowledge as a system of record) | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 두되, 백과사전이 아니라 지도로 구성한다. | ch06 |
+| 3 | **프로젝트 저장소 지식을 기록 시스템으로 삼아라** (Repository knowledge as a system of record) | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 두되, 백과사전이 아니라 지도로 구성한다. | ch06 |
 | 4 | **에이전트 가독성에 최적화하라** (Optimize for agent legibility) | 사람 취향보다 에이전트가 읽기 쉬운 구조를 우선한다. | ch07 |
 | 5 | **아키텍처와 취향을 기계적으로 강제하라** (Enforce architecture and taste mechanically) | 규칙을 문서가 아니라 린터·구조적 테스트·CI로 강제한다. | ch08 |
 | 6 | **처리량에 맞춰 병합 철학을 바꿔라** (Let throughput reshape merge philosophy) | 에이전트 처리량이 사람의 리뷰 범위를 넘으면 병합 규칙을 다시 짠다. | ch09 |

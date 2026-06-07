@@ -32,7 +32,7 @@
 |---|---|---|---|
 | 1 | Humans steer, agents execute | 사람이 조종하고, 에이전트가 실행한다 | Redefining the role of the engineer |
 | 2 | Make the application legible to agents | 애플리케이션을 에이전트가 읽게 하라 | Increasing application legibility |
-| 3 | Repository knowledge as a system of record | 리포지터리 지식을 기록 시스템으로 | We made repository knowledge the system of record |
+| 3 | Repository knowledge as a system of record | 프로젝트 저장소 지식을 기록 시스템으로 삼아라 | We made repository knowledge the system of record |
 | 4 | Optimize for agent legibility | 에이전트 가독성에 최적화하라 | Agent legibility is the goal |
 | 5 | Enforce architecture and taste mechanically | 아키텍처와 취향을 기계적으로 강제하라 | Enforcing architecture and taste |
 | 6 | Let throughput reshape merge philosophy | 처리량에 맞춰 병합 철학을 바꿔라 | Throughput changes the merge philosophy |

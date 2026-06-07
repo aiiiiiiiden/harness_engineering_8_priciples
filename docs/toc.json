@@ -65,7 +65,7 @@
         {
           "chapter": 6,
           "slug": "ch06-principle3-repo-as-system-of-record",
-          "title": "원칙 3 — 리포지터리 지식을 기록 시스템으로",
+          "title": "원칙 3 — 프로젝트 저장소 지식을 기록 시스템으로 삼아라",
           "official_links": [
             "https://openai.com/index/harness-engineering/"
           ]

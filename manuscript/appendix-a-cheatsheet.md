@@ -32,7 +32,7 @@ humanized_date: "2026-06-03"
 |---|---|---|---|
 | 1 | **사람이 조종하고, 에이전트가 실행한다**<br>Humans steer, agents execute | 사람의 일은 코드 타이핑이 아니라 **환경 설계·의도 명시·피드백 루프 구축**으로 옮겨간다. | Redefining the role of the engineer |
 | 2 | **애플리케이션을 에이전트가 읽게 하라**<br>Make the application legible to agents | 로그·상태·동작을 에이전트가 *관측*할 수 있게 앱을 계측한다. 눈이 없으면 "고쳤다"를 검증할 수 없다. | Increasing application legibility |
-| 3 | **리포지터리 지식을 기록 시스템으로**<br>Repository knowledge as a system of record | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 둔다. 단 백과사전이 아니라 **지도**(짧은 `AGENTS.md`) + 구조화된 `docs/`. | We made repository knowledge the system of record |
+| 3 | **프로젝트 저장소 지식을 기록 시스템으로 삼아라**<br>Repository knowledge as a system of record | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 둔다. 단 백과사전이 아니라 **지도**(짧은 `AGENTS.md`) + 구조화된 `docs/`. | We made repository knowledge the system of record |
 | 4 | **에이전트 가독성에 최적화하라**<br>Optimize for agent legibility | 사람의 멋부린 취향보다 **에이전트가 읽기 쉬운 구조**(작은 진입점·명시적 경계·일관된 패턴)를 우선한다. | Agent legibility is the goal |
 | 5 | **아키텍처와 취향을 기계적으로 강제하라**<br>Enforce architecture and taste mechanically | 규칙을 문서가 아니라 **린터·구조적 테스트·CI**로 강제한다. 강제되지 않은 규칙은 드리프트한다. | Enforcing architecture and taste |
 | 6 | **처리량에 맞춰 병합 철학을 바꿔라**<br>Let throughput reshape merge philosophy | 에이전트 PR이 폭증하면 사람의 리뷰가 병목이 되어 버티지 못한다. **작은 PR·자동 검증·반복 루프**로 병합 정책을 재설계한다. | Throughput changes the merge philosophy |
