@@ -84,7 +84,7 @@ humanized_date: null          # 문체 윤문 완료일 (YYYY-MM-DD)
 |---|---|
 | 하네스(harness) | 래퍼, 프레임워크(맥락상 구분), 껍데기 |
 | 코딩 에이전트 | AI, 봇(맥락상 구분) |
-| 컨텍스트 윈도 | 컨텍스트 창, 윈도우 |
+| 컨텍스트 윈도우 | 컨텍스트 창, 윈도 |
 | 가독성(legibility) | 판독성, 읽힘성(혼용 금지) |
 | 기계적 강제(mechanical enforcement) | 자동 검사(좁음), 강제화 |
 | 기록 시스템(system of record) | 기록 체계, SoR(본문 한글 우선) |
