@@ -2,7 +2,7 @@
 part: 3
 chapter: 14
 slug: ch14-deterministic-artifacts
-title: "결정론적 산출물 — 코드가 진실의 원천"
+title: "결정론적 산출물"
 status: "published"
 wikidocs_page_id: 363233
 parent_page_id: 363215

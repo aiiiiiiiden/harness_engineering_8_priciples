@@ -120,7 +120,7 @@
         {
           "chapter": 12,
           "slug": "ch12-single-source-of-truth",
-          "title": "진실의 원천(SoT) 설계하기",
+          "title": "진실의 원천(SoT)",
           "official_links": [
             "https://openai.com/index/harness-engineering/"
           ]
@@ -128,13 +128,13 @@
         {
           "chapter": 13,
           "slug": "ch13-trust-and-model-diversity",
-          "title": "검증 게이트와 모델 다양성으로 신뢰성 확보",
+          "title": "검증 게이트와 모델 다양성",
           "official_links": []
         },
         {
           "chapter": 14,
           "slug": "ch14-deterministic-artifacts",
-          "title": "결정론적 산출물 — 코드가 진실의 원천",
+          "title": "결정론적 산출물",
           "official_links": []
         },
         {

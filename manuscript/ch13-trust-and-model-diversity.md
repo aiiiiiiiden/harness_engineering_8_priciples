@@ -2,7 +2,7 @@
 part: 3
 chapter: 13
 slug: ch13-trust-and-model-diversity
-title: "검증 게이트와 모델 다양성으로 신뢰성 확보"
+title: "검증 게이트와 모델 다양성"
 status: "published"
 wikidocs_page_id: 363232
 parent_page_id: 363215

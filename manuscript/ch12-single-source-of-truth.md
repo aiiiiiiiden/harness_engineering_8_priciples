@@ -2,7 +2,7 @@
 part: 3
 chapter: 12
 slug: ch12-single-source-of-truth
-title: "진실의 원천(SoT) 설계하기"
+title: "진실의 원천(SoT)"
 status: "published"
 wikidocs_page_id: 363231
 parent_page_id: 363215
