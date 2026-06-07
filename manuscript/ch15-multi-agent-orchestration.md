@@ -10,7 +10,7 @@ official_links:
   - https://code.claude.com/docs/en/sub-agents
 last_verified: 2026-06-02
 crosscheck: "pass"
-crosscheck_date: "2026-06-03"
+crosscheck_date: "2026-06-07"
 humanized: "pass"
 humanized_date: "2026-06-03"
 wikidocs_image: "applied"
