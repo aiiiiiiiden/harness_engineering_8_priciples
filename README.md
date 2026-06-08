@@ -56,17 +56,7 @@
 
 이 책은 8원칙으로 만든 하네스 안에서 집필되었습니다. 그 골격이 이 저장소에 그대로 들어 있습니다 (4부에서 해부).
 
-```
-docs/toc.json (구조 SoT)
-   └─ scaffold.py ──▶ manuscript/*.md 골격
-        └─ 집필 + 사실확인 ──▶ status: draft
-             └─ 4중 검증 게이트 ──▶ status: reviewed
-             │     1) verify.py (기계 검증)
-             │     2) md-doc-reviewer (기술 검수)
-             │     3) crosscheck.py (codex·독립 모델 교차검증 — 모델 다양성)
-             │     4) humanize (문체·AI 티 제거, 내용 불변)
-             └─ wikidocs 발행 ──▶ status: published
-```
+![골든 워크플로우: 구조의 진실의 원천인 toc.json에서 scaffold.py가 원고 골격을 결정론적으로 생성하고, 집필된 draft는 4중 검증 게이트(verify.py 기계 검증 · md-doc-reviewer 기술 검수 · crosscheck.py codex 독립 모델 교차검증 · humanize 문체)를 모두 통과해야 reviewed가 되어 위키독스로 발행된다. 하나라도 실패하면 차단된다.](assets/diagrams/chatgpt-renders/ch16-harness-case-study.ko.png)
 
 | 도구 | 역할 | 대응 원칙 |
 |---|---|---|
