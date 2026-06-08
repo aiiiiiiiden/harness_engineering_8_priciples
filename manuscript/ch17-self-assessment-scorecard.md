@@ -2,7 +2,7 @@
 part: 4
 chapter: 17
 slug: ch17-self-assessment-scorecard
-title: "8원칙으로 내 하네스 평가하기 (스코어카드 L1→L5)"
+title: "스코어카드로 하네스 평가하기"
 status: "published"
 wikidocs_page_id: 363236
 parent_page_id: 363216
