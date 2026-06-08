@@ -22,7 +22,11 @@ wikidocs_image: "applied"
 
 ## 핵심 개념
 
-이 프로젝트 저장소는 한 줄로 **코드가 진실의 원천(SoT)이 되어 "책 원고"를 산출물로 만드는 하네스이다.** 빈 디렉토리에서 시작해, 에이전트가 안정적으로 한 장씩 써 내려가도록 계획, 작성, 검증, 상태 기록을 하네스로 구축했습니다. 이 책의 프로젝트 저장소는 다음 주소에서 볼 수 있으니(<https://github.com/aiiiiiiiden/harness_engineering_8_priciples>), 이 장을 읽으며 실제 파일을 함께 열어 보면 좋습니다. 이 책의 하네스를 워크플로우로 표시하면 아래와 같습니다.
+이 프로젝트 저장소는 한 줄로 **코드가 진실의 원천(SoT)이 되어 "책 원고"를 산출물로 만드는 하네스이다.** 빈 디렉토리에서 시작해, 에이전트가 안정적으로 한 장씩 써 내려가도록 계획, 작성, 검증, 상태 기록을 하네스로 구축했습니다. 이 책의 프로젝트 저장소는 아래 주소에서 볼 수 있습니다.
+
+https://github.com/aiiiiiiiden/harness_engineering_8_priciples
+
+이 장을 읽으며 실제 파일을 함께 열어 보면 좋습니다. 이 책의 하네스를 워크플로우로 표시하면 아래와 같습니다.
 
 ![골든 워크플로우 다이어그램: 구조의 진실의 원천인 toc.json에서 scaffold.py가 원고 골격을 결정론적으로 생성하고, 집필된 draft는 4중 검증 게이트(verify.py 기계검증·md-doc-reviewer·crosscheck.py codex 독립 모델·humanize 문체)를 모두 통과해야 reviewed가 되어 위키독스로 발행된다. 하나라도 실패하면 차단된다.](../assets/diagrams/chatgpt-renders/ch16-harness-case-study.ko.png)
 
@@ -60,9 +64,24 @@ wikidocs_image: "applied"
       "part": 1,
       "title": "하네스 엔지니어링 입문",
       "chapters": [
-        { "chapter": 1, "slug": "ch01-what-is-harness",        "title": "하네스 엔지니어링이란?",        "official_links": ["…"] },
-        { "chapter": 2, "slug": "ch02-why-harness-engineering", "title": "왜 하네스 엔지니어링이 필요한가", "official_links": ["…"] },
-        { "chapter": 3, "slug": "ch03-anatomy-of-a-harness",    "title": "하네스 엔지니어링 미리보기",      "official_links": ["…"] }
+        {
+          "chapter": 1,
+          "slug": "ch01-what-is-harness",
+          "title": "하네스 엔지니어링이란?",
+          "official_links": ["…"]
+        },
+        {
+          "chapter": 2,
+          "slug": "ch02-why-harness-engineering",
+          "title": "왜 하네스 엔지니어링이 필요한가",
+          "official_links": ["…"]
+        },
+        {
+          "chapter": 3,
+          "slug": "ch03-anatomy-of-a-harness",
+          "title": "하네스 엔지니어링 미리보기",
+          "official_links": ["…"]
+        }
       ],
       "wikidocs_page_id": 363213
     }
@@ -337,4 +356,4 @@ if __name__ == "__main__":
 ## 공식 출처
 
 - https://openai.com/index/harness-engineering/
-- 이 책의 프로젝트 저장소(이 장에서 해부한 하네스): https://github.com/aiiiiiiiden/harness_engineering_8_priciples
+- https://github.com/aiiiiiiiden/harness_engineering_8_priciples
