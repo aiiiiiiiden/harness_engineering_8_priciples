@@ -31,7 +31,7 @@ humanized_date: "2026-06-03"
 | # | 원칙 (한국어 / 영문) | 한 줄 정의 | 원문 절 |
 |---|---|---|---|
 | 1 | **사람이 조종하고, 에이전트가 실행한다**<br>Humans steer, agents execute | 사람의 일은 코드 타이핑이 아니라 **환경 설계·의도 명시·피드백 루프 구축**으로 옮겨간다. | Redefining the role of the engineer |
-| 2 | **애플리케이션을 에이전트가 읽게 하라**<br>Make the application legible to agents | 로그·상태·동작을 에이전트가 *관측*할 수 있게 앱을 계측한다. 눈이 없으면 "고쳤다"를 검증할 수 없다. | Increasing application legibility |
+| 2 | **애플리케이션을 에이전트가 읽게 하라**<br>Make the application legible to agents | 로그·상태·동작을 에이전트가 **관측**할 수 있게 앱을 계측한다. 눈이 없으면 "고쳤다"를 검증할 수 없다. | Increasing application legibility |
 | 3 | **프로젝트 저장소 지식을 기록 시스템으로 삼아라**<br>Repository knowledge as a system of record | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 둔다. 단 백과사전이 아니라 **지도**(짧은 `AGENTS.md`) + 구조화된 `docs/`. | We made repository knowledge the system of record |
 | 4 | **에이전트 가독성에 최적화하라**<br>Optimize for agent legibility | 사람의 멋부린 취향보다 **에이전트가 읽기 쉬운 구조**(작은 진입점·명시적 경계·일관된 패턴)를 우선한다. | Agent legibility is the goal |
 | 5 | **아키텍처와 취향을 기계적으로 강제하라**<br>Enforce architecture and taste mechanically | 규칙을 문서가 아니라 **린터·구조적 테스트·CI**로 강제한다. 강제되지 않은 규칙은 드리프트한다. | Enforcing architecture and taste |
@@ -64,7 +64,7 @@ humanized_date: "2026-06-03"
 |---|---|---|---|
 | 1 | 수용 가능한 기준 · 사람 리뷰 게이트 | `docs/exec-plans/active/*.md`(계획 + 의사결정 로그) | 2부 1장(ch04) |
 | 2 | 구조화 로그 · 관측성 | 표준화된 로그 포맷, 메트릭 엔드포인트, LogQL/PromQL로 조회 가능한 관측성 | 2부 2장(ch05) |
-| 3 | 맵 + 기록 시스템 | `AGENTS.md`(약 100줄) → `docs/`(design-docs·exec-plans·references) | 2부 3장(ch06) |
+| 3 | 지도 + 기록 시스템 | `AGENTS.md`(약 100줄) → `docs/`(design-docs·exec-plans·references) | 2부 3장(ch06) |
 | 4 | 작은 진입점 · 명시적 경계 | 계층 모델(Types→Config→Repo→Service→Runtime→UI), 일관된 모듈 패턴 | 2부 4장(ch07) |
 | 5 | 린터 · 구조적 테스트 · CI | 맞춤형 린터 + 구조적 테스트가 위반을 빌드에서 차단 | 2부 5장(ch08) |
 | 6 | 최소 차단 게이트 · 짧은 PR | 짧은 PR 수명·빠른 병합, 사람 승인은 판단 필요 시만, 에이전트 검토자 반복 루프 | 2부 6장(ch09) |
@@ -80,7 +80,7 @@ humanized_date: "2026-06-03"
 - **치트시트를 원문으로 착각하기.** 이 표는 **이 책이 도출한** 8원칙입니다. 원문을 "OpenAI가 번호로 못 박은 목록"처럼 인용하면 출처 오류입니다. 원문은 원칙에 번호를 매기지 않습니다.
 - **원칙을 독립 체크리스트로만 보기.** 8원칙은 서로 맞물립니다. 원칙 2(관측성) 없이 원칙 5(기계적 강제)만 깔면, 강제는 되지만 무엇이 깨졌는지 못 봅니다. 진단할 땐 한 원칙이 아니라 이웃 원칙까지 같이 봐야 합니다.
 - **데모 기준으로 판단하기.** 위 진단표의 증상은 전부 규모와 시간에서 드러납니다. "지금은 잘 도는데?"는 아직 작아서일 뿐, 원칙이 갖춰졌다는 증거는 아닙니다.
-- **강제 없이 표만 붙이기.** 이 치트시트를 `AGENTS.md`에 그대로 붙여도, 린터·CI가 강제하지 않으면 원칙 5를 어기는 셈입니다. 요약은 사람용 지도이고, 강제는 기계의 몫입니다.
+- **강제 없이 표만 붙이기.** 이 치트시트를 `AGENTS.md`에 그대로 붙여도, 린터·CI가 강제하지 않으면 원칙 5를 어기는 셈입니다. 요약은 사람이 보라고 만든 지도일 뿐, 강제는 기계가 할 일입니다.
 
 ## 핵심 정리 / 체크리스트
 
