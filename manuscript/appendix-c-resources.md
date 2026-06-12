@@ -41,7 +41,7 @@ humanized_date: "2026-06-03"
 | **MCP (Model Context Protocol)** | 에이전트와 외부 도구·데이터를 연결하는 공개 프로토콜의 명세. | https://modelcontextprotocol.io |
 | **OpenAI Codex** | 원문 실험의 코딩 에이전트. 원문 글과 같은 출처에서 다룬다. | https://openai.com/index/harness-engineering/ |
 
-> 외부 라이브러리 문서는 원문의 방식대로 **요약본을 프로젝트 저장소에 둡니다**. `docs/references/*-llms.txt`에 핵심만 추려 버전 관리하면, 에이전트가 매번 외부를 긁지 않고도 안정적으로 참조합니다(원칙 3, ch06).
+> 외부 라이브러리 문서는 원문의 방식대로 **요약본을 프로젝트 저장소에 둡니다**. `docs/references/*-llms.txt`에 핵심만 추려 버전 관리하면, 에이전트가 매번 외부를 긁지 않고도 안정적으로 참조합니다(원칙 3, [6장](https://wikidocs.net/363224)).
 
 ### (다) 이 책의 내부 기준 (Source of Truth)
 
@@ -60,19 +60,19 @@ humanized_date: "2026-06-03"
 
 | 이 책 | 원문 절 (verbatim) |
 |---|---|
-| 1부 (ch01~03) 입문 | We started with an empty git repository *(실험 도입)* |
-| 원칙 1 (ch04) | Redefining the role of the engineer |
-| 원칙 2 (ch05) | Increasing application legibility |
-| 원칙 3 (ch06) | We made repository knowledge the system of record |
-| 원칙 4 (ch07) | Agent legibility is the goal |
-| 원칙 5 (ch08) | Enforcing architecture and taste |
-| 원칙 6 (ch09) | Throughput changes the merge philosophy |
+| 1부 ([1장](https://wikidocs.net/363218)~[3장](https://wikidocs.net/363220)) 입문 | We started with an empty git repository *(실험 도입)* |
+| 원칙 1 ([4장](https://wikidocs.net/363222)) | Redefining the role of the engineer |
+| 원칙 2 ([5장](https://wikidocs.net/363223)) | Increasing application legibility |
+| 원칙 3 ([6장](https://wikidocs.net/363224)) | We made repository knowledge the system of record |
+| 원칙 4 ([7장](https://wikidocs.net/363226)) | Agent legibility is the goal |
+| 원칙 5 ([8장](https://wikidocs.net/363227)) | Enforcing architecture and taste |
+| 원칙 6 ([9장](https://wikidocs.net/363228)) | Throughput changes the merge philosophy |
 | *(원칙 미승격)* | What "agent-generated" actually means *(개념 절 → 철학·원칙 5·7 배경)* |
-| 원칙 7 (ch10) | Increasing levels of autonomy |
-| 원칙 8 (ch11) | Entropy and garbage collection |
+| 원칙 7 ([10장](https://wikidocs.net/363229)) | Increasing levels of autonomy |
+| 원칙 8 ([11장](https://wikidocs.net/363230)) | Entropy and garbage collection |
 | 맺음 참고 | What we're still learning *(원칙 아님)* |
 
-> 3부(ch12~15)와 4부(ch16~17)는 특정 절이 아니라 8원칙을 **합치는** 패턴과 이 책 하네스의 자기 해부라, 위 절들을 가로지릅니다.
+> 3부([12장](https://wikidocs.net/363231)~[15장](https://wikidocs.net/363234))와 4부([16장](https://wikidocs.net/363235)~[17장](https://wikidocs.net/363236))는 특정 절이 아니라 8원칙을 **합치는** 패턴과 이 책 하네스의 자기 해부라, 위 절들을 가로지릅니다.
 
 ## 왜 중요한가
 

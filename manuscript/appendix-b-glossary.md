@@ -27,12 +27,12 @@ humanized_date: "2026-06-03"
 
 | 표준어 (영문) | 정의 | 관련 |
 |---|---|---|
-| **하네스 엔지니어링 (Harness Engineering)** | 코딩 에이전트가 안정적으로 일하도록 코드베이스 환경(지도, 강제, 피드백 루프)을 설계하는 분야. OpenAI 원문(Ryan Lopopolo, 2026)에서 도출. | 1부, ch01 |
-| **하네스 (harness)** | 에이전트를 감싸 일하게 만드는 환경 전체. 진입점·문서·린터·테스트·관측성·CI의 묶음. | ch01·ch03 |
+| **하네스 엔지니어링 (Harness Engineering)** | 코딩 에이전트가 안정적으로 일하도록 코드베이스 환경(지도, 강제, 피드백 루프)을 설계하는 분야. OpenAI 원문(Ryan Lopopolo, 2026)에서 도출. | 1부, [1장](https://wikidocs.net/363218) |
+| **하네스 (harness)** | 에이전트를 감싸 일하게 만드는 환경 전체. 진입점·문서·린터·테스트·관측성·CI의 묶음. | [1장](https://wikidocs.net/363218)·[3장](https://wikidocs.net/363220) |
 | **코딩 에이전트 (coding agent)** | 코드를 읽고 쓰는 LLM 기반 에이전트(Codex, Claude Code 등). 사람은 주로 프롬프트로 상호작용한다. | 전 장 |
-| **사람이 조종하고, 에이전트가 실행한다 (Humans steer, agents execute)** | 하네스 엔지니어링의 한 줄 명제. 사람의 일은 코드 타이핑이 아니라 환경 설계·의도 명시·검증으로 옮겨간다. | ch02, 원칙 1 |
-| **프롬프트 엔지니어링 (prompt engineering)** | **한 번의 호출**을 잘 빚는 일. 하네스 엔지니어링은 에이전트가 수백 번 일하는 **환경 전체**를 설계하는 점에서 층위가 다르다. | ch02 |
-| **컨텍스트 윈도우 (context window)** | 에이전트가 한 번에 볼 수 있는 입력 분량. 희소 자원이라, 큰 지침 파일이 핵심 정보를 밀어낸다. | ch06·ch07 |
+| **사람이 조종하고, 에이전트가 실행한다 (Humans steer, agents execute)** | 하네스 엔지니어링의 한 줄 명제. 사람의 일은 코드 타이핑이 아니라 환경 설계·의도 명시·검증으로 옮겨간다. | [2장](https://wikidocs.net/363219), 원칙 1 |
+| **프롬프트 엔지니어링 (prompt engineering)** | **한 번의 호출**을 잘 빚는 일. 하네스 엔지니어링은 에이전트가 수백 번 일하는 **환경 전체**를 설계하는 점에서 층위가 다르다. | [2장](https://wikidocs.net/363219) |
+| **컨텍스트 윈도우 (context window)** | 에이전트가 한 번에 볼 수 있는 입력 분량. 희소 자원이라, 큰 지침 파일이 핵심 정보를 밀어낸다. | [6장](https://wikidocs.net/363224)·[7장](https://wikidocs.net/363226) |
 
 > 표기 주의: **컨텍스트 윈도우**(○) / 컨텍스트 창·윈도(✗), **코딩 에이전트**(○) / AI·봇(✗).
 
@@ -40,14 +40,14 @@ humanized_date: "2026-06-03"
 
 | # | 표준어 (영문) | 한 줄 정의 | 장 |
 |---|---|---|---|
-| 1 | **사람이 조종하고, 에이전트가 실행한다** (Humans steer, agents execute) | 사람의 역할을 코드 작성에서 환경 설계로 재정의한다. | ch04 |
-| 2 | **애플리케이션을 에이전트가 읽게 하라** (Make the application legible to agents) | 로그·상태·동작을 에이전트가 관측하도록 앱을 계측한다. | ch05 |
-| 3 | **프로젝트 저장소 지식을 기록 시스템으로 삼아라** (Repository knowledge as a system of record) | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 두되, 백과사전이 아니라 지도로 구성한다. | ch06 |
-| 4 | **에이전트 가독성에 최적화하라** (Optimize for agent legibility) | 사람 취향보다 에이전트가 읽기 쉬운 구조를 우선한다. | ch07 |
-| 5 | **아키텍처와 취향을 기계적으로 강제하라** (Enforce architecture and taste mechanically) | 규칙을 문서가 아니라 린터·구조적 테스트·CI로 강제한다. | ch08 |
-| 6 | **처리량에 맞춰 병합 철학을 바꿔라** (Let throughput reshape merge philosophy) | 에이전트 처리량이 사람의 리뷰 범위를 넘으면 병합 규칙을 다시 짠다. | ch09 |
-| 7 | **자율 루프를 시스템으로 구축하라** (Encode the autonomy loop) | 반복 작업을 백그라운드 태스크·루프로 구축해 자율 수준을 점증시킨다. | ch10 |
-| 8 | **엔트로피를 가비지 컬렉션하라** (Garbage-collect entropy) | AI 생성물의 드리프트를 황금 원칙과 반복 정리 태스크로 GC한다. | ch11 |
+| 1 | **사람이 조종하고, 에이전트가 실행한다** (Humans steer, agents execute) | 사람의 역할을 코드 작성에서 환경 설계로 재정의한다. | [4장](https://wikidocs.net/363222) |
+| 2 | **애플리케이션을 에이전트가 읽게 하라** (Make the application legible to agents) | 로그·상태·동작을 에이전트가 관측하도록 앱을 계측한다. | [5장](https://wikidocs.net/363223) |
+| 3 | **프로젝트 저장소 지식을 기록 시스템으로 삼아라** (Repository knowledge as a system of record) | 지식을 버전 관리되는 프로젝트 저장소 아티팩트로 두되, 백과사전이 아니라 지도로 구성한다. | [6장](https://wikidocs.net/363224) |
+| 4 | **에이전트 가독성에 최적화하라** (Optimize for agent legibility) | 사람 취향보다 에이전트가 읽기 쉬운 구조를 우선한다. | [7장](https://wikidocs.net/363226) |
+| 5 | **아키텍처와 취향을 기계적으로 강제하라** (Enforce architecture and taste mechanically) | 규칙을 문서가 아니라 린터·구조적 테스트·CI로 강제한다. | [8장](https://wikidocs.net/363227) |
+| 6 | **처리량에 맞춰 병합 철학을 바꿔라** (Let throughput reshape merge philosophy) | 에이전트 처리량이 사람의 리뷰 범위를 넘으면 병합 규칙을 다시 짠다. | [9장](https://wikidocs.net/363228) |
+| 7 | **자율 루프를 시스템으로 구축하라** (Encode the autonomy loop) | 반복 작업을 백그라운드 태스크·루프로 구축해 자율 수준을 점증시킨다. | [10장](https://wikidocs.net/363229) |
+| 8 | **엔트로피를 가비지 컬렉션하라** (Garbage-collect entropy) | AI 생성물의 드리프트를 황금 원칙과 반복 정리 태스크로 GC한다. | [11장](https://wikidocs.net/363230) |
 
 > 8개는 **원문에서 도출한** 커리큘럼이다. 원문은 원칙을 번호로 매기지 않으므로 "원문이 정한 8원칙"이 아니라 "도출한 8원칙"으로 부른다. 8원칙은 원문 11개 절 중 원칙을 담은 8개 절에서 각각 한 원칙씩 선별·도출했다. 다만 원문 11개 절 전체가 8원칙과 1:1로 전수 매핑되는 것은 아니다(부록 A 참조).
 
@@ -55,15 +55,15 @@ humanized_date: "2026-06-03"
 
 | 표준어 (영문) | 정의 | 관련 |
 |---|---|---|
-| **기록 시스템 (system of record)** | 에이전트가 의지하는 지식의 권위 있는 출처. 채팅·머릿속이 아니라 버전 관리되는 `docs/`. | ch06, 원칙 3 |
-| **AGENTS.md** | 에이전트용 진입점. 백과사전이 아니라 "어디에 무엇이 있나"를 가리키는 지도(원문 기준 약 100줄). | ch06 |
-| **실행 계획 (execution plans)** | 복잡한 작업을 진행 상황·의사결정 로그와 함께 담아 버전 관리하는 일급 아티팩트. active/completed로 구분. | ch06 |
-| **점진적 공개 (progressive disclosure)** | 에이전트가 작은 진입점에서 시작해 맵을 따라 필요한 깊이로만 들어가는 방식. | ch06·ch07 |
-| **가독성 (legibility)** | 에이전트가 코드·문서·상태를 얼마나 쉽게 읽고 이해하는가. 사람 가독성과 구분된다. | ch05·ch07, 원칙 2·4 |
-| **계층 모델 (layer model)** | 원문의 의존 방향 규칙. Types → Config → Repo → Service → Runtime → UI, 교차관심사는 Providers 인터페이스로. | ch07·ch08 |
-| **황금 원칙 (Golden Principles)** | 프로젝트 저장소에 인코딩해 두고 반복 태스크가 위반을 스캔하는 품질 기준. | ch11, 원칙 8 |
-| **엔트로피 (entropy)** | 시간이 지나며 AI 생성물에 쌓이는 드리프트(명명 표류·죽은 코드·문서 불일치). | ch11, 원칙 8 |
-| **doc-gardening** | 낡은 문서를 찾아 수정 PR을 여는 반복 에이전트 작업. 엔트로피 GC의 한 형태. | ch06·ch11 |
+| **기록 시스템 (system of record)** | 에이전트가 의지하는 지식의 권위 있는 출처. 채팅·머릿속이 아니라 버전 관리되는 `docs/`. | [6장](https://wikidocs.net/363224), 원칙 3 |
+| **AGENTS.md** | 에이전트용 진입점. 백과사전이 아니라 "어디에 무엇이 있나"를 가리키는 지도(원문 기준 약 100줄). | [6장](https://wikidocs.net/363224) |
+| **실행 계획 (execution plans)** | 복잡한 작업을 진행 상황·의사결정 로그와 함께 담아 버전 관리하는 일급 아티팩트. active/completed로 구분. | [6장](https://wikidocs.net/363224) |
+| **점진적 공개 (progressive disclosure)** | 에이전트가 작은 진입점에서 시작해 맵을 따라 필요한 깊이로만 들어가는 방식. | [6장](https://wikidocs.net/363224)·[7장](https://wikidocs.net/363226) |
+| **가독성 (legibility)** | 에이전트가 코드·문서·상태를 얼마나 쉽게 읽고 이해하는가. 사람 가독성과 구분된다. | [5장](https://wikidocs.net/363223)·[7장](https://wikidocs.net/363226), 원칙 2·4 |
+| **계층 모델 (layer model)** | 원문의 의존 방향 규칙. Types → Config → Repo → Service → Runtime → UI, 교차관심사는 Providers 인터페이스로. | [7장](https://wikidocs.net/363226)·[8장](https://wikidocs.net/363227) |
+| **황금 원칙 (Golden Principles)** | 프로젝트 저장소에 인코딩해 두고 반복 태스크가 위반을 스캔하는 품질 기준. | [11장](https://wikidocs.net/363230), 원칙 8 |
+| **엔트로피 (entropy)** | 시간이 지나며 AI 생성물에 쌓이는 드리프트(명명 표류·죽은 코드·문서 불일치). | [11장](https://wikidocs.net/363230), 원칙 8 |
+| **doc-gardening** | 낡은 문서를 찾아 수정 PR을 여는 반복 에이전트 작업. 엔트로피 GC의 한 형태. | [6장](https://wikidocs.net/363224)·[11장](https://wikidocs.net/363230) |
 
 > 표기 주의: **기록 시스템**(○) / 기록 체계·SoR(본문은 한글 우선), **가독성**(○) / 판독성·읽힘성(✗).
 
@@ -71,16 +71,16 @@ humanized_date: "2026-06-03"
 
 | 표준어 (영문) | 정의 | 관련 |
 |---|---|---|
-| **진실의 원천 (SoT, Source of Truth)** | 어떤 사실·구조의 단일 권위 출처. 중복 정의 대신 한 곳을 고치면 나머지가 따라온다. | ch12 |
-| **불변식 (invariant)** | 항상 참이어야 하는 조건. 깨지면 빌드를 멈춘다(예: 계층 의존 방향). | ch08·ch12 |
-| **기계적 강제 (mechanical enforcement)** | 규칙을 사람 주의가 아니라 린터·구조적 테스트·CI로 강제하는 것. | ch08, 원칙 5 |
-| **구조적 테스트 (structural test)** | 동작이 아니라 코드 구조·경계(계층 방향, 금지 패턴)를 검사하는 테스트. | ch08 |
-| **검증 게이트 (verification gate)** | 다음 단계로 넘어가기 전 통과해야 하는 검사. 이 책은 발행 전 4중 게이트를 둔다. | ch13 |
-| **모델 다양성 (model diversity)** | 한 모델이 놓친 오류를 다른 모델이 잡도록, 집필과 검증에 서로 다른 모델을 쓰는 것. | ch13 |
-| **교차검증 (cross-check)** | 독립 모델로 같은 산출물의 사실을 한 번 더 검증하는 것. | ch13 |
-| **결정론적 산출물 (deterministic artifact)** | 같은 입력이면 같은 결과가 나오는, 코드로 생성·재현 가능한 산출물(예: SVG 렌더). | ch14 |
-| **수용 가능한 기준 (acceptance criteria)** | 사람이 의도를 에이전트가 검증 가능한 형태로 옮긴 완료 조건. | ch04·ch09 |
-| **Ralph Wiggum Loop** | 에이전트 검토자가 모두 만족할 때까지 반복하는 피드백 루프(원문 표현). | ch09·ch13 |
+| **진실의 원천 (SoT, Source of Truth)** | 어떤 사실·구조의 단일 권위 출처. 중복 정의 대신 한 곳을 고치면 나머지가 따라온다. | [12장](https://wikidocs.net/363231) |
+| **불변식 (invariant)** | 항상 참이어야 하는 조건. 깨지면 빌드를 멈춘다(예: 계층 의존 방향). | [8장](https://wikidocs.net/363227)·[12장](https://wikidocs.net/363231) |
+| **기계적 강제 (mechanical enforcement)** | 규칙을 사람 주의가 아니라 린터·구조적 테스트·CI로 강제하는 것. | [8장](https://wikidocs.net/363227), 원칙 5 |
+| **구조적 테스트 (structural test)** | 동작이 아니라 코드 구조·경계(계층 방향, 금지 패턴)를 검사하는 테스트. | [8장](https://wikidocs.net/363227) |
+| **검증 게이트 (verification gate)** | 다음 단계로 넘어가기 전 통과해야 하는 검사. 이 책은 발행 전 4중 게이트를 둔다. | [13장](https://wikidocs.net/363232) |
+| **모델 다양성 (model diversity)** | 한 모델이 놓친 오류를 다른 모델이 잡도록, 집필과 검증에 서로 다른 모델을 쓰는 것. | [13장](https://wikidocs.net/363232) |
+| **교차검증 (cross-check)** | 독립 모델로 같은 산출물의 사실을 한 번 더 검증하는 것. | [13장](https://wikidocs.net/363232) |
+| **결정론적 산출물 (deterministic artifact)** | 같은 입력이면 같은 결과가 나오는, 코드로 생성·재현 가능한 산출물(예: SVG 렌더). | [14장](https://wikidocs.net/363233) |
+| **수용 가능한 기준 (acceptance criteria)** | 사람이 의도를 에이전트가 검증 가능한 형태로 옮긴 완료 조건. | [4장](https://wikidocs.net/363222)·[9장](https://wikidocs.net/363228) |
+| **Ralph Wiggum Loop** | 에이전트 검토자가 모두 만족할 때까지 반복하는 피드백 루프(원문 표현). | [9장](https://wikidocs.net/363228)·[13장](https://wikidocs.net/363232) |
 
 > 표기 주의: **진실의 원천(SoT)**(○) / 단일 진실 공급원(✗), **불변식**(○) / 불변 조건(혼용 가능하나 '불변식' 우선).
 
@@ -88,12 +88,12 @@ humanized_date: "2026-06-03"
 
 | 표준어 (영문) | 정의 | 관련 |
 |---|---|---|
-| **OpenAI Codex** | 원문 실험의 코딩 에이전트. 사람은 거의 전적으로 프롬프트로만 상호작용했다. | ch02·ch16 |
-| **Claude Code** | Anthropic의 코딩 에이전트 CLI/도구. 실습 환경의 예. | ch03 |
-| **Claude Agent SDK** | 에이전트를 만드는 SDK. 과거 명칭 "Claude Code SDK"에서 변경. | ch15 |
-| **MCP (Model Context Protocol)** | 에이전트와 외부 도구·데이터를 연결하는 공개 프로토콜. | ch05·ch15 |
-| **구조화 출력 (structured output)** | JSON Schema 등으로 형식을 강제한 모델 출력. 교차검증·도구 연동의 토대. | ch13·ch14 |
-| **관측성 (observability)** | 로그·메트릭으로 시스템 내부를 들여다보는 능력(LogQL/PromQL로 조회). | ch05, 원칙 2 |
+| **OpenAI Codex** | 원문 실험의 코딩 에이전트. 사람은 거의 전적으로 프롬프트로만 상호작용했다. | [2장](https://wikidocs.net/363219)·[16장](https://wikidocs.net/363235) |
+| **Claude Code** | Anthropic의 코딩 에이전트 CLI/도구. 실습 환경의 예. | [3장](https://wikidocs.net/363220) |
+| **Claude Agent SDK** | 에이전트를 만드는 SDK. 과거 명칭 "Claude Code SDK"에서 변경. | [15장](https://wikidocs.net/363234) |
+| **MCP (Model Context Protocol)** | 에이전트와 외부 도구·데이터를 연결하는 공개 프로토콜. | [5장](https://wikidocs.net/363223)·[15장](https://wikidocs.net/363234) |
+| **구조화 출력 (structured output)** | JSON Schema 등으로 형식을 강제한 모델 출력. 교차검증·도구 연동의 토대. | [13장](https://wikidocs.net/363232)·[14장](https://wikidocs.net/363233) |
+| **관측성 (observability)** | 로그·메트릭으로 시스템 내부를 들여다보는 능력(LogQL/PromQL로 조회). | [5장](https://wikidocs.net/363223), 원칙 2 |
 
 ## 왜 중요한가
 
